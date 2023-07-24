@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
 @font-face {
   font-family: 'Neue Montreal Bold';
   src: url('./fonts/neuemontreal-bold-webfont.woff2') format('woff2'),
@@ -24,4 +25,22 @@
        url('./fonts/neuemontreal-medium-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+/* Splide carousel arrows */
+.splide__arrows.splide__arrows--ltr .splide__arrow {
+  background: transparent !important;
+  @apply h-screen top-0 rounded-none transform-none z-30 w-1/6;
+}
+
+.splide__arrows.splide__arrows--ltr .splide__arrow.splide__arrow--prev {
+  @apply left-0;
+}
+
+.splide__arrows.splide__arrows--ltr .splide__arrow.splide__arrow--next {
+  @apply right-0;
+}
+
+.splide__arrow svg {
+  @apply hidden;
 }
