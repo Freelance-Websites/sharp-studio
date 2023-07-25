@@ -19,4 +19,6 @@ slider:
   - image: /images/home/slide-6.jpg
     title: Munich Market
     credit: Whitekitchen
+architectsAndDevelopersHover: /images/home/architects-and-developers-hover.jpg
+brokersAndRealtorsHover: /images/home/brokers-and-realtors-hover.jpg
 ---

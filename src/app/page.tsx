@@ -4,12 +4,13 @@ import ReactFullpage from '@fullpage/react-fullpage';
 
 import Header from "@/components/Header";
 import FullPageSlider from "@/components/FullPageSlider";
+import LandingPageSelector from "@/components/LandingPageSelector";
 import { MainHeading } from "@/components/Typography";
 
 import { attributes } from '@/content/homepage.md';
 
 export default function Home() {
-  const { slogan, slider } = attributes;
+  const { slogan, slider, architectsAndDevelopersHover, brokersAndRealtorsHover } = attributes;
 
   return (
     <main>
@@ -20,7 +21,7 @@ export default function Home() {
         render={() => (
           <ReactFullpage.Wrapper>
             <section className="section">
-              <h1 className="absolute left-4 z-10 h-full flex items-center drop-shadow-lg md:max-w-lg">
+              <h1 className="absolute left-4 z-10 h-full flex items-center drop-shadow-lg max-w-xs md:max-w-lg">
                 <MainHeading color="text-off-white">{slogan}</MainHeading>
               </h1>
               <FullPageSlider
@@ -28,7 +29,10 @@ export default function Home() {
               />
             </section>
             <section className="section">
-              test 2
+              <LandingPageSelector
+                architectsAndDevelopersHover={architectsAndDevelopersHover}
+                brokersAndRealtorsHover={brokersAndRealtorsHover}
+              />
             </section>
           </ReactFullpage.Wrapper>
         )}
