@@ -25,7 +25,7 @@ export default function LandingPageSelector({ architectsAndDevelopersHover, brok
       </li>
       <li className="bg-black relative group hover:bg-off-white">
         <Link href="/brokers-and-realtors" className="flex items-center justify-center absolute w-full h-full">
-          <div className="relative z-10 fill-off-white group-hover:fill-black">
+          <div className="relative z-10 fill-off-white">
             <LogoBR />
           </div>
           <Image
