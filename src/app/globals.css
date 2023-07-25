@@ -44,3 +44,16 @@
 .splide__arrow svg {
   @apply hidden;
 }
+
+/* Splide pagination */
+.splide__pagination {
+  @apply bottom-6 !important;
+}
+
+.splide__pagination.splide__pagination--ltr .splide__pagination__page {
+  @apply bg-off-white rounded-none w-6 h-px m-0 opacity-50;
+}
+
+.splide__pagination.splide__pagination--ltr .splide__pagination__page.is-active {
+  @apply h-[2px] opacity-100 transform-none;
+}
