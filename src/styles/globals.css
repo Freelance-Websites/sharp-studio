@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --cursor-color: rgba(16, 16, 16, .6);
+}
+
 /* Fonts */
 @font-face {
   font-family: 'Neue Montreal Bold';
