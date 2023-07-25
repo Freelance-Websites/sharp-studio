@@ -3,7 +3,7 @@
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import Header from "@/components/Header";
-import FullPageSlider from "@/components/FullPageSlider";
+import FullPageSlider from "@/components/sections/FullPageSlider";
 import LandingPageSelector from "@/components/LandingPageSelector";
 import { MainHeading } from "@/components/Typography";
 
