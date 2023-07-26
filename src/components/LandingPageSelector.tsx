@@ -10,20 +10,23 @@ export default function LandingPageSelector({ architectsAndDevelopersHover, brok
 }) {
   return (
     <ul className="grid grid-cols-1 md:grid-cols-2 h-screen">
-      <li className="bg-off-white relative group hover:bg-black">
-        <Link href="/architects-and-developers" className="flex items-center justify-center absolute w-full h-full">
-          <div className="relative z-10 fill-black group-hover:fill-off-white">
+      <li className="bg-off-white relative group">
+        <Link href="/architects-and-developers" className="flex items-center justify-center absolute w-full h-full z-10">
+          <div className="relative z-10 fill-black group-hover:fill-off-white z-20">
             <LogoAD />
           </div>
-          <Image
-            src={architectsAndDevelopersHover}
-            alt="Architects and Developers"
-            className="w-full h-full absolute object-cover opacity-0 group-hover:opacity-70 transition-all ease-in-out duration-300"
-            fill={true}
-          />
+          <div className="opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-300 absolute w-full h-full">
+            <Image
+              src={architectsAndDevelopersHover}
+              alt="Architects and Developers"
+              className="w-full h-full absolute object-cover z-10 opacity-70"
+              fill={true}
+            />
+            <span className="hidden group-hover:block bg-black absolute w-full h-full" />
+          </div>
         </Link>
       </li>
-      <li className="bg-black relative group hover:bg-off-white">
+      <li className="bg-black relative group">
         <Link href="/brokers-and-realtors" className="flex items-center justify-center absolute w-full h-full">
           <div className="relative z-10 fill-off-white">
             <LogoBR />
