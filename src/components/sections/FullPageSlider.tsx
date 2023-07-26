@@ -17,9 +17,9 @@ export default function FullPageSlider({ slides }: {
     <Splide
       hasTrack={false}
       options={{
-        type: 'loop',
         speed: '400',
         autoplay: true,
+        rewind: true,
       }}
     >
       <SplideTrack>
