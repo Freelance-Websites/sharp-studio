@@ -5,12 +5,14 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import CustomHead from '@/components/CustomHead';
 import Header from "@/components/Header";
 import FullPageSlider from "@/components/sections/FullPageSlider";
+import FullBleedImage from "@/components/sections/FullBleedImage";
+import TextAndImage from "@/components/sections/TextAndImage";
 import TextOnly from "@/components/sections/TextOnly";
 
 import { attributes } from '@/content/architects-and-developers.md';
 
 export default function Home() {
-  const { title, heroEnabled, heroSlider, studioEnabled, studioTitle, studioText, studioLinkText, studioLinkHref, studioSlider } = attributes;
+  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit } = attributes;
 
   return (
     <main>
@@ -27,8 +29,10 @@ export default function Home() {
           <ReactFullpage.Wrapper>
             {heroEnabled &&
               <section className="section">
-                <FullPageSlider
-                  slides={heroSlider}
+                <FullBleedImage
+                  image={heroImage}
+                  title={heroTitle}
+                  credit={heroCredit}
                 />
               </section>
             }
@@ -40,12 +44,29 @@ export default function Home() {
                     title={studioTitle}
                     content={studioText}
                     linkText={studioLinkText}
-                    linkHref={studioLinkHref}
+                    linkHref={'/'}
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
                     slides={studioSlider}
+                  />
+                </section>
+              </>
+            }
+            {servicesEnabled &&
+              <>
+                <section className="section overflow-x-hidden">
+                  <TextAndImage
+                    orientation="left"
+                    color="bg-light-gray"
+                    title={servicesTitle}
+                    content={servicesText}
+                    linkText={servicesLinkText}
+                    linkHref={'/architects-and-developers/services'}
+                    image={servicesImage}
+                    imageCaption={servicesImageCaption}
+                    imageCredit={servicesImageCredit}
                   />
                 </section>
               </>

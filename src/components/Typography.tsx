@@ -18,12 +18,12 @@ export function BigText({ children, color }: {
   )
 }
 
-export function UpperCaseText({ children, color }: {
+export function MediumText({ children, color }: {
   color: string,
   children: React.ReactNode,
 }) {
   return (
-    <span className={`uppercase text-sm tracking-wider font-neue-medium ${color}`}>{children}</span>
+    <span className={`text-xl md:text-2xl xl:text-3xl xl:leading-normal ${color}`}>{children}</span>
   )
 }
 
@@ -33,5 +33,14 @@ export function StandardText({ children, color }: {
 }) {
   return (
     <span className={`${color}`}>{children}</span>
+  )
+}
+
+export function UpperCaseText({ children, color }: {
+  color: string,
+  children: React.ReactNode,
+}) {
+  return (
+    <span className={`uppercase text-sm tracking-wider font-neue-medium ${color}`}>{children}</span>
   )
 }
