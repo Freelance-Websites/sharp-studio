@@ -1,4 +1,4 @@
-export const getPixelColor = async (imageUrl, x, y) => {
+export const getPixelColor = async (imageUrl: string, x: number, y: number) => {
   const img = new Image();
   img.crossOrigin = 'Anonymous'; // To avoid CORS issues with external images
 
@@ -9,10 +9,10 @@ export const getPixelColor = async (imageUrl, x, y) => {
       canvas.height = 1;
 
       const context = canvas.getContext('2d');
-      context.drawImage(img, -x, -y);
+      context?.drawImage(img, -x, -y);
 
-      const pixelData = context.getImageData(0, 0, 1, 1).data;
-      const color = `#${rgbToHex(pixelData[0], pixelData[1], pixelData[2])}`;
+      const pixelData = context?.getImageData(0, 0, 1, 1).data;
+      const color = `#${rgbToHex(pixelData?.[0], pixelData?.[1], pixelData?.[2])}`;
       
       resolve(color);
     };
@@ -26,6 +26,6 @@ export const getPixelColor = async (imageUrl, x, y) => {
 };
 
 // Helper function to convert RGB values to HEX
-const rgbToHex = (r, g, b) => {
+const rgbToHex = (r: number, g: number, b: number) => {
   return ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
 };

@@ -12,7 +12,7 @@ import TextOnly from "@/components/sections/TextOnly";
 import { attributes } from '@/content/architects-and-developers.md';
 
 export default function Home() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider } = attributes;
+  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider, workflowEnabled, workflowText, workflowLinkText, workflowImage, workflowImageCaption, workflowImageCredit, workflowSlider } = attributes;
 
   return (
     <main>
@@ -93,6 +93,28 @@ export default function Home() {
                 <section className="section">
                   <FullPageSlider
                     slides={immersiveServicesSlider}
+                    drag={true}
+                  />
+                </section>
+              </>
+            }
+            {workflowEnabled &&
+              <>
+                <section className="section">
+                  <TextAndImage
+                    orientation="left"
+                    color="bg-light-green"
+                    content={workflowText}
+                    linkText={workflowLinkText}
+                    linkHref={'/architects-and-developers/workflow'}
+                    image={workflowImage}
+                    imageCaption={workflowImageCaption}
+                    imageCredit={workflowImageCredit}
+                  />
+                </section>
+                <section className="section">
+                  <FullPageSlider
+                    slides={workflowSlider}
                     drag={true}
                   />
                 </section>

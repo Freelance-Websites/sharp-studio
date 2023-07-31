@@ -22,6 +22,9 @@ interface Slide {
   title: string;
   credit: string;
   theme?: string;
+  titleTwo?: string;
+  creditTwo?: string;
+  imageMobile?: string;
 }
 
 export default function FullPageSlider({ slides, drag }: {
@@ -73,6 +76,9 @@ export default function FullPageSlider({ slides, drag }: {
                 imageUrl={slide.image}
                 title={slide.title}
                 credit={slide.credit}
+                titleTwo={slide.titleTwo ? slide.titleTwo : ''}
+                creditTwo={slide.creditTwo ? slide.creditTwo : ''}
+                imageMobile={slide.imageMobile ? slide.imageMobile : undefined}
               />
             :
               <Image
@@ -83,16 +89,45 @@ export default function FullPageSlider({ slides, drag }: {
               />
             }
             {/* Caption */}
-            <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
-              <h2 className="drop-shadow-md">
-                <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
-                  <span className="font-neue-bold">{slide.title}</span>
-                </StandardText>
-                <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
-                  &nbsp;&mdash; {slide.credit}
-                </StandardText>
-              </h2>
-            </div>
+            {slide.titleTwo ?
+              <>
+                <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
+                  <ul className="grid md:grid-cols-2 md:gap-4">
+                    <li>
+                      <h2 className="drop-shadow-md">
+                        <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                          <span className="font-neue-bold">{slide.title}</span>
+                        </StandardText>
+                        <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                          &nbsp;&mdash; {slide.credit}
+                        </StandardText>
+                      </h2>
+                    </li>
+                    <li>
+                      <h2 className="drop-shadow-md">
+                        <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                          <span className="font-neue-bold">{slide.titleTwo}</span>
+                        </StandardText>
+                        <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                          &nbsp;&mdash; {slide.creditTwo}
+                        </StandardText>
+                      </h2>
+                    </li>
+                  </ul>
+                </div>
+              </>
+              :
+              <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
+                <h2 className="drop-shadow-md">
+                  <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                    <span className="font-neue-bold">{slide.title}</span>
+                  </StandardText>
+                  <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                    &nbsp;&mdash; {slide.credit}
+                  </StandardText>
+                </h2>
+              </div>
+            }
           </SplideSlide>
         )}
       </SplideTrack>

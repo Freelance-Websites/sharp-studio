@@ -47,8 +47,32 @@ immersiveServicesSlider:
     credit: Monoblock
     type: image
   - image: /images/architects-and-developers/immersive-services-slider-2.jpg
+    imageMobile: /images/architects-and-developers/immersive-services-mobile.jpg
     title: Ixou Mini
     credit: Monoblock
+    type: two-column
+    theme: dark
+workflowEnabled: true
+workflowText: Each project has a dedicated team of architects and designers who are in constant contact with the client and their every need. Our workflow is meticulously supervised by a team of managers with impeccable attention to detail and proactiveness whose function is to carry out the demands of each account in a timely manner.
+workflowLinkText: Click here to learn more about our production process.
+workflowImage: /images/architects-and-developers/workflow-image.jpg
+workflowImageCaption: Rue 2
+workflowImageCredit: IVB
+workflowSlider:
+  - image: /images/architects-and-developers/workflow-slider-1.jpg
+    title: Cuba
+    credit: MGSSSS
+    type: image
+  - image: /images/architects-and-developers/workflow-slider-2.jpg
+    title: Munich Market
+    credit: Whitekitchen
+    type: image
+  - image: /images/architects-and-developers/workflow-slider-3.jpg
+    imageMobile: /images/architects-and-developers/workflow-mobile.jpg
+    title: Concurso Edenor
+    credit: Monoblock
+    titleTwo: LIV Plaza
+    creditTwo: ATV
     type: two-column
     theme: dark
 ---
