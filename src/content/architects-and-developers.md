@@ -12,12 +12,15 @@ studioSlider:
   - image: /images/architects-and-developers/studio-slider-1.jpg
     title: Munich Market
     credit: Whitekitchen
+    type: image
   - image: /images/architects-and-developers/studio-slider-2.jpg
     title: Concurso ITBA
     credit: Matías Beccar Varela, Pablo Katz, Ignacio Beccar Varela
+    type: image
   - image: /images/architects-and-developers/studio-slider-3.jpg
     title: Paris Rooftop
     credit: Whitekitchen
+    type: image
 servicesEnabled: true
 servicesTitle: Services.
 servicesText: We offer tailor made solutions to all of our clients with the objective of making unbuilt projects into a reality. We do so by creating state of the art high definition images for each project as well as immersive strategies to captivate investors and potential clients alike.
@@ -25,4 +28,13 @@ servicesLinkText: Click here for detailed information on each of our specific se
 servicesImage: /images/architects-and-developers/services.jpg
 servicesImageCaption: Ixou Brusco
 servicesImageCredit: Klotz, Minond, Hauser
+servicesSlider:
+  - image: /images/architects-and-developers/services-slider-1.mp4
+    title: Palermo Green
+    credit: ATV
+    type: video
+  - image: /images/architects-and-developers/services-slider-2.jpg
+    title: Palermo Green
+    credit: ATV
+    type: panoram
 ---

@@ -12,7 +12,7 @@ import TextOnly from "@/components/sections/TextOnly";
 import { attributes } from '@/content/architects-and-developers.md';
 
 export default function Home() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit } = attributes;
+  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider } = attributes;
 
   return (
     <main>
@@ -67,6 +67,11 @@ export default function Home() {
                     image={servicesImage}
                     imageCaption={servicesImageCaption}
                     imageCredit={servicesImageCredit}
+                  />
+                </section>
+                <section className="section">
+                  <FullPageSlider
+                    slides={servicesSlider}
                   />
                 </section>
               </>
