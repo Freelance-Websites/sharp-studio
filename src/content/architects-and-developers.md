@@ -37,4 +37,18 @@ servicesSlider:
     title: Palermo Green
     credit: ATV
     type: panoram
+immersiveServicesEnabled: true
+immersiveServicesText: At Sharp Studio Visuals we have countless options for bringing architecture to life even when it's not yet built. To do so, we rely on our highly trained human resources and state-of-the-art technology. That is why we offer 3D virtual tours, 360 experiences, and even tools to visualize projects in Virtual Reality to take the adventure of architecture to the next level.
+immersiveServicesLinkText: To experience our immersive services click here.
+immersiveServicesImage: /images/architects-and-developers/services-360.jpg
+immersiveServicesSlider:
+  - image: /images/architects-and-developers/immersive-services-slider-1.jpg
+    title: Ixou Mini
+    credit: Monoblock
+    type: image
+  - image: /images/architects-and-developers/immersive-services-slider-2.jpg
+    title: Ixou Mini
+    credit: Monoblock
+    type: two-column
+    theme: dark
 ---

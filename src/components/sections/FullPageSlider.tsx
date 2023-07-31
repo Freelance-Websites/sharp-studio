@@ -13,6 +13,7 @@ const ReactPhotoSphereViewer = dynamic(
   }
 );
 
+import TwoColumnImages from '@/components/sections/TwoColumnImages';
 import { StandardText } from '@/components/Typography';
 
 interface Slide {
@@ -20,10 +21,12 @@ interface Slide {
   image: string;
   title: string;
   credit: string;
+  theme?: string;
 }
 
-export default function FullPageSlider({ slides }: {
-  slides: Array<Slide>
+export default function FullPageSlider({ slides, drag }: {
+  slides: Array<Slide>;
+  drag: Boolean;
 }) {
   return (
     <Splide
@@ -32,8 +35,8 @@ export default function FullPageSlider({ slides }: {
         speed: '400',
         autoplay: true,
         rewind: true,
-        drag: false,
-        // rewindByDrag: true,
+        drag,
+        rewindByDrag: drag,
       }}
     >
       <SplideTrack>
@@ -42,8 +45,8 @@ export default function FullPageSlider({ slides }: {
             key={index}
             className="w-full h-screen relative"
           >
-            {/* Image, gradient and overlay */}
-            {slide.type !== 'panoram' &&
+            {/* Image, gradient and overlay. We only show these for images and video overlays. */}
+            {slide.type === 'video' || slide.type === 'image' &&
               <>
                 <div className="bg-gradient-to-t from-black absolute w-full h-screen z-20 to-20% opacity-60" />
                 <div className="bg-black/10 w-full h-screen z-10 absolute" />
@@ -65,6 +68,12 @@ export default function FullPageSlider({ slides }: {
                 width={"100%"}
                 navbar={false}
               />
+            : slide.type === 'two-column' ?
+              <TwoColumnImages
+                imageUrl={slide.image}
+                title={slide.title}
+                credit={slide.credit}
+              />
             :
               <Image
                 src={slide.image}
@@ -76,10 +85,10 @@ export default function FullPageSlider({ slides }: {
             {/* Caption */}
             <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
               <h2 className="drop-shadow-md">
-                <StandardText color="text-off-white">
+                <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                   <span className="font-neue-bold">{slide.title}</span>
                 </StandardText>
-                <StandardText color="text-off-white">
+                <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                   &nbsp;&mdash; {slide.credit}
                 </StandardText>
               </h2>

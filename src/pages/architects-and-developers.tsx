@@ -12,7 +12,7 @@ import TextOnly from "@/components/sections/TextOnly";
 import { attributes } from '@/content/architects-and-developers.md';
 
 export default function Home() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider } = attributes;
+  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider } = attributes;
 
   return (
     <main>
@@ -50,6 +50,7 @@ export default function Home() {
                 <section className="section">
                   <FullPageSlider
                     slides={studioSlider}
+                    drag={true}
                   />
                 </section>
               </>
@@ -72,6 +73,27 @@ export default function Home() {
                 <section className="section">
                   <FullPageSlider
                     slides={servicesSlider}
+                    drag={false}
+                  />
+                </section>
+              </>
+            }
+            {immersiveServicesEnabled &&
+              <>
+                <section className="section">
+                  <TextAndImage
+                    orientation="right"
+                    color="bg-salmon"
+                    content={immersiveServicesText}
+                    linkText={immersiveServicesLinkText}
+                    linkHref={'/architects-and-developers/services'}
+                    image={immersiveServicesImage}
+                  />
+                </section>
+                <section className="section">
+                  <FullPageSlider
+                    slides={immersiveServicesSlider}
+                    drag={true}
                   />
                 </section>
               </>

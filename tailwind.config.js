@@ -13,6 +13,7 @@ module.exports = {
         'off-white': '#f9f9f9',
         'light-gray': '#EAE4E9',
         'cream': '#FFF1E6',
+        'salmon': '#FFEEEF',
       },
       fontFamily: {
         'neue-light': ['Neue Montreal Light', "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],

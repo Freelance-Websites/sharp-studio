@@ -6,13 +6,13 @@ import { MediumText, StandardText } from "../Typography";
 export default function TextAndImage({ orientation, color, title, content, linkText, linkHref, image, imageCaption, imageCredit }: {
   orientation: string,
   color: string,
-  title: string,
+  title?: string,
   content: string,
   linkText: string,
   linkHref: string,
   image: string,
-  imageCaption: string,
-  imageCredit: string,
+  imageCaption?: string,
+  imageCredit?: string,
 }) {
   const formattedLinkText = linkText.replace(/click here/gi, '<u class="decoration-1 underline-offset-8 group-hover:no-underline">$&</u>');
 
