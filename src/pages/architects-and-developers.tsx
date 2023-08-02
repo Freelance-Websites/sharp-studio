@@ -8,11 +8,12 @@ import FullPageSlider from "@/components/sections/FullPageSlider";
 import FullBleedImage from "@/components/sections/FullBleedImage";
 import TextAndImage from "@/components/sections/TextAndImage";
 import TextOnly from "@/components/sections/TextOnly";
+import Map from "@/components/Map";
 
 import { attributes } from '@/content/architects-and-developers.md';
 
 export default function Home() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider, workflowEnabled, workflowText, workflowLinkText, workflowImage, workflowImageCaption, workflowImageCredit, workflowSlider } = attributes;
+  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider, workflowEnabled, workflowText, workflowLinkText, workflowImage, workflowImageCaption, workflowImageCredit, workflowSlider, portfolioEnabled, portfolioText, portfolioLinkText, documentationEnabled, documentationSlider, documentationText, documentationLinkText, documentationImage, faqsEnabled, faqsText, faqsLinkText, mapEnabled } = attributes;
 
   return (
     <main>
@@ -119,6 +120,49 @@ export default function Home() {
                   />
                 </section>
               </>
+            }
+            {portfolioEnabled &&
+              <section className="section">
+                <TextOnly
+                  color="bg-light-blue"
+                  content={portfolioText}
+                  linkText={portfolioLinkText}
+                  linkHref={'/architects-and-developers/portfolio'}
+                />
+              </section>
+            }
+            {documentationEnabled &&
+              <>
+                <section className="section">
+                  <FullPageSlider
+                    slides={documentationSlider}
+                    drag={true}
+                  />
+                </section>
+                <section className="section">
+                  <TextAndImage
+                    orientation="right"
+                    color="bg-light-gray"
+                    content={documentationText}
+                    linkText={documentationLinkText}
+                    linkHref={'/architects-and-developers/services'}
+                    image={documentationImage}
+                  />
+                </section>
+              </>
+            }
+            {faqsEnabled &&
+              <section className="section">
+                <TextOnly
+                  color="bg-off-white"
+                  content={faqsText}
+                  linkText={faqsLinkText}
+                  linkHref={'/architects-and-developers/faqs'}
+                />
+              </section>
+            }
+            {mapEnabled &&
+              <Map />
             }
           </ReactFullpage.Wrapper>
         )}

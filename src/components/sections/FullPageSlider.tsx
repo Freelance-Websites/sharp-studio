@@ -1,4 +1,4 @@
-import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
+const { Splide, SplideTrack, SplideSlide } = require('@splidejs/react-splide');
 import '@splidejs/react-splide/css';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
@@ -25,6 +25,7 @@ interface Slide {
   titleTwo?: string;
   creditTwo?: string;
   imageMobile?: string;
+  imageFit?: string;
 }
 
 export default function FullPageSlider({ slides, drag }: {
@@ -48,8 +49,8 @@ export default function FullPageSlider({ slides, drag }: {
             key={index}
             className="w-full h-screen relative"
           >
-            {/* Image, gradient and overlay. We only show these for images and video overlays. */}
-            {slide.type === 'video' || slide.type === 'image' &&
+            {/* Image, gradient and overlay. We only show these for images and video overlays, and for places where we have text to add. */}
+            {slide.type === 'video' || slide.type === 'image' || !slide.title || !slide.credit &&
               <>
                 <div className="bg-gradient-to-t from-black absolute w-full h-screen z-20 to-20% opacity-60" />
                 <div className="bg-black/10 w-full h-screen z-10 absolute" />
@@ -70,6 +71,7 @@ export default function FullPageSlider({ slides, drag }: {
                 height={'100vh'}
                 width={"100%"}
                 navbar={false}
+                container={""}
               />
             : slide.type === 'two-column' ?
               <TwoColumnImages
@@ -81,12 +83,22 @@ export default function FullPageSlider({ slides, drag }: {
                 imageMobile={slide.imageMobile ? slide.imageMobile : undefined}
               />
             :
-              <Image
-                src={slide.image}
-                alt={`${slide.title} – ${slide.credit}`}
-                fill={true}
-                className="w-full h-full object-cover"
-              />
+              <>
+                <Image
+                  src={slide.image}
+                  alt={`${slide.title} – ${slide.credit}`}
+                  fill={true}
+                  className={`w-full h-full ${slide.imageFit ? slide.imageFit : 'object-cover'} ${slide.imageMobile ? 'hidden lg:block' : ''}`}
+                />
+                {slide.imageMobile &&
+                  <Image
+                    src={slide.imageMobile}
+                    alt={`${slide.title} – ${slide.credit}`}
+                    fill={true}
+                    className="w-full h-full object-contain block lg:hidden"
+                  />
+                }
+              </>
             }
             {/* Caption */}
             {slide.titleTwo ?

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { MediumText, StandardText } from "../Typography";
+import { MediumText, StandardText } from "@/components/Typography";
 
 export default function TextAndImage({ orientation, color, title, content, linkText, linkHref, image, imageCaption, imageCredit }: {
   orientation: string,
@@ -14,7 +14,11 @@ export default function TextAndImage({ orientation, color, title, content, linkT
   imageCaption?: string,
   imageCredit?: string,
 }) {
-  const formattedLinkText = linkText.replace(/click here/gi, '<u class="decoration-1 underline-offset-8 group-hover:no-underline">$&</u>');
+  let formattedLinkText;
+  formattedLinkText = linkText.replace(/click here/gi, '<u class="decoration-1 underline-offset-8 group-hover:no-underline">$&</u>');
+  formattedLinkText = formattedLinkText.replace(/->/gi, `<i class="absolute top-3 ml-2"><svg class="fill-black" fill="none" height="21" viewBox="0 0 24 21" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13.2045 20.9999-1.75-1.7273 7.2046-7.2046h-18.6591v-2.49995h18.6591l-7.2046-7.18182 1.75-1.75 10.1819 10.18177z" /></svg></i>`);
+  
+  const shouldUnderline = formattedLinkText.includes('svg');
 
   return (
     <article
@@ -44,9 +48,10 @@ export default function TextAndImage({ orientation, color, title, content, linkT
             <Link href={linkHref}>
               <MediumText
                 color="text-black"
+                underline={shouldUnderline}
               >
                 <span
-                  className="group"
+                  className="group relative"
                   dangerouslySetInnerHTML={{ __html: formattedLinkText }}
                 />
               </MediumText>

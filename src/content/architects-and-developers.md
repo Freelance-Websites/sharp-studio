@@ -75,4 +75,26 @@ workflowSlider:
     creditTwo: ATV
     type: two-column
     theme: dark
+portfolioEnabled: true
+portfolioText: We have been creating projects for over 10 years and fulfilling all of our clients’ highest expectations.
+portfolioLinkText: Check out our Portfolio ->
+documentationEnabled: true
+documentationSlider:
+  - image: /images/architects-and-developers/documentation-slider-1.mp4
+    type: video
+  - image: /images/architects-and-developers/documentation-slider-2.jpg
+    imageMobile: /images/architects-and-developers/documentation-slider-2-mobile.jpg
+    imageFit: contain
+    type: image
+  - image: /images/architects-and-developers/documentation-slider-3.jpg
+    imageMobile: /images/architects-and-developers/documentation-slider-3-mobile.jpg
+    imageFit: contain
+    type: image
+documentationText: At SSV we have created a team that specializes in technical documentation of architectural projects, both for permitting, quotes for construction, and building project execution. Our aim is to help companies running a very tight schedule, Architects with their firms stretched too thin with limited resources, or developers who cannot find permitting to build companies to fulfill their expectations.
+documentationLinkText: Find some examples here ->
+documentationImage: /images/architects-and-developers/documentation.jpg
+faqsEnabled: true
+faqsText: Do you have any questions about SSV? We have prepared this FAQ section to clear all of your doubts.
+faqsLinkText: Check out our FAQs ->
+mapEnabled: true
 ---
