@@ -94,7 +94,7 @@ documentationText: At SSV we have created a team that specializes in technical d
 documentationLinkText: Find some examples here ->
 documentationImage: /images/architects-and-developers/documentation.jpg
 faqsEnabled: true
-faqsText: Do you have any questions about SSV? We have prepared this FAQ section to clear all of your doubts.
-faqsLinkText: Check out our FAQs ->
 mapEnabled: true
+officesEnabled: true
+contactEnabled: true
 ---

@@ -9,11 +9,14 @@ import FullBleedImage from "@/components/sections/FullBleedImage";
 import TextAndImage from "@/components/sections/TextAndImage";
 import TextOnly from "@/components/sections/TextOnly";
 import Map from "@/components/Map";
+import Contact from "@/components/Contact";
 
 import { attributes } from '@/content/architects-and-developers.md';
+import { attributes as globals } from '@/content/globals.md';
 
 export default function Home() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider, workflowEnabled, workflowText, workflowLinkText, workflowImage, workflowImageCaption, workflowImageCredit, workflowSlider, portfolioEnabled, portfolioText, portfolioLinkText, documentationEnabled, documentationSlider, documentationText, documentationLinkText, documentationImage, faqsEnabled, faqsText, faqsLinkText, mapEnabled } = attributes;
+  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider, workflowEnabled, workflowText, workflowLinkText, workflowImage, workflowImageCaption, workflowImageCredit, workflowSlider, portfolioEnabled, portfolioText, portfolioLinkText, documentationEnabled, documentationSlider, documentationText, documentationLinkText, documentationImage, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes;
+  const { faqsText, faqsLinkText, officesImage, officesText, contactTitle, contactText } = globals;
 
   return (
     <main>
@@ -28,6 +31,16 @@ export default function Home() {
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
         render={() => (
           <ReactFullpage.Wrapper>
+            {contactEnabled &&
+              <>
+                <section className="section">
+                  <Contact
+                    title={contactTitle}
+                    content={contactText}
+                  />
+                </section>
+              </>
+            }
             {heroEnabled &&
               <section className="section">
                 <FullBleedImage
@@ -163,6 +176,28 @@ export default function Home() {
             }
             {mapEnabled &&
               <Map />
+            }
+            {officesEnabled &&
+              <>
+                <section className="section">
+                  <TextAndImage
+                    orientation="left"
+                    color="bg-light-gray"
+                    content={officesText}
+                    image={officesImage}
+                  />
+                </section>
+              </>
+            }
+            {contactEnabled &&
+              <>
+                <section className="section">
+                  <Contact
+                    title={contactTitle}
+                    content={contactText}
+                  />
+                </section>
+              </>
             }
           </ReactFullpage.Wrapper>
         )}
