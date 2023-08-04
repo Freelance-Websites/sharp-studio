@@ -1,5 +1,6 @@
 import { UpperCaseText, MediumText } from "./Typography";
 
+import Footer from '@/components/Footer';
 import Input from '@/components/contact/Input';
 import Textarea from '@/components/contact/Textarea';
 import Cta from '@/components/contact/Cta';
@@ -43,6 +44,9 @@ export default function Contact({
           />
         </div>
       </form>
+      <Footer
+        classes="absolute bottom-6 left-0"
+      />
     </div>
   )
 }

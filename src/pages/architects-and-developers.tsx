@@ -31,16 +31,6 @@ export default function Home() {
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
         render={() => (
           <ReactFullpage.Wrapper>
-            {contactEnabled &&
-              <>
-                <section className="section">
-                  <Contact
-                    title={contactTitle}
-                    content={contactText}
-                  />
-                </section>
-              </>
-            }
             {heroEnabled &&
               <section className="section">
                 <FullBleedImage
@@ -191,7 +181,7 @@ export default function Home() {
             }
             {contactEnabled &&
               <>
-                <section className="section">
+                <section className="section relative">
                   <Contact
                     title={contactTitle}
                     content={contactText}

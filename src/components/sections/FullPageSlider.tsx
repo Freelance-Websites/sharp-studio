@@ -50,7 +50,7 @@ export default function FullPageSlider({ slides, drag }: {
             className="w-full h-screen relative"
           >
             {/* Image, gradient and overlay. We only show these for images and video overlays, and for places where we have text to add. */}
-            {slide.type === 'video' || slide.type === 'image' || slide.title || slide.credit &&
+            {slide.type === 'video' || slide.type === 'image' &&
               <>
                 <div className="bg-gradient-to-t from-black absolute w-full h-screen z-20 to-20% opacity-60" />
                 <div className="bg-black/10 w-full h-screen z-10 absolute" />

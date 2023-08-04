@@ -5,7 +5,7 @@ export function MainHeading({ children, color, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`text-2xl md:text-3xl lg:text-4xl font-neue-bold ${color} ${classes}`}>{children}</span>
+    <span className={`text-xl md:text-2xl lg:text-3xl xl:text-4xl font-neue-bold ${color} ${classes}`}>{children}</span>
   )
 }
 
@@ -17,7 +17,7 @@ export function BigText({ children, color, underline, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`text-2xl md:text-3xl lg:text-4xl lg:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
+    <span className={`text-xl md:text-2xl lg:text-3xl xl:text-4xl xl:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
   )
 }
 
@@ -28,7 +28,7 @@ export function MediumText({ children, color, underline, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`text-xl md:text-2xl xl:text-3xl xl:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
+    <span className={`text-lg md:text-xl lg:text-2xl xl:text-3xl xl:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
   )
 }
 
@@ -38,7 +38,7 @@ export function StandardText({ children, color, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`${color} ${classes}`}>{children}</span>
+    <span className={`text-md md:text-base ${color} ${classes}`}>{children}</span>
   )
 }
 
@@ -48,7 +48,7 @@ export function SmallText({ children, color, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`text-sm tracking-wider font-neue-medium ${color} ${classes}`}>{children}</span>
+    <span className={`text-sm tracking-wider font-neue-regular ${color} ${classes}`}>{children}</span>
   )
 }
 
