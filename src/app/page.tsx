@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <ReactFullpage
         credits={{ enabled: false }}
-        licenseKey=''
+        licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
         render={() => (
           <ReactFullpage.Wrapper>
             <section className="section">

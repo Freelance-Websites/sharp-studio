@@ -8,7 +8,7 @@ const styles = [{"featureType":"water","elementType":"geometry","stylers":[{"col
 
 const Map = compose(
   withProps({
-    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_KEY}`,
+    googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}`,
     loadingElement: <div style={{ height: `100vh` }} />,
     containerElement: <div style={{ height: `100vh` }} />,
     mapElement: <div style={{ height: `100vh` }} />,

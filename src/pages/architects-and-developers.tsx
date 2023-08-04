@@ -25,7 +25,7 @@ export default function Home() {
       />
       <ReactFullpage
         credits={{ enabled: false }}
-        licenseKey=''
+        licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
         render={() => (
           <ReactFullpage.Wrapper>
             {heroEnabled &&
