@@ -30,11 +30,11 @@ servicesImageCaption: Ixou Brusco
 servicesImageCredit: Klotz, Minond, Hauser
 servicesSlider:
   - image: /images/architects-and-developers/services-slider-1.mp4
-    title: Palermo Green
+    title: Sens Palermo Green
     credit: ATV
     type: video
   - image: /images/architects-and-developers/services-slider-2.jpg
-    title: Palermo Green
+    title: Sens Palermo Green
     credit: ATV
     type: panoram
 immersiveServicesEnabled: true

@@ -10,13 +10,12 @@ const Map = compose(
   withProps({
     googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}`,
     loadingElement: <div style={{ height: `100vh` }} />,
-    containerElement: <div style={{ height: `100vh` }} />,
+    containerElement: <section className="section" />,
     mapElement: <div style={{ height: `100vh` }} />,
   }),
   withScriptjs,
   withGoogleMap
 )(() =>
-  <section className="section">
     <GoogleMap
       defaultZoom={17}
       defaultCenter={{ lat: 25.9694088, lng: -80.1455022 }}
@@ -30,7 +29,6 @@ const Map = compose(
         <div className="bg-white p-2 rounded-md"><SmallText color="text-black">20900 NE 30th Ave, Aventura, FL 33180, USA</SmallText></div>
       </MarkerWithLabel>
     </GoogleMap>
-  </section>
 )
 
 export default Map;
