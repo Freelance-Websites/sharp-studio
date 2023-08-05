@@ -39,8 +39,8 @@
   font-style: normal;
 }
 
-/* Splide carousel arrows */
-.splide__arrows.splide__arrows--ltr .splide__arrow {
+/* Hide Splide carousel arrows */
+/* .splide__arrows.splide__arrows--ltr .splide__arrow {
   background: transparent !important;
   @apply h-screen top-0 rounded-none transform-none z-30 w-1/6;
 }
@@ -55,7 +55,7 @@
 
 .splide__arrow svg {
   @apply hidden;
-}
+} */
 
 /* Splide pagination */
 .splide__pagination {
