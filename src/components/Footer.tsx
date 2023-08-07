@@ -1,4 +1,4 @@
-import { SmallText } from "./Typography"
+import { SmallText } from "@/components/Typography";
 
 export default function Footer({
   classes,
@@ -11,7 +11,7 @@ export default function Footer({
     >
       <SmallText color="text-black">&copy; {new Date().getFullYear()} Sharp Studio Visuals.</SmallText>
       <SmallText color="text-black">
-        Made by
+        Made by{" "}
         <a
           href="https://www.juanmartingarcia.com"
           target="_blank"
