@@ -12,7 +12,7 @@ import VirtualStaging from "@/components/sections/VirtualStaging";
 import Map from "@/components/Map";
 import Contact from "@/components/Contact";
 
-import { attributes } from '@/content/brokers-and-realtors.md';
+import { attributes } from '@/content/brokers-and-realtors/index.md';
 import { attributes as globals } from '@/content/globals.md';
 
 export default function Home() {

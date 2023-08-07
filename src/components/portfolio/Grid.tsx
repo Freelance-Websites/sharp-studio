@@ -26,7 +26,7 @@ export default function PortfolioGrid({
         return(
           <li
             key={index}
-            className="relative aspect-square group"
+            className="relative aspect-tv group"
           >
             <Link
               href={itemUrl}

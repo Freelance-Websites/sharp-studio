@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        'tv': '4 / 3'
+      },
       colors: {
         'black': '#101010',
         'light-gray': '#EAE4E9',
