@@ -8,7 +8,7 @@ import FullPageSlider from "@/components/sections/FullPageSlider";
 import LandingPageSelector from "@/components/LandingPageSelector";
 import { MainHeading } from "@/components/Typography";
 
-import { attributes } from '@/content/homepage.md';
+import { attributes } from '@/content/index.md';
 
 export default function Home() {
   const { slogan, slider, architectsAndDevelopersHover, brokersAndRealtorsHover } = attributes;

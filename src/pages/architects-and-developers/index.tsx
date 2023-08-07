@@ -11,7 +11,7 @@ import TextOnly from "@/components/sections/TextOnly";
 import Map from "@/components/Map";
 import Contact from "@/components/Contact";
 
-import { attributes } from '@/content/architects-and-developers.md';
+import { attributes } from '@/content/architects-and-developers/index.md';
 import { attributes as globals } from '@/content/globals.md';
 
 export default function Home() {
