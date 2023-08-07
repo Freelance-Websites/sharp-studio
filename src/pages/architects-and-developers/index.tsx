@@ -165,7 +165,9 @@ export default function Home() {
               </section>
             }
             {mapEnabled &&
-              <Map />
+              <section className="section">
+                <Map />
+              </section>
             }
             {officesEnabled &&
               <>
