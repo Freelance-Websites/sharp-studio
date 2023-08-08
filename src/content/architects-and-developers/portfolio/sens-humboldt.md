@@ -3,4 +3,11 @@ thumbnail: /images/architects-and-developers/portfolio/sens-humboldt/thumbnail.j
 title: Sens Humboldt
 credit: ATV
 order: 16
+slides:
+  - image: /images/architects-and-developers/portfolio/sens-humboldt/slide-1.jpg
+    proportion: vertical
+  - image: /images/architects-and-developers/portfolio/sens-humboldt/slide-2.jpg
+    proportion: vertical
+  - image: /images/architects-and-developers/portfolio/sens-humboldt/slide-3.jpg
+    proportion: video
 ---

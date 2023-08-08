@@ -4,8 +4,13 @@ import Image from 'next/image';
 
 import { StandardText } from '@/components/Typography';
 
+interface Slide {
+  image: string;
+  proportion: string;
+}
+
 interface Project {
-  slides: Array<string>;
+  slides: Array<Slide>;
   title: string;
   credit: string;
 }
@@ -26,16 +31,16 @@ export default function PortfolioSlider({ project }: {
         }}
       >
         <SplideTrack>
-          {project.slides.map((slide: string, index: number) =>
+          {project.slides.map((slide: Slide, index: number) =>
             <SplideSlide
               key={index}
-              className="w-full aspect-tv lg:aspect-video relative"
+              className={`w-full h-full max-h-[70vh] aspect-${slide.proportion} relative`}
             >
               <Image
-                src={slide}
+                src={slide.image}
                 alt={`${project.title} – ${project.credit}`}
                 fill={true}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${slide.proportion === 'vertical' ? 'object-contain' : 'object-cover'}`}
               />
             </SplideSlide>
           )}

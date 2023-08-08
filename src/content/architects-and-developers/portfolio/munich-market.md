@@ -3,4 +3,13 @@ thumbnail: /images/architects-and-developers/portfolio/munich-market/thumbnail.j
 title: Munich Market
 credit: White Kitchen
 order: 10
+slides:
+  - image: /images/architects-and-developers/portfolio/munich-market/slide-1.jpg
+    proportion: video
+  - image: /images/architects-and-developers/portfolio/munich-market/slide-2.jpg
+    proportion: video
+  - image: /images/architects-and-developers/portfolio/munich-market/slide-3.jpg
+    proportion: video
+  - image: /images/architects-and-developers/portfolio/munich-market/slide-4.jpg
+    proportion: video
 ---
