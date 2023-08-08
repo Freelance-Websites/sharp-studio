@@ -1,11 +1,11 @@
-import slugify from 'react-slugify';
-
 import Image from "next/image";
 import Link from "next/link";
 
-import { SmallText, StandardText } from "@/components/Typography";
+import { StandardText } from "@/components/Typography";
 
 interface Slide {
+  order: number
+  id: string;
   thumbnail: string;
   title: string;
   credit: string;
@@ -20,8 +20,8 @@ export default function PortfolioGrid({
 }) {
   return (
     <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 py-4">
-      {slider.map((slide, index) => {
-        const itemUrl = `/${type}/portfolio/${slugify(`${slide.title}-${slide.credit}`)}`;
+      {slider.sort((a, b) => a.order > b.order ? 1 : -1).map((slide, index) => {
+        const itemUrl = `/${type}/portfolio/${slide.id}`;
 
         return(
           <li

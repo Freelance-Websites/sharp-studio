@@ -21,6 +21,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "frontmatter-markdown-loader": "^3.7.0",
+    "gray-matter": "^4.0.3",
     "next": "13.4.12",
     "postcss": "8.4.27",
     "react": "18.2.0",
@@ -28,7 +29,8 @@
     "react-compare-image": "^3.4.0",
     "react-dom": "18.2.0",
     "react-photo-sphere-viewer": "^3.3.5-psv5.1.4",
-    "react-slugify": "^3.0.2",
+    "remark": "^14.0.3",
+    "remark-html": "^15.0.2",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   }
