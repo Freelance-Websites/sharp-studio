@@ -17,8 +17,8 @@ services:
     linkHref: 3d-stills
   - image: /images/brokers-and-realtors/services/service-2.jpg
     title: Interactive Experiences
-    imageTitle: Ixou Brusco
-    imageCredit: Klotz, Minond, Hauser
+    imageTitle: Liv Guatemala
+    imageCredit: ATV
     description: The 3D experiences that we offer at Sharp Studio Visuals manage to go beyond the screen and bring buildings, houses, or the departments of your commercial portfolio to reality. We use the latest technology at the service of total immersion in space.
     bullets:
       - CGI Animation
