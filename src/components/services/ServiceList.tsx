@@ -24,7 +24,12 @@ export default function ServiceList({ type, services }: {
         let formattedLinkText;
         formattedLinkText = service.linkText?.replace(/click here/gi, '<u class="decoration-1 underline-offset-4 md:underline-offset-8 group-hover:no-underline">$&</u>');
 
-        const fullLink = `/${type}/services/details#${service.linkHref}`;
+        let fullLink;
+        if(service.linkHref.includes('architecture-and-developer-services')) {
+          fullLink = `/${type}/services/${service.linkHref}`;
+        } else {
+          fullLink = `/${type}/services/showcase#${service.linkHref}`;
+        }
 
         return (
           <li

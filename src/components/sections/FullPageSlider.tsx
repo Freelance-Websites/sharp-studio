@@ -13,15 +13,20 @@ const ReactPhotoSphereViewer = dynamic(
   }
 );
 
+import BoxedImage from '@/components/sections/BoxedImage';
 import TwoColumnImages from '@/components/sections/TwoColumnImages';
 import VirtualStaging from '@/components/sections/VirtualStaging';
+import TextOnly from '@/components/sections/TextOnly';
+
 import { StandardText } from '@/components/Typography';
 
 interface Slide {
   type: string;
-  image: string;
+  image?: string;
+  color?: string;
   imageTwo?: string;
   title: string;
+  description?: string;
   credit: string;
   theme?: string;
   titleTwo?: string;
@@ -70,7 +75,7 @@ export default function FullPageSlider({ slides, drag }: {
               >
                 <source src={slide.image} type="video/mp4" />
               </video>
-            : slide.type === 'panoram' ?
+            : slide.type === 'panoram' && slide.image ?
               <ReactPhotoSphereViewer
                 src={slide.image}
                 height={'100vh'}
@@ -78,7 +83,7 @@ export default function FullPageSlider({ slides, drag }: {
                 navbar={false}
                 container={""}
               />
-            : slide.type === 'two-column' ?
+            : slide.type === 'two-column' && slide.image ?
               <TwoColumnImages
                 imageUrl={slide.image}
                 title={slide.title}
@@ -87,7 +92,14 @@ export default function FullPageSlider({ slides, drag }: {
                 creditTwo={slide.creditTwo ? slide.creditTwo : ''}
                 imageMobile={slide.imageMobile ? slide.imageMobile : undefined}
               />
-            : slide.type === 'slide' && slide.imageTwo ?
+            : slide.type === 'one-column' && slide.image ?
+              <BoxedImage
+                color={slide.color ? slide.color : 'bg-off-white'}
+                imageUrl={slide.image}
+                title={slide.title}
+                credit={slide.credit}
+              />
+            : slide.type === 'slide' && slide.image && slide.imageTwo ?
               <VirtualStaging
                 leftImage={slide.image}
                 rightImage={slide.imageTwo}
@@ -98,7 +110,7 @@ export default function FullPageSlider({ slides, drag }: {
                 imageTwoCaption={slide.imageTwoCaption ? slide.imageTwoCaption : undefined}
                 theme={slide.theme ? slide.theme : undefined}
               />
-            :
+            : slide.image || slide.type === 'map' && slide.image ?
               <>
                 <Image
                   src={slide.image}
@@ -115,6 +127,13 @@ export default function FullPageSlider({ slides, drag }: {
                   />
                 }
               </>
+            :
+              <TextOnly
+                title={slide.title ? slide.title : undefined}
+                content={slide.description ? slide.description : slide.title}
+                color={slide.theme && slide.theme === 'dark' ? 'text-white' : 'text-black'}
+                classes="px-12 md:px-0"
+              />
             }
             {/* Captions */}
             {slide.imageOneCaption &&
@@ -158,7 +177,7 @@ export default function FullPageSlider({ slides, drag }: {
                   </ul>
                 </div>
               </>
-              :
+              : slide.type !== 'text' ?
               <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
                 <h2 className="drop-shadow-md">
                   <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
@@ -169,6 +188,7 @@ export default function FullPageSlider({ slides, drag }: {
                   </StandardText>
                 </h2>
               </div>
+              : ''
             }
           </SplideSlide>
         )}

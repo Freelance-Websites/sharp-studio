@@ -2,12 +2,13 @@ import Link from "next/link";
 
 import { MainHeading, BigText } from "../Typography";
 
-export default function TextOnly({ color, title, content, linkText, linkHref }: {
+export default function TextOnly({ color, title, content, linkText, linkHref, classes }: {
   color: string,
   title?: string,
   content: string,
   linkText?: string,
   linkHref?: string,
+  classes?: string,
 }) {
   let formattedLinkText;
   formattedLinkText = linkText?.replace(/click here/gi, '<u class="decoration-1 underline-offset-4 md:underline-offset-8 group-hover:no-underline">$&</u>');
@@ -17,7 +18,7 @@ export default function TextOnly({ color, title, content, linkText, linkHref }: 
 
   return (
     <article
-      className={`h-screen flex items-center ${color}`}
+      className={`h-screen flex items-center ${classes} ${color}`}
     >
       <div className="container mx-auto p-4 grid gap-4 lg:max-w-5xl">
         {title &&
