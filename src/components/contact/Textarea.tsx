@@ -18,7 +18,7 @@ export default function Textarea({
         id={id}
         placeholder={placeholder}
         required={required}
-        className="text-xl md:text-2xl xl:text-3xl xl:leading-normal placeholder:text-black/20 pb-3 border-b border-b-black/10 focus:outline-none text-black w-full resize-none md:h-16"
+        className="text-xl md:text-2xl xl:text-3xl xl:leading-normal placeholder:text-black/20 pb-3 border-b border-b-black/10 focus:outline-none text-black w-full resize-none md:h-16 bg-off-white"
       />
     </div>
   )
