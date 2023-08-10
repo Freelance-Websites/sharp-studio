@@ -30,7 +30,7 @@ export default function Stills() {
         render={() => (
           <ReactFullpage.Wrapper>
             {heroEnabled &&
-              <section className="section">
+              <section className="section" id="3d-stills">
                 <FullBleedImage
                   image={heroImage}
                   title={heroTitle}
@@ -57,7 +57,7 @@ export default function Stills() {
             }
             {immersiveExperiencesEnabled &&
               <>
-                <section className="section">
+                <section className="section" id="immersive-experiences">
                   <TextOnly
                     color="bg-light-green"
                     title={immersiveExperiencesTitle}
