@@ -5,7 +5,7 @@ steps:
     imageTitle: Rue 2
     imageCredit: IBV
     title: Architecture Modeling and Camera Composition
-    description: The first approach to analyze and define each space is modeling. The most importantthing in this stage is that the client defines the relevant viewpoints, and approves the architecture according to the information provided at the beginning of the process.
+    description: The first approach to analyze and define each space is modeling. The most important thing in this stage is that the client defines the relevant viewpoints, and approves the architecture according to the information provided at the beginning of the process.
     cta: Interested on working with us on something like this? Contact us.
   - image: /images/architects-and-developers/workflow/step-2.jpg
     imageTitle: Rue 2

@@ -69,7 +69,7 @@ export default function Home() {
                     title={servicesTitle}
                     content={servicesText}
                     linkText={servicesLinkText}
-                    linkHref={'/architects-and-developers/services'}
+                    linkHref={'/brokers-and-realtors/services'}
                     image={servicesImage}
                     imageCaption={servicesImageCaption}
                     imageCredit={servicesImageCredit}
@@ -91,7 +91,7 @@ export default function Home() {
                     color="bg-light-gray"
                     content={immersiveServicesText}
                     linkText={immersiveServicesLinkText}
-                    linkHref={'/architects-and-developers/services'}
+                    linkHref={'/brokers-and-realtors/services'}
                     image={immersiveServicesImage}
                     imageProportion="horizontal"
                   />
@@ -112,7 +112,7 @@ export default function Home() {
                     color="bg-salmon"
                     content={workflowText}
                     linkText={workflowLinkText}
-                    linkHref={'/architects-and-developers/workflow'}
+                    linkHref={'/brokers-and-realtors/workflow'}
                     image={workflowImage}
                     imageCaption={workflowImageCaption}
                     imageCredit={workflowImageCredit}
@@ -133,7 +133,7 @@ export default function Home() {
                   color="bg-light-blue"
                   content={portfolioText}
                   linkText={portfolioLinkText}
-                  linkHref={'/architects-and-developers/portfolio'}
+                  linkHref={'/brokers-and-realtors/portfolio'}
                 />
               </section>
             }
@@ -153,7 +153,7 @@ export default function Home() {
                   color="bg-off-white"
                   content={faqsText}
                   linkText={faqsLinkText}
-                  linkHref={'/architects-and-developers/faqs'}
+                  linkHref={'/brokers-and-realtors/faqs'}
                 />
               </section>
             }

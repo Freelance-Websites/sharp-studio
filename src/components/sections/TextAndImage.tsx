@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 
 import { MediumText, StandardText } from "@/components/Typography";
@@ -57,8 +56,9 @@ export default function TextAndImage({ orientation, color, title, content, linkT
               <MediumText color="text-black">{content}</MediumText>
             </p>
           }
+          {/* Need to use <a> so that it scrolls to the top */}
           {formattedLinkText && linkHref &&
-            <Link href={linkHref}>
+            <a href={linkHref}>
               <MediumText
                 color="text-black"
                 underline={shouldUnderline}
@@ -68,7 +68,7 @@ export default function TextAndImage({ orientation, color, title, content, linkT
                   dangerouslySetInnerHTML={{ __html: formattedLinkText }}
                 />
               </MediumText>
-            </Link>
+            </a>
           }
         </li>
       </ul>

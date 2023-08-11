@@ -6,7 +6,7 @@ import Step from "@/components/workflow/Step";
 import Contact from '@/components/Contact';
 // import Footer from "@/components/Footer";
 
-import { attributes } from '@/content/architects-and-developers/workflow.md';
+import { attributes } from '@/content/brokers-and-realtors/workflow.md';
 import { attributes as globals } from '@/content/globals.md';
 
 const pluginWrapper = () => {
@@ -32,7 +32,7 @@ export default function Workflow() {
         title={title}
       />
       <Header
-        type="architects-and-developers"
+        type="brokers-and-realtors"
       />
       <ReactFullpage
         pluginWrapper={pluginWrapper}
@@ -53,7 +53,7 @@ export default function Workflow() {
                   key={index}
                 >
                   <Step
-                    type="architects-and-developers"
+                    type="brokers-and-realtors"
                     index={index}
                     image={step.image}
                     imageTitle={step.imageTitle}

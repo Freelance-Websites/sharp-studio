@@ -3,6 +3,7 @@ import Image from "next/image";
 import { MediumText, StandardText } from "../Typography";
 
 export default function Step({ 
+  type,
   index,
   image,
   imageTitle,
@@ -13,6 +14,7 @@ export default function Step({
   ctaAction
  }: {
   index: number;
+  type: string;
   image: string;
   imageTitle: string;
   imageCredit: string;
@@ -26,8 +28,12 @@ export default function Step({
   formattedLinkText = formattedLinkText?.replace(/->/gi, `<i class="absolute top-1 md:top-3 md:ml-2 transform scale-75 md:scale-100"><svg class="fill-black" fill="none" height="21" viewBox="0 0 24 21" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13.2045 20.9999-1.75-1.7273 7.2046-7.2046h-18.6591v-2.49995h18.6591l-7.2046-7.18182 1.75-1.75 10.1819 10.18177z" /></svg></i>`);
 
   return (
-    <ul className="w-full grid lg:grid-cols-4 lg:grid-cols-12 gap-4 lg:gap-12 2xl:gap-16 items-center">
-      <li className="lg:col-span-2 lg:col-span-6 relative aspect-square lg:h-screen w-full">
+    <ul className="w-full grid lg:grid-cols-12 gap-4 lg:gap-12 2xl:gap-16 items-center">
+      <li className={`
+        ${type === 'architects-and-developers' ? 'aspect-square col-span-full lg:col-span-6' : 'aspect-video col-span-full lg:col-span-8'}
+        relative lg:h-screen w-full
+      `}
+      >
         <Image
           src={image}
           alt={`${imageTitle} – ${imageCredit}`}
@@ -36,7 +42,12 @@ export default function Step({
         />
         <p className="absolute left-4 bottom-4"><StandardText color="text-off-white"><strong>{imageTitle}</strong> &mdash; {imageCredit}</StandardText></p>
       </li>
-      <li className="lg:col-span-2 lg:col-span-5 grid gap-2 lg:gap-4 px-4 lg:px-0">
+      <li
+        className={`
+          ${type === 'architects-and-developers' ? 'col-span-full lg:col-span-5' : 'col-span-full lg:col-span-4 lg:pr-8'}
+          grid gap-2 lg:gap-4 px-4 lg:px-0
+        `}
+      >
         {index === 0 &&
           <h2><MediumText color="text-black"><strong>Workflow</strong></MediumText></h2>
         }

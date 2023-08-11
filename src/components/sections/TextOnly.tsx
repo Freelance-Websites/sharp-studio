@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { MainHeading, BigText } from "../Typography";
 
 export default function TextOnly({ color, title, content, linkText, linkHref, classes }: {
@@ -31,8 +29,9 @@ export default function TextOnly({ color, title, content, linkText, linkHref, cl
             <BigText color="text-black">{content}</BigText>
           </p>
         }
+        {/* Need to use <a> so that it scrolls to the top */}
         {linkText && linkHref &&
-          <Link
+          <a
             href={linkHref}
           >
             <BigText
@@ -44,7 +43,7 @@ export default function TextOnly({ color, title, content, linkText, linkHref, cl
                 dangerouslySetInnerHTML={{ __html: formattedLinkText || linkText }}
               />
             </BigText>
-          </Link>
+          </a>
         }
       </div>
     </article>
