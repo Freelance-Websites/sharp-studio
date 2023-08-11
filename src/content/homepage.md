@@ -1,5 +1,5 @@
 ---
-slogan: "While me make changes to our site please find us on Instagram: @sharpstudiovisuals"
+slogan: "While me make changes to our site please find us on Instagram"
 slider:
   - image: /images/home/slide-1.jpg
     title: Competition for the New Administration Centre in Rawson
