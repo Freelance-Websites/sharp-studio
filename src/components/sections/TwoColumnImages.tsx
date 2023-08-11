@@ -18,7 +18,7 @@ const TwoColumnImages = ({ imageUrl, title, credit, imageMobile }: {
     const fetchPixelColor = async () => {
       try {
         const color = await getPixelColor(imageUrl, 0, 0);
-        setBackgroundColor(color);
+        setBackgroundColor(`${color}`);
       } catch (error) {
         setBackgroundColor('#FFFFFF');
       }
