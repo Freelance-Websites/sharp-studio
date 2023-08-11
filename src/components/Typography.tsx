@@ -28,7 +28,7 @@ export function MediumText({ children, color, underline, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`text-lg md:text-xl lg:text-2xl xl:text-3xl xl:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
+    <span className={`text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
   )
 }
 
