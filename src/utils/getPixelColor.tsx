@@ -12,7 +12,7 @@ export const getPixelColor = async (imageUrl: string, x: number, y: number) => {
       context?.drawImage(img, -x, -y);
 
       const pixelData = context?.getImageData(0, 0, 1, 1).data;
-      const color = `#${rgbToHex(pixelData?.[0], pixelData?.[1], pixelData?.[2])}`;
+      const color = `#${rgbToHex(pixelData?.[0] || 249, pixelData?.[1] || 249, pixelData?.[2] || 249)}`;
       
       resolve(color);
     };

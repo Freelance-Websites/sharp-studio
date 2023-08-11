@@ -8,22 +8,31 @@ import { getAllCollections, getCollectionById, getCollectionIds } from '@/lib/co
 
 import { attributes } from '@/content/brokers-and-realtors/portfolio.md';
 
-interface Slide {
-  order: number;
+interface Projects {
   id: string;
   thumbnail: string;
   title: string;
   credit: string;
+  order: number;
+  slides: Array<Object>
 }
 
 interface Project {
-  slides: Array<string>;
+  id: string;
+  thumbnail: string;
   title: string;
   credit: string;
+  order: 1;
+  slides: Array<Slide>;
+}
+
+interface Slide {
+  image: string;
+  proportion: string;
 }
 
 export default function PortfolioItem({ allProjectsData, projectData }: {
-  allProjectsData: Array<Slide>;
+  allProjectsData: Array<Projects>;
   projectData: Project;
 }) {
   const { title } = attributes;
