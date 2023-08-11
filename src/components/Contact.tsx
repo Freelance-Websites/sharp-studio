@@ -8,9 +8,11 @@ import Cta from '@/components/contact/Cta';
 export default function Contact({
   title,
   content,
+  showFooter,
 }: {
   title: string,
-  content: string
+  content: string,
+  showFooter?: boolean
 }) {
   return (
     <div className="container mx-auto px-4 grid gap-2">
@@ -44,9 +46,12 @@ export default function Contact({
           />
         </div>
       </form>
-      <Footer
-        classes="absolute bottom-6 left-0"
-      />
+      {showFooter !== undefined && showFooter === false ? null
+        :
+        <Footer
+          classes="absolute bottom-6 left-0"
+        />
+      }
     </div>
   )
 }
