@@ -22,7 +22,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="flex items-center justify-center"
         >
-          <h1 className="absolute md:left-16 z-10 drop-shadow-lg max-w-[200px] md:max-w-xl lg:max-w-3xl mx-auto md:mx-0 text-center md:text-left">
+          <h1 className="absolute md:left-16 z-10 drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] max-w-[200px] md:max-w-xl lg:max-w-3xl mx-auto md:mx-0 text-center md:text-left">
             <MainHeading color="text-off-white">{slogan}</MainHeading>
           </h1>
         </a>
