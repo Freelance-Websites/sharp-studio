@@ -26,7 +26,7 @@ export default function FullBleedImage({ image, title, credit, isMap }: {
       />
       {/* Caption */}
       <div className="container mx-auto p-4 absolute bottom-0 md:bottom-4 z-30">
-        <h2 className={isMap && isMap === true ? '' : 'drop-shadow-md'}>
+        <h2 className={isMap && isMap === true ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'}>
           <StandardText color={isMap && isMap === true ? 'text-black' : 'text-off-white'}>
             <span className="font-neue-bold">{title}</span>
           </StandardText>

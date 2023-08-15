@@ -25,7 +25,7 @@ export default function Home() {
         render={() => (
           <ReactFullpage.Wrapper>
             <section className="section">
-              <h1 className="absolute md:left-16 z-10 w-full h-full flex items-center drop-shadow-lg">
+              <h1 className="absolute md:left-16 z-10 w-full h-full flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
                 <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left">{slogan}</MainHeading>
               </h1>
               <FullPageSlider

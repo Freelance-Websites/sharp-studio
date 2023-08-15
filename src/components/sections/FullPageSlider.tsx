@@ -137,14 +137,14 @@ export default function FullPageSlider({ slides, drag }: {
             }
             {/* Captions */}
             {slide.imageOneCaption &&
-              <p className="drop-shadow-md absolute top-20 left-4 z-10">
+              <p className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] absolute top-20 left-4 z-10">
                 <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                   <span className="font-neue-bold">{slide.imageOneCaption}</span>
                 </StandardText>
               </p>
             }
             {slide.imageTwoCaption &&
-              <p className="drop-shadow-md absolute top-20 right-4 z-10">
+              <p className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)] absolute top-20 right-4 z-10">
                 <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                   <span className="font-neue-bold">{slide.imageTwoCaption}</span>
                 </StandardText>
@@ -155,7 +155,7 @@ export default function FullPageSlider({ slides, drag }: {
                 <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
                   <ul className="grid md:grid-cols-2 md:gap-4">
                     <li>
-                      <h2 className="drop-shadow-md">
+                      <h2 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
                         <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                           <span className="font-neue-bold">{slide.title}</span>
                         </StandardText>
@@ -165,7 +165,7 @@ export default function FullPageSlider({ slides, drag }: {
                       </h2>
                     </li>
                     <li>
-                      <h2 className="drop-shadow-md">
+                      <h2 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
                         <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                           <span className="font-neue-bold">{slide.titleTwo}</span>
                         </StandardText>
@@ -179,7 +179,7 @@ export default function FullPageSlider({ slides, drag }: {
               </>
               : slide.type !== 'text' ?
               <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
-                <h2 className="drop-shadow-md">
+                <h2 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
                   <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                     <span className="font-neue-bold">{slide.title}</span>
                   </StandardText>

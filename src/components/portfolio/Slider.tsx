@@ -47,7 +47,7 @@ export default function PortfolioSlider({ project }: {
         </SplideTrack>
       </Splide>
       <div className="container mx-auto py-4 md:pb-8">
-        <h2 className="drop-shadow-md">
+        <h2 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
           <StandardText color="text-black">
             <span className="font-neue-bold">{project.title}</span>
           </StandardText>
