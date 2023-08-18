@@ -7,7 +7,7 @@ heroCredit: ATV
 stillsEnabled: true
 stillsTitle: 3D Stills
 stillsText: With our still images you will be able to show any property with greater reality than even reality itself. We offer services tailored for your business.
-stillsLinkText: Click here to contact us if you are interested in our services.
+stillsLinkText: <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Contact us</a> and get a quote on hyper realistic visual solutions.
 stillsLinkHref: /contact
 stillsSlider:
   - image: /images/brokers-and-realtors/services/hi-q.jpg
@@ -30,6 +30,7 @@ stillsSlider:
 interactiveExperiencesEnabled: true
 interactiveExperiencesTitle: Interactive Experiences
 interactiveExperiencesText: The 3D experiences that we offer at Sharp Studio Visuals manage to go beyond the screen and bring buildings, houses, or the departments of your commercial portfolio to reality. We use the latest technology at the service of total immersion in space.
+interactiveExperiencesLinkText: Want to meet us? Come and visit us in our offices in Aventura, FL! or just <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">message us</a> to know about pricing.
 interactiveExperiencesSlider:
   - image: /images/brokers-and-realtors/services/interactive-experiences-slider-1.mp4
     title: Sens Palermo Green

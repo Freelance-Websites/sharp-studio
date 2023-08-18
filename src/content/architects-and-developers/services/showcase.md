@@ -24,7 +24,7 @@ stillsSlider:
 immersiveExperiencesEnabled: true
 immersiveExperiencesTitle: Immersive Experiences
 immersiveExperiencesText: We offer deeply immersive experiences at Sharp Studio Visuals. This means that, in addition to perceiving the space, you can explore it fully. Inquire about our services to fully experience your projects.
-immersiveExperiencesLinkText: Click here to contact us if you are interested in our services.
+immersiveExperiencesLinkText: To know more about our interactive visual solutions, <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">contact us</a>!
 immersiveExperiencesLinkHref: /contact
 immersiveExperiencesSlider:
   - image: /images/architects-and-developers/services/immersive-experiences-slider-1.mp4

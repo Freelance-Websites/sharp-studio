@@ -59,7 +59,10 @@ export default function ServiceList({ type, services }: {
             </div>
             <div className="col-span-full md:col-span-full lg:col-span-6 xl:col-span-5 grid gap-2">
               <h2><MediumText color="text-black" classes="font-neue-bold xl:text-2xl 2xl:text-3xl 2xl:leading-normal">{service.title}</MediumText></h2>
-              <p><MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal">{service.description}</MediumText></p>
+              <p
+                className="text-black text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal xl:text-2xl 2xl:text-3xl 2xl:leading-normal"
+                dangerouslySetInnerHTML={{ __html: service.description }}
+              />
               {service.bullets.length > 0 &&
                 <ol className={`ml-4 md:ml-8 list-disc grid ${service.bullets.length > 4 ? 'md:grid-cols-2' : ''} gap-1`}>
                   {service.bullets.map((bullet, index) =>
@@ -69,14 +72,9 @@ export default function ServiceList({ type, services }: {
                   )}
                 </ol>
               }
-              <Link
-                href={fullLink}
-                className="group"
-              >
-                <MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal">
-                  <span dangerouslySetInnerHTML={{ __html: formattedLinkText }} />
-                </MediumText>
-              </Link>
+              <MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal">
+                <span dangerouslySetInnerHTML={{ __html: formattedLinkText }} />
+              </MediumText>
             </div>
           </li>
         )
