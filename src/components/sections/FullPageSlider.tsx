@@ -110,6 +110,11 @@ export default function FullPageSlider({ slides, drag }: {
                 imageTwoCaption={slide.imageTwoCaption ? slide.imageTwoCaption : undefined}
                 theme={slide.theme ? slide.theme : undefined}
               />
+            : slide.type === 'walking' ?
+              <iframe
+                src={slide.image}
+                className="w-full h-screen"
+              />
             : slide.image || slide.type === 'map' && slide.image ?
               <>
                 <Image

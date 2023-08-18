@@ -64,6 +64,11 @@ interactiveExperiencesSlider:
     percentage: 0.50
     imageOneCaption: Virtual Staging
     type: slide
+  - image: https://virtual-tour-ad.netlify.app/
+    title: Sens Palermo Green
+    credit: ATV
+    theme: light
+    type: walking
 faqsEnabled: true
 mapEnabled: true
 officesEnabled: true

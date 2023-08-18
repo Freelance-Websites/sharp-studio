@@ -12,7 +12,7 @@ stillsSlider:
     imageTwo: /images/architects-and-developers/services/super-hi-q.jpg
     imageOneCaption: Hi Q – 3000px
     imageTwoCaption: Super Hi Q – 6000px
-    title: LIV Thames
+    title: Sens Palermo Green
     credit: ATV
     theme: light
     percentage: 0.50
@@ -45,6 +45,12 @@ immersiveExperiencesSlider:
     theme: light
     type: panoram
     imageOneCaption: 360 Visualization
+  - image: https://virtual-tour-realtors.netlify.app/
+    title: Sens Palermo Green
+    credit: ATV
+    theme: light
+    type: walking
+    imageOneCaption: Walking tour
 faqsEnabled: true
 mapEnabled: true
 officesEnabled: true

@@ -7,7 +7,7 @@ heroCredit: LABA + PIEZA
 studioEnabled: true
 studioTitle: The Studio.
 studioText: Our team at Sharp Studio is composed of sworn perfectionists; Architects, 3D artists, and designers dedicated to the production of visual and technical solutions for architecture and real estate developments.
-studioLinkText: To meet us click here.
+studioLinkText: <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Want to meet us and get a free quote? Or drive to our offices in Aventura, FL, USA.</a>
 studioSlider:
   - image: /images/architects-and-developers/studio-slider-1.jpg
     title: Munich Market
@@ -23,7 +23,7 @@ studioSlider:
     type: image
 servicesEnabled: true
 servicesTitle: Services.
-servicesText: We offer tailor made solutions to all of our clients with the objective of making unbuilt projects into a reality. We do so by creating state of the art high definition images for each project as well as immersive strategies to captivate investors and potential clients alike.
+servicesText: We offer tailor made solutions to all of our clients with the objective of making unbuilt projects into a reality. We do so by creating state of the art <a href="/architects-and-developers/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">high definition images for each project as well as immersive strategies</a> to captivate investors and potential clients alike.
 servicesLinkText: Click here for detailed information on each of our specific services.
 servicesImage: /images/architects-and-developers/services.jpg
 servicesImageCaption: Ixou Brusco
@@ -38,8 +38,7 @@ servicesSlider:
     credit: ATV
     type: panoram
 immersiveServicesEnabled: true
-immersiveServicesText: At Sharp Studio Visuals we have countless options for bringing architecture to life even when it's not yet built. To do so, we rely on our highly trained human resources and state-of-the-art technology. That is why we offer 3D virtual tours, 360 experiences, and even tools to visualize projects in Virtual Reality to take the adventure of architecture to the next level.
-immersiveServicesLinkText: To experience our immersive services click here.
+immersiveServicesText: At Sharp Studio Visuals we have countless options for bringing architecture to life even when it's not yet built. To do so, we rely on our highly trained human resources and state-of-the-art technology. That is why we offer <a href="/architects-and-developers/services/showcase#immersive-services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">3D virtual tours, 360 experiences, and even tools to visualize projects in Virtual Reality</a> to take the adventure of architecture to the next level.
 immersiveServicesImage: /images/architects-and-developers/services-360.jpg
 immersiveServicesSlider:
   - image: /images/architects-and-developers/immersive-services-slider-1.jpg
@@ -53,8 +52,7 @@ immersiveServicesSlider:
     type: two-column
     theme: dark
 workflowEnabled: true
-workflowText: Each project has a dedicated team of architects and designers who are in constant contact with the client and their every need. Our workflow is meticulously supervised by a team of managers with impeccable attention to detail and proactiveness whose function is to carry out the demands of each account in a timely manner.
-workflowLinkText: Click here to learn more about our production process.
+workflowText: Each project has a dedicated team of architects and designers who are in constant contact with the client and their every need. <a href="/architects-and-developers/workflow" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Our workflow is meticulously supervised by a team of managers</a> with impeccable attention to detail and proactiveness whose function is to carry out the demands of each account in a timely manner.
 workflowImage: /images/architects-and-developers/workflow-image.jpg
 workflowImageCaption: Rue 2
 workflowImageCredit: IVB
@@ -77,7 +75,7 @@ workflowSlider:
     theme: dark
 portfolioEnabled: true
 portfolioText: We have been creating projects for over 10 years and fulfilling all of our clients’ highest expectations.
-portfolioLinkText: Check out our Portfolio ->
+portfolioLinkText: Want to see how we do it? <a href="/architects-and-developers/portfolio" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Head to our portfolio</a>.
 documentationEnabled: true
 documentationSlider:
   - image: /images/architects-and-developers/documentation-slider-1.mp4

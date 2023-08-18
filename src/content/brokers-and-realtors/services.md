@@ -7,7 +7,7 @@ services:
     title: 3D Stills
     imageTitle: Virrey Olaguer
     imageCredit: BOOSARQ
-    description: With our <a href="/brokers-and-realtors/3d-stills" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">still images you will be able to show any property with greater reality</a> than even reality itself. We offer services tailored for your business.
+    description: With our <a href="/brokers-and-realtors/services/showcase#3d-stills" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">still images you will be able to show any property with greater reality</a> than even reality itself. We offer services tailored for your business.
     bullets:
       - "Interior rendering: Super Hi Q (6000px) | Hi Q (3000px)"
       - "Exterior rendering: Super Hi Q (6000px) | Hi Q (3000px)"
@@ -19,7 +19,7 @@ services:
     title: Interactive Experiences
     imageTitle: Liv Guatemala
     imageCredit: ATV
-    description: <a href="/brokers-and-realtors/interactive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">The 3D experiences that we offer at Sharp Studio Visuals manage to go beyond the screen and bring buildings, houses, or the departments of your commercial portfolio to reality</a>. We use the latest technology at the service of total immersion in space.
+    description: <a href="/brokers-and-realtors/services/showcase#interactive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">The 3D experiences that we offer at Sharp Studio Visuals manage to go beyond the screen and bring buildings, houses, or the departments of your commercial portfolio to reality</a>. We use the latest technology at the service of total immersion in space.
     bullets:
       - CGI Animation
       - 3D Modelling
