@@ -3,15 +3,13 @@ backend:
   branch: main
 media_folder: "images/uploads"
 i18n:
-  structure: single_file
+  structure: multiple_files
   locales: [en, es]
   default_locale: en
 collections:
   - name: "pages"
     label: "Páginas Globales"
-    i18n:
-      structure: single_file
-      locales: [en, es]
+    i18n: true
     files:
       # Index Structure
       - label: "Inicio"

@@ -12,7 +12,6 @@ import { attributes } from '@/content/index.md';
 
 export default function Home() {
   const { slogan, slider, architectsAndDevelopersHover, brokersAndRealtorsHover } = attributes.en;
-  console.log(slogan)
 
   return (
     <main>
