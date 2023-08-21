@@ -8,9 +8,13 @@ import { UpperCaseText } from '@/components/Typography';
 export default function Header({
   type,
   bgColor,
+  activeLanguage,
+  changeLanguage
 }: {
-  type?: String
-  bgColor?: String
+  type?: String;
+  bgColor?: String;
+  activeLanguage: String;
+  changeLanguage: (lang: string) => void;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,15 +41,29 @@ export default function Header({
                 </li>
                 <li>
                   <Link href={`/${type}/services`} className="hover:opacity-80 duration-100 transition ease-in-out">
-                    <UpperCaseText color="text-black">Services</UpperCaseText>
+                    <UpperCaseText color="text-black">
+                      {activeLanguage === 'en' ? 'Services' : 'Servicios'}
+                    </UpperCaseText>
                   </Link>
                 </li>
               </>
             }
             <li>
               <Link href={`/${type}/contact`} className="hover:opacity-80 duration-100 transition ease-in-out bg-black py-2 px-3 rounded-full">
-                <UpperCaseText color="text-off-white">Contact Us</UpperCaseText>
+                <UpperCaseText color="text-off-white">
+                  {activeLanguage === 'en' ? 'Contact Us' : 'Contactanos'}
+                </UpperCaseText>
               </Link>
+            </li>
+            <li>
+              <button
+                className="hover:opacity-80 duration-100 transition ease-in-out"
+                onClick={() => changeLanguage(activeLanguage === 'en' ? 'es' : 'en')}
+              >
+                <UpperCaseText color="text-black">
+                  {activeLanguage === 'en' ? 'ES' : 'EN'}
+                </UpperCaseText>
+              </button>
             </li>
           </ul>
           <div className="relative -top-px">

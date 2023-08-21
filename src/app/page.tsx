@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import CustomHead from "@/components/CustomHead";
@@ -11,14 +12,28 @@ import { MainHeading } from "@/components/Typography";
 import { attributes } from '@/content/index.md';
 
 export default function Home() {
-  const { slogan, slider, architectsAndDevelopersHover, brokersAndRealtorsHover } = attributes.en;
+  const { en, es } = attributes;
+  const [language, setLanguage] = useState('en');
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main>
       <CustomHead
         // title={title}
       />
-      <Header />
+      <Header
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
+      />
       <ReactFullpage
         credits={{ enabled: false }}
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
@@ -26,17 +41,19 @@ export default function Home() {
           <ReactFullpage.Wrapper>
             <section className="section">
               <h1 className="absolute md:left-16 z-10 w-full h-full flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
-                <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left">{slogan}</MainHeading>
+                <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left">
+                  {language === 'en' ? en.slogan : es.slogan}
+                </MainHeading>
               </h1>
               <FullPageSlider
-                slides={slider}
+                slides={language === 'en' ? en.slider : es.slider}
                 drag={true}
               />
             </section>
             <section className="section">
               <LandingPageSelector
-                architectsAndDevelopersHover={architectsAndDevelopersHover}
-                brokersAndRealtorsHover={brokersAndRealtorsHover}
+                architectsAndDevelopersHover={en.architectsAndDevelopersHover}
+                brokersAndRealtorsHover={en.brokersAndRealtorsHover}
               />
             </section>
           </ReactFullpage.Wrapper>

@@ -32,7 +32,7 @@ es:
   slogan: Soluciones visuales para Arquitectura & Real Estate
   slider:
     - image: /images/home/slide-1.jpg
-      title: Competencia para el nuevo Centrod Administrativo en Rawson
+      title: Competencia para el nuevo Centro Administrativo en Rawson
       credit: LABA + PIEZA
       type: image
     - image: /images/home/slide-2.jpg
