@@ -29,10 +29,10 @@ en:
   architectsAndDevelopersHover: /images/home/architects-and-developers-hover.jpg
   brokersAndRealtorsHover: /images/home/brokers-and-realtors-hover.jpg
 es:
-  slogan: Visual solutions for Architecture & Real Estate
+  slogan: Soluciones visuales para Arquitectura & Real Estate
   slider:
     - image: /images/home/slide-1.jpg
-      title: Competition for the New Administration Centre in Rawson
+      title: Competencia para el nuevo Centrod Administrativo en Rawson
       credit: LABA + PIEZA
       type: image
     - image: /images/home/slide-2.jpg
