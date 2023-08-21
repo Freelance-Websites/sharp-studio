@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 media_folder: "images/uploads"
-i8n:
+i18n:
   structure: single_file
   locales: [en, es]
   default_locale: en
