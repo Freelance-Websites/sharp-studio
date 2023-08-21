@@ -3,20 +3,22 @@ backend:
   branch: main
 media_folder: "images/uploads"
 i18n:
-  structure: multiple_files
+  structure: single_file
   locales: [en, es]
   default_locale: en
 collections:
   - name: "pages"
     label: "Páginas Globales"
-    i18n: true
+    i18n:
+      structure: single_file
+      locales: [en, es]
     files:
       # Index Structure
       - label: "Inicio"
         name: "index"
         file: "src/content/index.md"
         fields:
-          - {label: "Título", name: "title", widget: "string", hint: "Título para la página. Sólo se muestra en el CMS.", i18n: true}
+          - {label: "Título", name: "slogan", widget: "string", hint: "El título que está por encima del slider", i18n: true, required: false}
   # - name: "projectsAD"
   #   label: "Proyectos A&D"
   #   folder: "content/architects-and-developers/portfolio"
