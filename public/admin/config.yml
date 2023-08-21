@@ -17,11 +17,6 @@ collections:
       - label: "Inicio"
         name: "index"
         file: "src/content/index.md"
+        i18n: true
         fields:
           - {label: "Título", name: "slogan", widget: "string", hint: "El título que está por encima del slider", i18n: true, required: false}
-  # - name: "projectsAD"
-  #   label: "Proyectos A&D"
-  #   folder: "content/architects-and-developers/portfolio"
-  #   create: true
-  #   fields:
-  #     - {label: "Título", name: "title", widget: "string", hint: "Título para el proyecto. Sólo se muestra en el CMS."}
