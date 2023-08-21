@@ -2,16 +2,21 @@ backend:
   name: git-gateway
   branch: main
 media_folder: "images/uploads"
+i8n:
+  structure: single_file
+  locales: [en, es]
+  default_locale: en
 collections:
   - name: "pages"
     label: "Páginas Globales"
+    i18n: true
     files:
       # Index Structure
       - label: "Inicio"
         name: "index"
         file: "src/content/index.md"
         fields:
-          - {label: "Título", name: "title", widget: "string", hint: "Título para la página. Sólo se muestra en el CMS."}
+          - {label: "Título", name: "title", widget: "string", hint: "Título para la página. Sólo se muestra en el CMS.", i18n: true}
   # - name: "projectsAD"
   #   label: "Proyectos A&D"
   #   folder: "content/architects-and-developers/portfolio"
