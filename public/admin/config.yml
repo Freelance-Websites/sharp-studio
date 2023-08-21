@@ -20,3 +20,21 @@ collections:
         i18n: true
         fields:
           - {label: "Título", name: "slogan", widget: "string", hint: "El título que está por encima del slider", i18n: true, required: false}
+          - label: "Slider"
+            name: "slider"
+            widget: "list"
+            summary: "{{fields.title}}"
+            i18n: true
+            fields:
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                required: false
+                hint: "El tipo de contenido a mostrar en el slider"
+                options:
+                  - { label: "Imagen", value: "image" }
+              - {label: Imagen, name: image, widget: image, hint: Imagen para el slider, required: false}
+              - {label: Title, name: title, widget: string, hint: Título de la imagen, required: false}
+              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+          - {label: Imagen hover para A&D, name: architectsAndDevelopersHover, widget: image, required: false, i18n: duplicate}
+          - {label: Imagen hover para B&R, name: brokersAndRealtorsHover, widget: image, required: false, i18n: duplicate}
