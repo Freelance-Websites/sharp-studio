@@ -9,7 +9,9 @@ i18n:
 collections:
   - name: "pages"
     label: "Páginas Globales"
-    i18n: true
+    i18n:
+      structure: single_file
+      locales: [en, es]
     files:
       # Index Structure
       - label: "Inicio"
