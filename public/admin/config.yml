@@ -3,14 +3,8 @@ backend:
   branch: main
 media_folder: "images/uploads"
 collections:
-  - name: "projectsAD"
-    label: "Proyectos A&D"
-    folder: "content/architects-and-developers/portfolio"
-    create: true
-    fields:
-      - {label: "Título", name: "title", widget: "string", hint: "Título para el proyecto. Sólo se muestra en el CMS."}
-- name: "pages"
-    label: "Páginas"
+  - name: "pages"
+    label: "Páginas Globales"
     files:
       # Index Structure
       - label: "Inicio"
@@ -18,3 +12,9 @@ collections:
         file: "src/content/index.md"
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "Título para la página. Sólo se muestra en el CMS."}
+  # - name: "projectsAD"
+  #   label: "Proyectos A&D"
+  #   folder: "content/architects-and-developers/portfolio"
+  #   create: true
+  #   fields:
+  #     - {label: "Título", name: "title", widget: "string", hint: "Título para el proyecto. Sólo se muestra en el CMS."}
