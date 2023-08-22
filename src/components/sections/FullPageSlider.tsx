@@ -40,6 +40,7 @@ export default function FullPageSlider({ slides, drag }: {
         autoplay: true,
         rewind: true,
         drag,
+        arrows: false,
         rewindByDrag: drag,
       }}
     >

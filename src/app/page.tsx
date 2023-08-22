@@ -29,7 +29,7 @@ export default function Home() {
       </a>
       <FullPageSlider
         slides={slider}
-        drag={true}
+        drag={false}
       />
     </main>
   )
