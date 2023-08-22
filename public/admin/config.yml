@@ -36,6 +36,7 @@ collections:
           - label: "Slider"
             name: "slider"
             widget: "list"
+            allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
             fields:
@@ -76,6 +77,34 @@ collections:
         i18n: true
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+      # Services Structure
+      - label: "Servicios"
+        name: "servicesAD"
+        file: "src/content/architects-and-developers/services.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - {label: "Título encabezado", name: "headingTitle", widget: "string", hint: "El título para la sección principal", i18n: true, required: false}
+          - {label: "Texto encabezado", name: "headingText", widget: "text", hint: "El texto para la sección principal", i18n: true, required: false}
+          - label: "Servicios"
+            name: "services"
+            widget: "list"
+            allow_add: true
+            i18n: true
+            fields:
+              - {label: Imagen del servicio, name: image, widget: image, hint: Tamaño recomendado: 800x800px o superior, i18n: duplicate, required: false}
+              - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
+              - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
+              - {label: "Título servicio", name: "title", widget: "string", hint: "El título para el servicio", i18n: true, required: false}
+              - {label: "Texto del servicio", name: "description", widget: "text", hint: "El texto para el servicio", i18n: true, required: false}
+              - label: "Sub servicios"
+                name: "bullets"
+                widget: "list"
+                allow_add: true
+                i18n: true
+                field: {label: Texto, name: text, widget: text, hint: Texto para el sub servicio, i18n: true, required: false}
+              - {label: "Texto del botón", name: "linkText", widget: "string", hint: "El texto para el botón del servicio", i18n: true, required: false}
+              - {label: "Link del botón", name: "linkHref", widget: "string", hint: "El link para el botón del servicio", i18n: true, required: false}
       # Workflow Structure
       - label: "Workflow"
         name: "workflowAD"
@@ -86,6 +115,7 @@ collections:
           - label: "Pasos"
             name: "steps"
             widget: "list"
+            allow_add: true
             i18n: true
             fields:
               - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 1440x1800px o superior, i18n: duplicate, required: false}
@@ -118,6 +148,7 @@ collections:
           - label: "Pasos"
             name: "steps"
             widget: "list"
+            allow_add: true
             i18n: true
             fields:
               - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 1840x1280px o superior, i18n: duplicate, required: false}
@@ -141,6 +172,7 @@ collections:
       - label: "Slider"
         name: "slides"
         widget: "list"
+        allow_add: true
         i18n: true
         fields:
           - label: "Proporción"
@@ -168,6 +200,7 @@ collections:
       - label: "Slider"
         name: "slides"
         widget: "list"
+        allow_add: true
         i18n: true
         fields:
           - label: "Proporción"
