@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import CustomHead from '@/components/CustomHead';
@@ -14,16 +15,31 @@ import { attributes } from '@/content/contact.md';
 import { attributes as globals } from '@/content/globals.md';
 
 export default function Contact() {
-  const { title, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes;
-  const { faqsText, faqsLinkText, officesImage, officesText, contactTitle, contactText } = globals;
+  const { faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes.en;
+  const titleEng = attributes.en.title;
+  const titleEsp = attributes.es.title;
+  const { en, es } = globals;
+
+  const [language, setLanguage] = useState('en');
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main>
       <CustomHead
-        title={title}
+        title={language === 'en' ? titleEng : titleEsp}
       />
       <Header
-        type="brokers-and-realtors"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <ReactFullpage
         credits={{ enabled: false }}
@@ -34,8 +50,9 @@ export default function Contact() {
               <>
                 <section className="section relative">
                   <ContactForm
-                    title={contactTitle}
-                    content={contactText}
+                    title={language === 'en' ? en.contactTitle : es.contactTitle}
+                    content={language === 'en' ? en.contactText : es.contactText}
+                    language={language}
                     showFooter={false}
                   />
                 </section>
@@ -45,9 +62,8 @@ export default function Contact() {
               <section className="section">
                 <TextOnly
                   color="bg-off-white"
-                  content={faqsText}
-                  linkText={faqsLinkText}
-                  linkHref={'/brokers-and-realtors/faqs'}
+                  content={language === 'en' ? en.faqsText : es.faqsText}
+                  linkText={language === 'en' ? en.faqsLinkText : es.faqsLinkText}
                 />
               </section>
             }
@@ -62,8 +78,8 @@ export default function Contact() {
                   <TextAndImage
                     orientation="left"
                     color="bg-light-gray"
-                    content={officesText}
-                    image={officesImage}
+                    content={language === 'en' ? en.officesText : es.officesText}
+                    image={en.officesImage}
                   />
                   <Footer classes="absolute bottom-4" />
                 </section>

@@ -13,6 +13,18 @@ collections:
       structure: single_file
       locales: [en, es]
     files:
+      # Globals Structure
+      - label: "Información global"
+        name: "globals"
+        file: "src/content/globals.md"
+        i18n: true
+        fields:
+          - {label: "Texto sección FAQs", name: "faqsText", widget: "text", hint: "El texto para la sección FAQs", i18n: true, required: false}
+          - {label: "Texto links FAQs", name: "faqsLinkText", widget: "string", hint: "El texto para el link de la sección FAQs", i18n: true, required: false}
+          - {label: "Texto sección Oficinas", name: "officesText", widget: "string", hint: "El texto para la sección Oficinas", i18n: true, required: false}
+          - {label: "Imagen sección Oficinas", name: "officesImage", widget: "image", hint: "La imagen para la sección Oficinas", i18n: duplicate, required: false}
+          - {label: "Título sección Contacto", name: "contactTitle", widget: "string", hint: "El título para la sección Contacto", i18n: true, required: false}
+          - {label: "Texto sección Contacto", name: "contactText", widget: "twxt", hint: "El texto para la sección Contacto", i18n: true, required: false}
       # Index Structure
       - label: "Inicio"
         name: "index"
@@ -38,3 +50,14 @@ collections:
               - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
           - {label: Imagen hover para A&D, name: architectsAndDevelopersHover, widget: image, required: false, i18n: duplicate}
           - {label: Imagen hover para B&R, name: brokersAndRealtorsHover, widget: image, required: false, i18n: duplicate}
+      # Contact Structure
+      - label: "Contacto"
+        name: "contacto"
+        file: "src/content/contact.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - {label: "Habilitar formulario de contacto?", name: "contactEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Habilitar mapa?", name: "mapEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Habilitar sección Oficinas?", name: "officesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}

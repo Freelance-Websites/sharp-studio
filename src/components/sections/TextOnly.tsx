@@ -1,11 +1,10 @@
 import { MainHeading, BigText } from "../Typography";
 
-export default function TextOnly({ color, title, content, linkText, linkHref, classes }: {
+export default function TextOnly({ color, title, content, linkText, classes }: {
   color: string,
   title?: string,
   content: string,
   linkText?: string,
-  linkHref?: string,
   classes?: string,
 }) {
   return (
@@ -23,7 +22,6 @@ export default function TextOnly({ color, title, content, linkText, linkHref, cl
             <BigText color="text-black">{content}</BigText>
           </p>
         }
-        {/* Need to use <a> so that it scrolls to the top */}
         {linkText &&
           <BigText
             color="text-black"

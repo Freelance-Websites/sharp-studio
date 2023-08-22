@@ -9,10 +9,12 @@ export default function Contact({
   title,
   content,
   showFooter,
+  language
 }: {
   title: string,
   content: string,
-  showFooter?: boolean
+  language?: string,
+  showFooter?: boolean,
 }) {
   return (
     <div className="container mx-auto px-4 grid gap-2">
@@ -22,26 +24,26 @@ export default function Contact({
         <Input
           type="text"
           id="name"
-          label="Name"
-          placeholder="Your name goes here"
+          label={`${language === 'en' ? 'Name' : 'Nombre'}`}
+          placeholder={`${language === 'en' ? 'Your name goes here' : 'Tu nombre va aquí'}`}
           required={true}
         />
         <Input
           type="email"
           id="email"
           label="Email"
-          placeholder="Your email goes here"
+          placeholder={`${language === 'en' ? 'Your email goes here' : 'Tu email va aquí'}`}
           required={true}
         />
         <Textarea
           id="message"
-          label="Message"
-          placeholder="Your message goes here"
+          label={`${language === 'en' ? 'Message' : 'Mensaje'}`}
+          placeholder={`${language === 'en' ? 'Your message goes here' : 'Tu mensaje va aquí'}`}
           required={true}
         />
         <div className="text-left">
           <Cta
-            label="Submit"
+            label={`${language === 'en' ? 'Submit' : 'Enviar'}`}
             decoration={true}
           />
         </div>

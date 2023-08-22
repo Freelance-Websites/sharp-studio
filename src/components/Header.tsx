@@ -49,7 +49,7 @@ export default function Header({
               </>
             }
             <li>
-              <Link href={`/${type}/contact`} className="hover:opacity-80 duration-100 transition ease-in-out bg-black py-2 px-3 rounded-full">
+              <Link href="/contact" className="hover:opacity-80 duration-100 transition ease-in-out bg-black py-2 px-3 rounded-full">
                 <UpperCaseText color="text-off-white">
                   {activeLanguage === 'en' ? 'Contact Us' : 'Contactanos'}
                 </UpperCaseText>
