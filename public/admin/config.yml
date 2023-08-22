@@ -76,6 +76,24 @@ collections:
         i18n: true
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+      # Workflow Structure
+      - label: "Workflow"
+        name: "workflowAD"
+        file: "src/content/architects-and-developers/workflow.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - label: "Pasos"
+            name: "steps"
+            widget: "list"
+            i18n: true
+            fields:
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 1440x1800px o superior, i18n: duplicate, required: false}
+              - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
+              - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
+              - {label: "Título del paso", name: "title", widget: "string", hint: "El título para el paso", i18n: true, required: false}
+              - {label: "Texto del paso", name: "description", widget: "text", hint: "El texto para el paso", i18n: true, required: false}
+              - {label: "Texto del botón", name: "cta", widget: "string", hint: "El texto para el botón de contacto", i18n: true, required: false}
   # B&R pages
   - name: "pagesBR"
     label: "Páginas para Brokers & Realtors"
@@ -90,6 +108,24 @@ collections:
         i18n: true
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+      # Workflow Structure
+      - label: "Workflow"
+        name: "workflowBR"
+        file: "src/content/brokers-and-realtors/workflow.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - label: "Pasos"
+            name: "steps"
+            widget: "list"
+            i18n: true
+            fields:
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 1840x1280px o superior, i18n: duplicate, required: false}
+              - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
+              - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
+              - {label: "Título del paso", name: "title", widget: "string", hint: "El título para el paso", i18n: true, required: false}
+              - {label: "Texto del paso", name: "description", widget: "text", hint: "El texto para el paso", i18n: true, required: false}
+              - {label: "Texto del botón", name: "cta", widget: "string", hint: "El texto para el botón de contacto", i18n: true, required: false}
   # A&D projects
   - label: "Proyectos Architects & Developers"
     name: "projectsAD"

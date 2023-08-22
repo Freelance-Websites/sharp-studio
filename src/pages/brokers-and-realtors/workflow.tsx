@@ -1,10 +1,10 @@
+import { useState, useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import CustomHead from '@/components/CustomHead';
 import Header from "@/components/Header";
 import Step from "@/components/workflow/Step";
 import Contact from '@/components/Contact';
-// import Footer from "@/components/Footer";
 
 import { attributes } from '@/content/brokers-and-realtors/workflow.md';
 import { attributes as globals } from '@/content/globals.md';
@@ -14,8 +14,25 @@ const pluginWrapper = () => {
 };
 
 export default function Workflow() {
-  const { title, steps } = attributes;
-  const { contactTitle, contactText } = globals;
+  const { en, es } = attributes;
+  const contactTitleEng = globals.en.contactTitle;
+  const contactTitleEsp = globals.es.contactTitle;
+  const contactTextEng = globals.en.contactText;
+  const contactTextEsp = globals.es.contactText;
+
+  const [language, setLanguage] = useState('en');
+  const translatedSteps = language === 'en' ? en.steps : es.steps;
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
+
 
   interface Step {
     image: string;
@@ -29,10 +46,12 @@ export default function Workflow() {
   return (
     <main className="bg-off-white">
       <CustomHead
-        title={title}
+        title={language === 'en' ? en.title : es.title}
       />
       <Header
         type="brokers-and-realtors"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <ReactFullpage
         pluginWrapper={pluginWrapper}
@@ -47,7 +66,7 @@ export default function Workflow() {
             <section
               className="section"
             >
-              {steps.map((step: Step, index: number) =>
+              {translatedSteps.map((step: Step, index: number) =>
                 <div
                   className="slide h-screen"
                   key={index}
@@ -69,15 +88,16 @@ export default function Workflow() {
             <section
               className="section"
             >
-              <Contact
-                title={contactTitle}
-                content={contactText}
-              />
+              <div className="h-screen flex items-center">
+                <Contact
+                  title={language === 'en' ? contactTitleEng : contactTitleEsp}
+                  content={language === 'en' ? contactTextEng : contactTextEsp}
+                />
+              </div>
             </section>
           </ReactFullpage.Wrapper>
         )}
       />
-      {/* <Footer classes="pb-4" /> */}
     </main>
   )
 }
