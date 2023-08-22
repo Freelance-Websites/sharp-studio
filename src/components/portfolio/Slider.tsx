@@ -9,15 +9,26 @@ interface Slide {
   proportion: string;
 }
 
-interface Project {
+interface LanguageProject {
   slides: Array<Slide>;
   title: string;
   credit: string;
+  thumbnail: string;
+  order: number;
 }
 
-export default function PortfolioSlider({ project }: {
+interface Project {
+  id: string;
+  en: LanguageProject;
+  es: LanguageProject;
+  contentHtml: string;
+}
+
+export default function PortfolioSlider({ project, language }: {
   project: Project;
+  language: string;
 }) {
+  const translatedProject = language === 'en' ? project.en : project.es;
   return (
     <>
       <Splide
@@ -31,14 +42,14 @@ export default function PortfolioSlider({ project }: {
         }}
       >
         <SplideTrack>
-          {project.slides.map((slide: Slide, index: number) =>
+          {translatedProject.slides.map((slide: Slide, index: number) =>
             <SplideSlide
               key={index}
               className={`w-full h-full max-h-[70vh] aspect-${slide.proportion} relative`}
             >
               <Image
                 src={slide.image}
-                alt={`${project.title} – ${project.credit}`}
+                alt={`${translatedProject.title} – ${translatedProject.credit}`}
                 fill={true}
                 className={`w-full h-full ${slide.proportion === 'vertical' ? 'object-contain' : 'object-cover'}`}
               />
@@ -47,12 +58,12 @@ export default function PortfolioSlider({ project }: {
         </SplideTrack>
       </Splide>
       <div className="container mx-auto py-4 md:pb-8">
-        <h2 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
+        <h2>
           <StandardText color="text-black">
-            <span className="font-neue-bold">{project.title}</span>
+            <span className="font-neue-bold">{translatedProject.title}</span>
           </StandardText>
           <StandardText color="text-black">
-            &nbsp;&mdash; {project.credit}
+            &nbsp;&mdash; {translatedProject.credit}
           </StandardText>
         </h2>
       </div>

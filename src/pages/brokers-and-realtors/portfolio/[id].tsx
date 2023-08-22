@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import CustomHead from '@/components/CustomHead';
 import Header from "@/components/Header";
 import PortfolioGrid from "@/components/portfolio/Grid";
@@ -8,22 +10,34 @@ import { getAllCollections, getCollectionById, getCollectionIds } from '@/lib/co
 
 import { attributes } from '@/content/brokers-and-realtors/portfolio.md';
 
+interface LanguageProjects {
+  thumbnail: string;
+  title: string;
+  credit: string;
+  slides: Array<Slide>;
+}
+
 interface Projects {
+  order: number;
+  id: string;
+  en: LanguageProjects;
+  es: LanguageProjects;
+}
+
+interface LanguageProject {
   id: string;
   thumbnail: string;
   title: string;
   credit: string;
   order: number;
-  slides: Array<Object>
+  slides: Array<Slide>;
 }
 
 interface Project {
   id: string;
-  thumbnail: string;
-  title: string;
-  credit: string;
-  order: 1;
-  slides: Array<Slide>;
+  en: LanguageProject;
+  es: LanguageProject;
+  contentHtml: string;
 }
 
 interface Slide {
@@ -35,23 +49,38 @@ export default function PortfolioItem({ allProjectsData, projectData }: {
   allProjectsData: Array<Projects>;
   projectData: Project;
 }) {
-  const { title } = attributes;
+  const { en, es } = attributes;
+  const [language, setLanguage] = useState('en');
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main className="bg-off-white">
       <CustomHead
-        title={title}
+        title={language === 'en' ? en.title : es.title}
       />
       <Header
         type="brokers-and-realtors"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <section className="pt-[74px] px-4 container mx-auto">
         <PortfolioSlider
           project={projectData}
+          language={language}
         />
         <PortfolioGrid
           type="brokers-and-realtors"
-          slider={allProjectsData}
+          items={allProjectsData}
+          language={language}
         />
       </section>
       <Footer classes="pb-4" />

@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import CustomHead from '@/components/CustomHead';
 import Header from "@/components/Header";
 import PortfolioGrid from "@/components/portfolio/Grid";
@@ -7,31 +9,56 @@ import { getAllCollections } from '@/lib/collections';
 
 import { attributes } from '@/content/architects-and-developers/portfolio.md';
 
-interface Slide {
-  order: number;
-  id: string;
+interface LanguageProjects {
   thumbnail: string;
   title: string;
   credit: string;
+  slides: Array<Slide>;
+}
+
+interface Projects {
+  order: number;
+  id: string;
+  en: LanguageProjects;
+  es: LanguageProjects;
+}
+
+interface Slide {
+  image: string;
+  proportion: string;
 }
 
 export default function Portfolio({ projectsData }: {
-  projectsData: Array<Slide>;
+  projectsData: Array<Projects>;
 }) {
-  const { title } = attributes;
+  const { en, es } = attributes;
+  const [language, setLanguage] = useState('en');
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main className="bg-off-white">
       <CustomHead
-        title={title}
+        title={language === 'en' ? en.title : es.title}
       />
       <Header
         type="architects-and-developers"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <section className="pt-14 px-4 container mx-auto">
         <PortfolioGrid
           type="architects-and-developers"
-          slider={projectsData}
+          items={projectsData}
+          language={language}
         />
       </section>
       <Footer classes="pb-4" />

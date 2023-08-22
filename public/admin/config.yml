@@ -7,6 +7,7 @@ i18n:
   locales: [en, es]
   default_locale: en
 collections:
+  # Global pages
   - name: "pages"
     label: "Páginas Globales"
     i18n:
@@ -22,7 +23,7 @@ collections:
           - {label: "Texto sección FAQs", name: "faqsText", widget: "text", hint: "El texto para la sección FAQs", i18n: true, required: false}
           - {label: "Texto links FAQs", name: "faqsLinkText", widget: "string", hint: "El texto para el link de la sección FAQs", i18n: true, required: false}
           - {label: "Texto sección Oficinas", name: "officesText", widget: "string", hint: "El texto para la sección Oficinas", i18n: true, required: false}
-          - {label: "Imagen sección Oficinas", name: "officesImage", widget: "image", hint: "La imagen para la sección Oficinas", i18n: duplicate, required: false}
+          - {label: "Imagen sección Oficinas", name: "officesImage", widget: "image", hint: "Tamaño recomendado: 1000x1000 o superior", i18n: duplicate, required: false}
           - {label: "Título sección Contacto", name: "contactTitle", widget: "string", hint: "El título para la sección Contacto", i18n: true, required: false}
           - {label: "Texto sección Contacto", name: "contactText", widget: "twxt", hint: "El texto para la sección Contacto", i18n: true, required: false}
       # Index Structure
@@ -45,11 +46,11 @@ collections:
                 hint: "El tipo de contenido a mostrar en el slider"
                 options:
                   - { label: "Imagen", value: "image" }
-              - {label: Imagen, name: image, widget: image, hint: Imagen para el slider, required: false}
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
               - {label: Title, name: title, widget: string, hint: Título de la imagen, required: false}
               - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-          - {label: Imagen hover para A&D, name: architectsAndDevelopersHover, widget: image, required: false, i18n: duplicate}
-          - {label: Imagen hover para B&R, name: brokersAndRealtorsHover, widget: image, required: false, i18n: duplicate}
+          - {label: Imagen hover para A&D, name: architectsAndDevelopersHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
+          - {label: Imagen hover para B&R, name: brokersAndRealtorsHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
       # Contact Structure
       - label: "Contacto"
         name: "contacto"
@@ -61,3 +62,85 @@ collections:
           - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar mapa?", name: "mapEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar sección Oficinas?", name: "officesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+  # A&D pages
+  - name: "pagesAD"
+    label: "Páginas para Architects & Developers"
+    i18n:
+      structure: single_file
+      locales: [en, es]
+    files:
+      # Portfolio Structure
+      - label: "Portfolio"
+        name: "portfolioAD"
+        file: "src/content/architects-and-developers/portfolio.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+  # B&R pages
+  - name: "pagesBR"
+    label: "Páginas para Brokers & Realtors"
+    i18n:
+      structure: single_file
+      locales: [en, es]
+    files:
+      # Portfolio Structure
+      - label: "Portfolio"
+        name: "portfolioBR"
+        file: "src/content/brokers-and-realtors/portfolio.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+  # A&D projects
+  - label: "Proyectos Architects & Developers"
+    name: "projectsAD"
+    folder: "src/content/architects-and-developers/portfolio"
+    create: true
+    i18n:
+      structure: single_file
+      locales: [en, es]
+    fields:
+      - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", i18n: true, required: false}
+      - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", i18n: true, required: false}
+      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado: 800x600px o superior"}
+      - label: "Slider"
+        name: "slides"
+        widget: "list"
+        i18n: true
+        fields:
+          - label: "Proporción"
+            name: "proportion"
+            widget: "select"
+            required: false
+            hint: "La proporción de la imagen. Se usa para adaptar el tamaño que ocupa en la pantalla."
+            options:
+              - { label: "Horizontal", value: "video" }
+              - { label: "Vertical", value: "vertical" }
+              - { label: "Cuadrado", value: "square" }
+          - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+  # B&R projects
+  - label: "Proyectos Brokers & Realtors"
+    name: "projectsBR"
+    folder: "src/content/brokers-and-realtors/portfolio"
+    create: true
+    i18n:
+      structure: single_file
+      locales: [en, es]
+    fields:
+      - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", i18n: true, required: false}
+      - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", i18n: true, required: false}
+      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado: 800x600px o superior"}
+      - label: "Slider"
+        name: "slides"
+        widget: "list"
+        i18n: true
+        fields:
+          - label: "Proporción"
+            name: "proportion"
+            widget: "select"
+            required: false
+            hint: "La proporción de la imagen. Se usa para adaptar el tamaño que ocupa en la pantalla."
+            options:
+              - { label: "Horizontal", value: "video" }
+              - { label: "Vertical", value: "vertical" }
+              - { label: "Cuadrado", value: "square" }
+          - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}

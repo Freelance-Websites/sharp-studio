@@ -1,3 +1,6 @@
 ---
-title: Portfolio A&D
+en:
+  title: A&D Portfolio
+es:
+  title: Portfolio A&D
 ---
