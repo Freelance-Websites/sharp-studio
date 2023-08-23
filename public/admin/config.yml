@@ -47,9 +47,25 @@ collections:
                 hint: "El tipo de contenido a mostrar en el slider"
                 options:
                   - { label: "Imagen", value: "image" }
+                  - { label: "Virtual Staging", value: "slide" }
+                  - { label: "Video", value: "video" }
+                  - { label: "Panorama", value: "panoram" }
+                  - { label: "Walking Tour", value: "walking" }
               - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
+              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
               - {label: Title, name: title, widget: string, hint: Título de la imagen, required: false}
               - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+              - label: "Tema"
+                name: "theme"
+                widget: "select"
+                required: false
+                hint: "El tema de la imagen (claro u oscuro)"
+                options:
+                  - { label: "Claro", value: "light" }
+                  - { label: "Oscuro", value: "dark" }
           - {label: Imagen hover para A&D, name: architectsAndDevelopersHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
           - {label: Imagen hover para B&R, name: brokersAndRealtorsHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
       # Contact Structure
@@ -105,6 +121,90 @@ collections:
                 field: {label: Texto, name: text, widget: text, hint: Texto para el sub servicio, i18n: true, required: false}
               - {label: "Texto del botón", name: "linkText", widget: "string", hint: "El texto para el botón del servicio", i18n: true, required: false}
               - {label: "Link del botón", name: "linkHref", widget: "string", hint: "El link para el botón del servicio", i18n: true, required: false}
+      # Showcase Structure
+      - label: "Detaille Servicios"
+        name: "showcaseAD"
+        file: "src/content/architects-and-developers/services/showcase.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
+          - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
+          - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Título sección 3D Stills", name: "stillsTitle", widget: "string", hint: "El título para la sección 3D Stills", i18n: true, required: false}
+          - {label: "Texto sección 3D Stills", name: "stillsText", widget: "text", hint: "El texto para la sección 3D Stills", i18n: true, required: false}
+          - label: "Slider 3D Stills"
+            name: "stillsSlider"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.title}} – {{ fields.credit}}"
+            i18n: true
+            fields:
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                required: false
+                hint: "El tipo de contenido a mostrar en el slider"
+                options:
+                  - { label: "Imagen", value: "image" }
+                  - { label: "Virtual Staging", value: "slide" }
+                  - { label: "Video", value: "video" }
+                  - { label: "Panorama", value: "panoram" }
+                  - { label: "Walking Tour", value: "walking" }
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
+              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+              - {label: Title, name: title, widget: string, hint: Título de la imagen, required: false}
+              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+              - label: "Tema"
+                name: "theme"
+                widget: "select"
+                required: false
+                hint: "El tema de la imagen (claro u oscuro)"
+                options:
+                  - { label: "Claro", value: "light" }
+                  - { label: "Oscuro", value: "dark" }
+          - {label: "Habilitar sección experiencias inmersivas?", name: "immersiveExperiencesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Título sección Experiencias inmersivas", name: "immersiveExperiencesTitle", widget: "string", hint: "El título para la sección Experiencias inmersivas", i18n: true, required: false}
+          - {label: "Texto sección Experiencias inmersivas", name: "immersiveExperiencesText", widget: "text", hint: "El texto para la sección Experiencias inmersivas", i18n: true, required: false}
+          - {label: "Link sección Experiencias inmersivas", name: "immersiveExperiencesLinkText", widget: "string", hint: "El link para la sección Experiencias inmersivas", i18n: true, required: false}
+          - label: "Slider Experiencias Inmersivas"
+            name: "immersiveExperiencesSlider"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.title}} – {{ fields.credit}}"
+            i18n: true
+            fields:
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                required: false
+                hint: "El tipo de contenido a mostrar en el slider"
+                options:
+                  - { label: "Imagen", value: "image" }
+                  - { label: "Virtual Staging", value: "slide" }
+                  - { label: "Video", value: "video" }
+                  - { label: "Panorama", value: "panoram" }
+                  - { label: "Walking Tour", value: "walking" }
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
+              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+              - {label: Title, name: title, widget: string, hint: Título de la imagen, required: false}
+              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+              - label: "Tema"
+                name: "theme"
+                widget: "select"
+                required: false
+                hint: "El tema de la imagen (claro u oscuro)"
+                options:
+                  - { label: "Claro", value: "light" }
+                  - { label: "Oscuro", value: "dark" }
       # Workflow Structure
       - label: "Workflow"
         name: "workflowAD"
@@ -138,6 +238,90 @@ collections:
         i18n: true
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+      # Showcase Structure
+      - label: "Detaille Servicios"
+        name: "showcaseBR"
+        file: "src/content/brokers-and-realtors/services/showcase.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
+          - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
+          - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Título sección 3D Stills", name: "stillsTitle", widget: "string", hint: "El título para la sección 3D Stills", i18n: true, required: false}
+          - {label: "Texto sección 3D Stills", name: "stillsText", widget: "text", hint: "El texto para la sección 3D Stills", i18n: true, required: false}
+          - label: "Slider 3D Stills"
+            name: "stillsSlider"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.title}} – {{ fields.credit}}"
+            i18n: true
+            fields:
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                required: false
+                hint: "El tipo de contenido a mostrar en el slider"
+                options:
+                  - { label: "Imagen", value: "image" }
+                  - { label: "Virtual Staging", value: "slide" }
+                  - { label: "Video", value: "video" }
+                  - { label: "Panorama", value: "panoram" }
+                  - { label: "Walking Tour", value: "walking" }
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
+              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+              - {label: Title, name: title, widget: string, hint: Título de la imagen, required: false}
+              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+              - label: "Tema"
+                name: "theme"
+                widget: "select"
+                required: false
+                hint: "El tema de la imagen (claro u oscuro)"
+                options:
+                  - { label: "Claro", value: "light" }
+                  - { label: "Oscuro", value: "dark" }
+          - {label: "Habilitar sección experiencias interactivas?", name: "interactiveExperiencesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Título sección Experiencias interactivas", name: "interactiveExperiencesTitle", widget: "string", hint: "El título para la sección Experiencias interactivas", i18n: true, required: false}
+          - {label: "Texto sección Experiencias interactivas", name: "interactiveExperiencesText", widget: "text", hint: "El texto para la sección Experiencias interactivas", i18n: true, required: false}
+          - {label: "Link sección Experiencias interactivas", name: "interactiveExperiencesLinkText", widget: "string", hint: "El link para la sección Experiencias interactivas", i18n: true, required: false}
+          - label: "Slider Experiencias interactivas"
+            name: "interactiveExperiencesSlider"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.title}} – {{ fields.credit}}"
+            i18n: true
+            fields:
+              - label: "Tipo"
+                name: "type"
+                widget: "select"
+                required: false
+                hint: "El tipo de contenido a mostrar en el slider"
+                options:
+                  - { label: "Imagen", value: "image" }
+                  - { label: "Virtual Staging", value: "slide" }
+                  - { label: "Video", value: "video" }
+                  - { label: "Panorama", value: "panoram" }
+                  - { label: "Walking Tour", value: "walking" }
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
+              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+              - {label: Title, name: title, widget: string, hint: Título de la imagen, required: false}
+              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+              - label: "Tema"
+                name: "theme"
+                widget: "select"
+                required: false
+                hint: "El tema de la imagen (claro u oscuro)"
+                options:
+                  - { label: "Claro", value: "light" }
+                  - { label: "Oscuro", value: "dark" }
       # Workflow Structure
       - label: "Workflow"
         name: "workflowBR"

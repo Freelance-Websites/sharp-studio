@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import CustomHead from '@/components/CustomHead';
@@ -13,16 +14,40 @@ import { attributes } from '@/content/architects-and-developers/services/showcas
 import { attributes as globals } from '@/content/globals.md';
 
 export default function Showcase() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, stillsEnabled, stillsTitle, stillsText, stillsSlider, immersiveExperiencesEnabled, immersiveExperiencesTitle, immersiveExperiencesText, immersiveExperiencesLinkText, immersiveExperiencesLinkHref, immersiveExperiencesSlider, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes;
-  const { faqsText, faqsLinkText, officesImage, officesText, contactTitle, contactText } = globals;
+  const { en, es } = attributes;
+  const { heroEnabled, stillsEnabled, immersiveExperiencesEnabled, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes.en;
+  const faqsTextEng = globals.en.faqsText;
+  const faqsTextEsp = globals.es.faqsText;
+  const faqsLinkTextEng = globals.en.faqsLinkText;
+  const faqsLinkTextEsp = globals.es.faqsLinkText;
+  const officesTextEng = globals.en.officesText;
+  const officesTextEsp = globals.es.officesText;
+  const contactTitleEng = globals.en.contactTitle;
+  const contactTitleEsp = globals.es.contactTitle;
+  const contactTextEng = globals.en.contactText;
+  const contactTextEsp = globals.es.contactText;
+
+  const [language, setLanguage] = useState('en');
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main className="bg-off-white">
       <CustomHead
-        title={title}
+        title={language === 'en' ? en.title : es.title}
       />
       <Header
         type="architects-and-developers"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <ReactFullpage
         credits={{ enabled: false }}
@@ -32,9 +57,9 @@ export default function Showcase() {
             {heroEnabled &&
               <section className="section" id="3d-stills">
                 <FullBleedImage
-                  image={heroImage}
-                  title={heroTitle}
-                  credit={heroCredit}
+                  image={en.heroImage}
+                  title={language === 'en' ? en.heroTitle : es.heroTitle}
+                  credit={language === 'en' ? en.heroCredit : es.heroCredit}
                 />
               </section>
             }
@@ -43,13 +68,13 @@ export default function Showcase() {
                 <section className="section">
                   <TextOnly
                     color="bg-cream"
-                    title={stillsTitle}
-                    content={stillsText}
+                    title={language === 'en' ? en.stillsTitle : es.stillsTitle}
+                    content={language === 'en' ? en.stillsText : es.stillsText}
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={stillsSlider}
+                    slides={language === 'en' ? en.stillsSlider : es.stillsSlider}
                     drag={false}
                   />
                 </section>
@@ -60,15 +85,14 @@ export default function Showcase() {
                 <section className="section" id="immersive-experiences">
                   <TextOnly
                     color="bg-light-green"
-                    title={immersiveExperiencesTitle}
-                    content={immersiveExperiencesText}
-                    linkText={immersiveExperiencesLinkText}
-                    linkHref={immersiveExperiencesLinkHref}
+                    title={language === 'en' ? en.immersiveExperiencesTitle : es.immersiveExperiencesTitle}
+                    content={language === 'en' ? en.immersiveExperiencesText : es.immersiveExperiencesText}
+                    linkText={language === 'en' ? en.immersiveExperiencesLinkText : es.immersiveExperiencesLinkText}
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={immersiveExperiencesSlider}
+                    slides={language === 'en' ? en.immersiveExperiencesSlider : es.immersiveExperiencesSlider}
                     drag={false}
                   />
                 </section>
@@ -78,9 +102,8 @@ export default function Showcase() {
               <section className="section">
                 <TextOnly
                   color="bg-off-white"
-                  content={faqsText}
-                  linkText={faqsLinkText}
-                  linkHref={'/architects-and-developers/faqs'}
+                  content={language === 'en' ? faqsTextEng : faqsTextEsp}
+                  linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
                 />
               </section>
             }
@@ -94,16 +117,16 @@ export default function Showcase() {
                 <TextAndImage
                 orientation="left"
                   color="bg-light-gray"
-                  content={officesText}
-                  image={officesImage}
+                  content={language === 'en' ? officesTextEng : officesTextEsp}
+                  image={en.officesImage}
                 />
               </section>
             }
             {contactEnabled &&
               <section className="section relative">
                 <Contact
-                  title={contactTitle}
-                  content={contactText}
+                  title={language === 'en' ? contactTitleEng : contactTitleEsp}
+                  content={language === 'en' ? contactTextEng : contactTextEsp}
                 />
               </section>
             }

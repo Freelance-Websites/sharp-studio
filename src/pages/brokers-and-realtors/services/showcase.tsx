@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import CustomHead from '@/components/CustomHead';
@@ -13,16 +14,40 @@ import { attributes } from '@/content/brokers-and-realtors/services/showcase.md'
 import { attributes as globals } from '@/content/globals.md';
 
 export default function Showcase() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, stillsEnabled, stillsTitle, stillsText, stillsLinkText, stillsLinkHref, stillsSlider, interactiveExperiencesEnabled, interactiveExperiencesTitle, interactiveExperiencesText, interactiveExperiencesLinkText, interactiveExperiencesLinkHref, interactiveExperiencesSlider, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes;
-  const { faqsText, faqsLinkText, officesImage, officesText, contactTitle, contactText } = globals;
+  const { en, es } = attributes;
+  const { heroEnabled, stillsEnabled, interactiveExperiencesEnabled, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes.en;
+  const faqsTextEng = globals.en.faqsText;
+  const faqsTextEsp = globals.es.faqsText;
+  const faqsLinkTextEng = globals.en.faqsLinkText;
+  const faqsLinkTextEsp = globals.es.faqsLinkText;
+  const officesTextEng = globals.en.officesText;
+  const officesTextEsp = globals.es.officesText;
+  const contactTitleEng = globals.en.contactTitle;
+  const contactTitleEsp = globals.es.contactTitle;
+  const contactTextEng = globals.en.contactText;
+  const contactTextEsp = globals.es.contactText;
+
+  const [language, setLanguage] = useState('en');
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main className="bg-off-white">
       <CustomHead
-        title={title}
+        title={language === 'en' ? en.title : es.title}
       />
       <Header
         type="brokers-and-realtors"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <ReactFullpage
         credits={{ enabled: false }}
@@ -32,9 +57,9 @@ export default function Showcase() {
             {heroEnabled &&
               <section className="section" id="3d-stills">
                 <FullBleedImage
-                  image={heroImage}
-                  title={heroTitle}
-                  credit={heroCredit}
+                  image={en.heroImage}
+                  title={language === 'en' ? en.heroTitle : es.heroTitle}
+                  credit={language === 'en' ? en.heroCredit : es.heroCredit}
                 />
               </section>
             }
@@ -43,15 +68,14 @@ export default function Showcase() {
                 <section className="section">
                   <TextOnly
                     color="bg-light-green"
-                    title={stillsTitle}
-                    content={stillsText}
-                    linkText={stillsLinkText}
-                    linkHref={stillsLinkHref}
+                    title={language === 'en' ? en.stillsTitle : es.stillsTitle}
+                    content={language === 'en' ? en.stillsText : es.stillsText}
+                    linkText={language === 'en' ? en.stillsLinkText : es.stillsLinkText}
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={stillsSlider}
+                    slides={language === 'en' ? en.stillsSlider : es.stillsSlider}
                     drag={false}
                   />
                 </section>
@@ -62,15 +86,14 @@ export default function Showcase() {
                 <section className="section" id="interactive-experiences">
                   <TextOnly
                     color="bg-salmon"
-                    title={interactiveExperiencesTitle}
-                    content={interactiveExperiencesText}
-                    linkText={interactiveExperiencesLinkText}
-                    linkHref={interactiveExperiencesLinkHref}
+                    title={language === 'en' ? en.interactiveExperiencesTitle : es.interactiveExperiencesTitle}
+                    content={language === 'en' ? en.interactiveExperiencesText : es.interactiveExperiencesText}
+                    linkText={language === 'en' ? en.interactiveExperiencesLinkText : es.interactiveExperiencesLinkText}
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={interactiveExperiencesSlider}
+                    slides={language === 'en' ? en.immersiveExperiencesSlider : es.immersiveExperiencesSlider}
                     drag={false}
                   />
                 </section>
@@ -80,9 +103,8 @@ export default function Showcase() {
               <section className="section">
                 <TextOnly
                   color="bg-off-white"
-                  content={faqsText}
-                  linkText={faqsLinkText}
-                  linkHref={'/brokers-and-realtors/faqs'}
+                  content={language === 'en' ? faqsTextEng : faqsTextEsp}
+                  linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
                 />
               </section>
             }
@@ -96,16 +118,16 @@ export default function Showcase() {
                 <TextAndImage
                 orientation="left"
                   color="bg-light-gray"
-                  content={officesText}
-                  image={officesImage}
+                  content={language === 'en' ? officesTextEng : officesTextEsp}
+                  image={en.officesImage}
                 />
               </section>
             }
             {contactEnabled &&
               <section className="section relative">
                 <Contact
-                  title={contactTitle}
-                  content={contactText}
+                  title={language === 'en' ? contactTitleEng : contactTitleEsp}
+                  content={language === 'en' ? contactTextEng : contactTextEsp}
                 />
               </section>
             }

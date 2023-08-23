@@ -10,7 +10,6 @@ import Footer from "@/components/Footer";
 import { attributes } from '@/content/brokers-and-realtors/services.md';
 
 export default function Services() {
-  const { title, headingTitle, headingText, services } = attributes;
   const { en, es } = attributes;
   const [language, setLanguage] = useState('en');
 
