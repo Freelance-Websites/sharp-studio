@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import CustomHead from '@/components/CustomHead';
@@ -14,17 +15,41 @@ import { attributes } from '@/content/architects-and-developers/services/archite
 import { attributes as globals } from '@/content/globals.md';
 
 export default function ADServices() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, introEnabled, introTitle, introText, conceptDesignEnabled, conceptDesignSlider, designDevelopmentEnabled, designDevelopmentTitle, designDevelopmentText, designDevelopmentImage, bimEnabled, bimVideo, bimTitle, bimText, bimLinkText, bimLinkHref, cadEnabled, cadTitle, cadText, cadImage, cadCaption, cadCredit, permittingPlansEnabled, permittingPlansTitle, permittingPlansText, permittingPlansCaption, permittingPlansCredit, permittingPlansImage, permittingPlansSlider, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes;
-  const { faqsText, faqsLinkText, officesImage, officesText, contactTitle, contactText } = globals;
+  const { en, es } = attributes;
+  const { heroEnabled, introEnabled, conceptDesignEnabled, designDevelopmentEnabled, bimEnabled, cadEnabled, permittingPlansEnabled, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes.en;
+  const faqsTextEng = globals.en.faqsText;
+  const faqsTextEsp = globals.es.faqsText;
+  const faqsLinkTextEng = globals.en.faqsLinkText;
+  const faqsLinkTextEsp = globals.es.faqsLinkText;
+  const officesTextEng = globals.en.officesText;
+  const officesTextEsp = globals.es.officesText;
+  const contactTitleEng = globals.en.contactTitle;
+  const contactTitleEsp = globals.es.contactTitle;
+  const contactTextEng = globals.en.contactText;
+  const contactTextEsp = globals.es.contactText;
+
+  const [language, setLanguage] = useState('en');
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main className="bg-white">
       <CustomHead
-        title={title}
+        title={language === 'en' ? en.title : es.title}
       />
       <Header
         type="architects-and-developers"
         bgColor="bg-white"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <ReactFullpage
         credits={{ enabled: false }}
@@ -34,9 +59,9 @@ export default function ADServices() {
             {heroEnabled &&
               <section className="section">
                 <FullBleedImage
-                  image={heroImage}
-                  title={heroTitle}
-                  credit={heroCredit}
+                  image={en.heroImage}
+                  title={language === 'en' ? en.heroTitle : es.heroTitle}
+                  credit={language === 'en' ? en.heroTitle : es.heroTitle}
                   isMap={true}
                 />
               </section>
@@ -45,8 +70,8 @@ export default function ADServices() {
               <section className="section">
                 <TextOnly
                   color="bg-white"
-                  title={introTitle}
-                  content={introText}
+                  title={language === 'en' ? en.introTitle : es.introTitle}
+                  content={language === 'en' ? en.introText : es.introText}
                 />
               </section>
             }
@@ -54,7 +79,7 @@ export default function ADServices() {
               <>
                 <section className="section">
                   <FullPageSlider
-                    slides={conceptDesignSlider}
+                    slides={language === 'en' ? en.conceptDesignSlider : es.conceptDesignSlider}
                     drag={true}
                   />
                 </section>
@@ -65,9 +90,9 @@ export default function ADServices() {
                 <TextAndImage
                   orientation="left"
                   color="bg-white"
-                  title={designDevelopmentTitle}
-                  content={designDevelopmentText}
-                  image={designDevelopmentImage}
+                  title={language === 'en' ? en.designDevelopmentTitle : es.designDevelopmentTitle}
+                  content={language === 'en' ? en.designDevelopmentText : es.designDevelopmentText}
+                  image={language === 'en' ? en.designDevelopmentImage : es.designDevelopmentImage}
                 />
               </section>
             }
@@ -75,16 +100,15 @@ export default function ADServices() {
               <>
                 <section className="section">
                   <FullBleedVideo
-                    video={bimVideo}
+                    video={en.bimVideo}
                   />
                 </section>
                 <section className="section">
                   <TextOnly
                     color="bg-white"
-                    title={bimTitle}
-                    content={bimText}
-                    linkText={bimLinkText}
-                    linkHref={bimLinkHref}
+                    title={language === 'en' ? en.bimTitle : es.bimTitle}
+                    content={language === 'en' ? en.bimText : es.bimText}
+                    linkText={language === 'en' ? en.bimLinkText : es.bimLinkText}
                   />
                 </section>
               </>
@@ -94,11 +118,11 @@ export default function ADServices() {
                 <TextAndImage
                   orientation="right"
                   color="bg-white"
-                  title={cadTitle}
-                  imageCaption={cadCaption}
-                  imageCredit={cadCredit}
-                  content={cadText}
-                  image={cadImage}
+                  title={language === 'en' ? en.cadTitle : es.cadTitle}
+                  imageCaption={language === 'en' ? en.cadCaption : es.cadCaption}
+                  imageCredit={language === 'en' ? en.cadCredit : es.cadCredit}
+                  content={language === 'en' ? en.cadText : es.cadText}
+                  image={en.cadImage}
                 />
               </section>
             }
@@ -106,7 +130,7 @@ export default function ADServices() {
               <>
                 <section className="section">
                   <FullPageSlider
-                    slides={permittingPlansSlider}
+                    slides={language === 'en' ? en.permittingPlansSlider : es.permittingPlansSlider}
                     drag={true}
                   />
                 </section>
@@ -114,11 +138,11 @@ export default function ADServices() {
                   <TextAndImage
                     orientation="left"
                     color="bg-white"
-                    title={permittingPlansTitle}
-                    imageCaption={permittingPlansCaption}
-                    imageCredit={permittingPlansCredit}
-                    content={permittingPlansText}
-                    image={permittingPlansImage}
+                    title={language === 'en' ? en.permittingPlansTitle : es.permittingPlansTitle}
+                    imageCaption={language === 'en' ? en.permittingPlansCaption : es.permittingPlansCaption}
+                    imageCredit={language === 'en' ? en.permittingPlansCredit : es.permittingPlansCredit}
+                    content={language === 'en' ? en.permittingPlansText : es.permittingPlansText}
+                    image={en.permittingPlansImage}
                   />
                 </section>
               </>
@@ -127,9 +151,8 @@ export default function ADServices() {
               <section className="section">
                 <TextOnly
                   color="bg-off-white"
-                  content={faqsText}
-                  linkText={faqsLinkText}
-                  linkHref={'/architects-and-developers/faqs'}
+                  content={language === 'en' ? faqsTextEng : faqsTextEsp}
+                  linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
                 />
               </section>
             }
@@ -143,16 +166,16 @@ export default function ADServices() {
                 <TextAndImage
                 orientation="left"
                   color="bg-light-gray"
-                  content={officesText}
-                  image={officesImage}
+                  content={language === 'en' ? officesTextEng : officesTextEsp}
+                  image={en.officesImage}
                 />
               </section>
             }
             {contactEnabled &&
               <section className="section relative">
                 <Contact
-                  title={contactTitle}
-                  content={contactText}
+                  title={language === 'en' ? contactTitleEng : contactTitleEsp}
+                  content={language === 'en' ? contactTextEng : contactTextEsp}
                 />
               </section>
             }
