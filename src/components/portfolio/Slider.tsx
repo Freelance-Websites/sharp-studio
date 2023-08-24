@@ -45,7 +45,7 @@ export default function PortfolioSlider({ project, language }: {
           {translatedProject.slides.map((slide: Slide, index: number) =>
             <SplideSlide
               key={index}
-              className={`w-full h-full max-h-[70vh] aspect-${slide.proportion} relative`}
+              className={`w-full h-full ${slide.proportion === 'vertical' ? `aspect-[9/16] max-h-[70vh]` : `aspect-${slide.proportion}`} relative`}
             >
               <Image
                 src={slide.image}
