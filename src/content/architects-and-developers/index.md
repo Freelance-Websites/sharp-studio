@@ -25,7 +25,7 @@ en:
   servicesEnabled: true
   servicesTitle: Services.
   servicesText: We offer tailor made solutions to all of our clients with the objective of making unbuilt projects into a reality. We do so by creating state of the art <a href="/architects-and-developers/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">high definition images for each project as well as immersive strategies</a> to captivate investors and potential clients alike.
-  servicesLinkText: Get a quote contacting us!
+  servicesLinkText: Contact us to get a quote!
   servicesImage: /images/architects-and-developers/services.jpg
   servicesImageCaption: Ixou Brusco
   servicesImageCredit: Klotz, Minond, Hauser
@@ -122,7 +122,7 @@ es:
   servicesEnabled: true
   servicesTitle: Servicios.
   servicesText: Tenemos servicios a la medida de cada cliente para llevar a la realidad los edificios aún no construidos. <a href="/architects-and-developers/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Nítidas imágenes de cada proyecto y experiencias inmersivas</a> para seducir a inversores y clientes.
-  servicesLinkText: Contactanos y obtené una cotización!
+  servicesLinkText: Contactanos para obtener una cotización!
   servicesImage: /images/architects-and-developers/services.jpg
   servicesImageCaption: Ixou Brusco
   servicesImageCredit: Klotz, Minond, Hauser

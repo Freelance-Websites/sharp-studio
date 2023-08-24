@@ -20,12 +20,12 @@ en:
       title: Interactive Experiences
       imageTitle: Liv Guatemala
       imageCredit: ATV
-      description: <a href="/brokers-and-realtors/services/showcase#interactive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">The 3D experiences that we offer at Sharp Studio Visuals manage to go beyond the screen and bring buildings, houses, or the departments of your commercial portfolio to reality</a>. We use the latest technology at the service of total immersion in space.
+      description: <a href="/brokers-and-realtors/services/showcase#interactive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">The 3D experiences that we offer at Sharp Studio Visuals manage to go beyond the screen and bring buildings</a>, houses, or the departments of your commercial portfolio to reality. We use the latest technology at the service of total immersion in space.
       bullets:
         - CGI Animation
         - 3D Modelling
         - 3D 360 Visualization
-      linkText: <a href="/brokers-and-realtors/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Contact us</a>! Or you can drive to our offices in Aventura, FL to meet us.
+      linkText: <a href="/brokers-and-realtors/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Contact us! Or you can drive to our offices in Aventura, FL to meet us</a>.
       linkHref: interactive-experiences
 es:
   title: Servicios B&R

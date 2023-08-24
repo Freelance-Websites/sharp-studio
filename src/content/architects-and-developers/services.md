@@ -8,7 +8,7 @@ en:
       title: 3D Stills
       imageTitle: Ixou Brusco
       imageCredit: Klotz, Minond, Hauser
-      description: Through our still images, <a href="/architects-and-developers/services/showcase#3d-stills" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">you can experience the interior and exterior configuration of your projects with extraordinary realism</a>. We are able to take photographs of architectures not yet built.
+      description: Through our still images, you can experience <a href="/architects-and-developers/services/showcase#3d-stills" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">the interior and exterior configuration of your projects with extraordinary realism</a>. We are able to take photographs of architectures not yet built.
       bullets:
         - "Interior rendering: Super Hi Q (6000px) | Hi Q (3000px)"
         - "Exterior rendering: Super Hi Q (6000px) | Hi Q (3000px)"
@@ -19,7 +19,7 @@ en:
       title: Immersive Experiences
       imageTitle: Sens Palermo Green
       imageCredit: ATV
-      description: <a href="/architects-and-developers/services/showcase#immersive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">We offer deeply immersive experiences at Sharp Studio Visuals</a>. This means that, in addition to perceiving the space, you can explore	 it fully. Inquire about our services to fully experience your projects.
+      description: We offer <a href="/architects-and-developers/services/showcase#immersive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">deeply immersive experiences</a> at Sharp Studio Visuals. This means that, in addition to perceiving the space, you can explore	 it fully. Inquire about our services to fully experience your projects.
       bullets:
         - CGI Animation
         - 3D Modelling
