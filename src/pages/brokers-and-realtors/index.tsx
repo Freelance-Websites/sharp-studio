@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 import CustomHead from '@/components/CustomHead';
@@ -16,16 +17,45 @@ import { attributes } from '@/content/brokers-and-realtors/index.md';
 import { attributes as globals } from '@/content/globals.md';
 
 export default function Home() {
-  const { title, heroEnabled, heroImage, heroTitle, heroCredit, studioEnabled, studioTitle, studioText, studioLinkText, studioSlider, servicesEnabled, servicesTitle, servicesText, servicesLinkText, servicesImage, servicesImageCaption, servicesImageCredit, servicesSlider, immersiveServicesEnabled, immersiveServicesText, immersiveServicesLinkText, immersiveServicesImage, immersiveServicesSlider, workflowEnabled, workflowText, workflowLinkText, workflowImage, workflowImageCaption, workflowImageCredit, workflowSlider, portfolioEnabled, portfolioText, portfolioLinkText, virtualStagingEnabled, virtualStagingImageOne, virtualStagingImageTwo, virtualStagingTitle, virtualStagingCredit, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes;
-  const { faqsText, faqsLinkText, officesImage, officesText, contactTitle, contactText } = globals;
+  const { heroEnabled, heroImage, studioEnabled, servicesEnabled, immersiveServicesEnabled, workflowEnabled,  portfolioEnabled, virtualStagingEnabled, faqsEnabled, mapEnabled, officesEnabled, contactEnabled } = attributes.en;
+  const { officesImage } = globals.en;
+  const { en, es } = attributes;
+  const faqsTextEng = globals.en.faqsText;
+  const faqsTextEsp = globals.es.faqsText;
+  const faqsLinkTextEng = globals.en.faqsLinkText;
+  const faqsLinkTextEsp = globals.es.faqsLinkText;
+  const officesTextEng = globals.en.officesText;
+  const officesTextEsp = globals.es.officesText;
+  const contactTitleEng = globals.en.contactTitle;
+  const contactTitleEsp = globals.es.contactTitle;
+  const contactTextEng = globals.en.contactText;
+  const contactTextEsp = globals.es.contactText;
+
+  const [language, setLanguage] = useState('en');
+  const translatedStudioSlider = language === 'en' ? en.studioSlider : es.studioSlider;
+  const translatedServicesSlider = language === 'en' ? en.servicesSlider : es.servicesSlider;
+  const translatedImmersiveServicesSlider = language === 'en' ? en.immersiveServicesSlider : es.immersiveServicesSlider;
+  const translatedWorkflowSlider = language === 'en' ? en.workflowSlider : es.workflowSlider;
+
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    window.localStorage.setItem('language', lang);
+  }
+
+  useEffect(() => {
+    const storedLanguage = window.localStorage.getItem('language');
+    changeLanguage(storedLanguage ? storedLanguage : 'en');
+  });
 
   return (
     <main>
       <CustomHead
-        title={title}
+        title={language === 'en' ? en.title : es.title}
       />
       <Header
         type="brokers-and-realtors"
+        activeLanguage={language}
+        changeLanguage={changeLanguage}
       />
       <ReactFullpage
         credits={{ enabled: false }}
@@ -36,8 +66,8 @@ export default function Home() {
               <section className="section">
                 <FullBleedImage
                   image={heroImage}
-                  title={heroTitle}
-                  credit={heroCredit}
+                  title={language === 'en' ? en.heroTitle : es.heroTitle}
+                  credit={language === 'en' ? en.heroCredit : es.heroCredit}
                 />
               </section>
             }
@@ -46,15 +76,14 @@ export default function Home() {
                 <section className="section">
                   <TextOnly
                     color="bg-light-gray"
-                    title={studioTitle}
-                    content={studioText}
-                    linkText={studioLinkText}
-                    linkHref={'/'}
+                    title={language === 'en' ? en.studioTitle : es.studioTitle}
+                    content={language === 'en' ? en.studioText : es.studioText}
+                    linkText={language === 'en' ? en.studioLinkText : es.studioLinkText}
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={studioSlider}
+                    slides={translatedStudioSlider}
                     drag={true}
                   />
                 </section>
@@ -66,18 +95,18 @@ export default function Home() {
                   <TextAndImage
                     orientation="left"
                     color="bg-cream"
-                    title={servicesTitle}
-                    content={servicesText}
-                    linkText={servicesLinkText}
+                    title={language === 'en' ? en.servicesTitle : es.servicesTitle}
+                    content={language === 'en' ? en.servicesText : es.servicesText}
+                    linkText={language === 'en' ? en.servicesLinkText : es.servicesLinkText}
                     linkHref={'/brokers-and-realtors/services'}
-                    image={servicesImage}
-                    imageCaption={servicesImageCaption}
-                    imageCredit={servicesImageCredit}
+                    image={language === 'en' ? en.servicesImage : es.servicesImage}
+                    imageCaption={language === 'en' ? en.servicesImageCaption : es.servicesImageCaption}
+                    imageCredit={language === 'en' ? en.servicesImageCredit : es.servicesImageCredit}
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={servicesSlider}
+                    slides={translatedServicesSlider}
                     drag={false}
                   />
                 </section>
@@ -89,16 +118,16 @@ export default function Home() {
                   <TextAndImage
                     orientation="right"
                     color="bg-light-gray"
-                    content={immersiveServicesText}
-                    linkText={immersiveServicesLinkText}
+                    content={language === 'en' ? en.immersiveServicesText : es.immersiveServicesText}
+                    linkText={language === 'en' ? en.immersiveServicesLinkText : es.immersiveServicesLinkText}
                     linkHref={'/brokers-and-realtors/services'}
-                    image={immersiveServicesImage}
+                    image={language === 'en' ? en.immersiveServicesImage : es.immersiveServicesImage}
                     imageProportion="horizontal"
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={immersiveServicesSlider}
+                    slides={translatedImmersiveServicesSlider}
                     drag={true}
                   />
                 </section>
@@ -110,18 +139,18 @@ export default function Home() {
                   <TextAndImage
                     orientation="left"
                     color="bg-salmon"
-                    content={workflowText}
-                    linkText={workflowLinkText}
+                    content={language === 'en' ? en.workflowText : es.workflowText}
+                    linkText={language === 'en' ? en.workflowLinkText : es.workflowLinkText}
                     linkHref={'/brokers-and-realtors/workflow'}
-                    image={workflowImage}
-                    imageCaption={workflowImageCaption}
-                    imageCredit={workflowImageCredit}
+                    image={language === 'en' ? en.workflowImage : es.workflowImage}
+                    imageCaption={language === 'en' ? en.workflowImageCaption : es.workflowImageCaption}
+                    imageCredit={language === 'en' ? en.workflowImageCredit : es.workflowImageCredit}
                     imageProportion="horizontal"
                   />
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={workflowSlider}
+                    slides={translatedWorkflowSlider}
                     drag={true}
                   />
                 </section>
@@ -131,19 +160,18 @@ export default function Home() {
               <section className="section">
                 <TextOnly
                   color="bg-light-blue"
-                  content={portfolioText}
-                  linkText={portfolioLinkText}
-                  linkHref={'/brokers-and-realtors/portfolio'}
+                  content={language === 'en' ? en.portfolioText : es.portfolioText}
+                  linkText={language === 'en' ? en.portfolioLinkText : es.portfolioLinkText}
                 />
               </section>
             }
             {virtualStagingEnabled &&
               <section className="section">
                 <VirtualStaging
-                  leftImage={virtualStagingImageOne}
-                  rightImage={virtualStagingImageTwo}
-                  title={virtualStagingTitle}
-                  credit={virtualStagingCredit}
+                  leftImage={language === 'en' ? en.virtualStagingImageOne : es.virtualStagingImageOne}
+                  rightImage={language === 'en' ? en.virtualStagingImageTwo : es.virtualStagingImageTwo}
+                  title={language === 'en' ? en.virtualStagingTitle : es.virtualStagingTitle}
+                  credit={language === 'en' ? en.virtualStagingCredit : es.virtualStagingCredit}
                 />
               </section>
             }
@@ -151,9 +179,8 @@ export default function Home() {
               <section className="section">
                 <TextOnly
                   color="bg-off-white"
-                  content={faqsText}
-                  linkText={faqsLinkText}
-                  linkHref={'/brokers-and-realtors/faqs'}
+                  content={language === 'en' ? faqsTextEng : faqsTextEsp}
+                  linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
                 />
               </section>
             }
@@ -168,7 +195,7 @@ export default function Home() {
                   <TextAndImage
                     orientation="left"
                     color="bg-light-gray"
-                    content={officesText}
+                    content={language === 'en' ? officesTextEng : officesTextEsp}
                     image={officesImage}
                   />
                 </section>
@@ -178,8 +205,8 @@ export default function Home() {
               <>
                 <section className="section relative">
                   <Contact
-                    title={contactTitle}
-                    content={contactText}
+                    title={language === 'en' ? contactTitleEng : contactTitleEsp}
+                    content={language === 'en' ? contactTextEng : contactTextEsp}
                   />
                 </section>
               </>

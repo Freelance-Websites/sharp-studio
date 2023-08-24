@@ -19,7 +19,9 @@ export default function TextOnly({ color, title, content, linkText, classes }: {
         }
         {content &&
           <p>
-            <BigText color="text-black">{content}</BigText>
+            <BigText color="text-black">
+              <span dangerouslySetInnerHTML={{ __html: content }} />
+            </BigText>
           </p>
         }
         {linkText &&
