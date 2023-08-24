@@ -25,7 +25,7 @@ en:
   servicesEnabled: true
   servicesTitle: Services.
   servicesText: We excel by adjusting our tailor-made services to each of our clients' requirements by bringing your property ideals to reality. We do so by rendering <a href="/brokers-and-realtors/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">still images with fine lighting and textures, immersive animation and 360 visualization experiences, and 3D tours, and virtual stagings</a> to make sure your client and buyers are able to experience architecture.
-  servicesLinkText: <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Interested in knowing more about what we can do?</a>
+  servicesLinkText: Interested in knowing more about what we can do?
   servicesImage: /images/brokers-and-realtors/services.jpg
   servicesImageCaption: Virrey Olaguer
   servicesImageCredit: BOOSARQ
@@ -40,7 +40,7 @@ en:
       type: panoram
   immersiveServicesEnabled: true
   immersiveServicesText: There is even more! All of the services we offer are met with a high level of training from our team combined with the most cutting edge technologies which allow us to explore the realities of tomorrow with Virtual Reality solutions to introduce ourselves into the world of your listings.
-  immersiveServicesLinkText: <a href="/brokers-and-realtors/services/showcase#interactive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Want to see our interactive experiences</a>?
+  immersiveServicesLinkText: Want to see our interactive experiences?
   immersiveServicesImage: /images/brokers-and-realtors/services-360.jpg
   immersiveServicesSlider:
     - image: /images/brokers-and-realtors/interactive-experiences-slider-1.jpg
@@ -57,7 +57,7 @@ en:
       type: image
   workflowEnabled: true
   workflowText: Are you interested in knowing the steps that allow us to take our clients from rough ideas to hyper-realistic images?
-  workflowLinkText: <a href="/brokers-and-realtors/workflow" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">See a detailed step by step of our workflow and ask us all the questions that occur to you</a>.
+  workflowLinkText: See a detailed step by step of our workflow and ask us all the questions that occur to you.
   workflowImage: /images/brokers-and-realtors/workflow-image.jpg
   workflowImageCaption: LIV Guatemala
   workflowImageCredit: ATV
@@ -112,7 +112,7 @@ es:
   servicesEnabled: true
   servicesTitle: Servicios.
   servicesText: Nuestros servicios taylor made están ajustados a las más altas exigencias de nuestros clientes con el objetivo de llevar a la realidad tu propiedad. <a href="/brokers-and-realtors/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Renderings stills con delicadeza en su iluminación y texturas, experiencias inmersivas de animación y visualización 360, y tours 3D, virtual stagings:</a> Vas a poder vivir la arquitectura.
-  servicesLinkText: <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Interesado en conocer más sobre lo que podemos hacer?</a>
+  servicesLinkText: Interesado en conocer más sobre lo que podemos hacer?
   servicesImage: /images/brokers-and-realtors/services.jpg
   servicesImageCaption: Virrey Olaguer
   servicesImageCredit: BOOSARQ
@@ -127,7 +127,7 @@ es:
       type: panoram
   immersiveServicesEnabled: true
   immersiveServicesText: Aún hay más! Servicios con un alto nivel de capacitación de nuestro equipo que se combinan con la más alta tecnología de punta, nos permiten explorar las realidades del mañana con soluciones de Realidad Virtual para introducirnos en el mundo de tus activos.
-  immersiveServicesLinkText: <a href="/brokers-and-realtors/services/showcase#interactive-experiences" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Querés conocer nuestras experiencias interactivas</a>?
+  immersiveServicesLinkText: Querés conocer nuestras experiencias interactivas?
   immersiveServicesImage: /images/brokers-and-realtors/services-360.jpg
   immersiveServicesSlider:
     - image: /images/brokers-and-realtors/interactive-experiences-slider-1.jpg
@@ -144,7 +144,7 @@ es:
       type: image
   workflowEnabled: true
   workflowText: Cómo son los pasos que nos permiten llevar a nuestros clientes desde las ideas en borrador a las imágenes hiper-realistas?
-  workflowLinkText: <a href="/brokers-and-realtors/workflow" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Podés ver un paso a paso detallado para entender nuestro workflow y hacernos todas las preguntas que se te ocurran.</a>.
+  workflowLinkText: Podés ver un paso a paso detallado para entender nuestro workflow y hacernos todas las preguntas que se te ocurran.
   workflowImage: /images/brokers-and-realtors/workflow-image.jpg
   workflowImageCaption: LIV Guatemala
   workflowImageCredit: ATV
