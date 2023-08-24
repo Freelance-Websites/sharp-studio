@@ -44,7 +44,7 @@ en:
 es:
   title: Servicios A&D
   headingTitle: Servicios.
-  headingText: Sharp Studio Visualstiene soluciones para cada tipo de proyecto de arquitectura y desarrollo. Desde hace más de 10 años, nuestro equipo de arquitectos y artistas digitales viene trabajando junto renombrados estudios de arquitectura alcanzando las más altas expectativas de laindustria. Desde las primeras ideas hasta las imágenes finales, SSV y cada uno de sus profesionales acompaña cada proyecto con detalle y minuciosidad en cada una de las decisiones visuales.
+  headingText: Sharp Studio Visuals tiene soluciones para cada tipo de proyecto de arquitectura y desarrollo. Desde hace más de 10 años, nuestro equipo de arquitectos y artistas digitales viene trabajando junto renombrados estudios de arquitectura alcanzando las más altas expectativas de laindustria. Desde las primeras ideas hasta las imágenes finales, SSV y cada uno de sus profesionales acompaña cada proyecto con detalle y minuciosidad en cada una de las decisiones visuales.
   services:
     - image: /images/architects-and-developers/services/service-1.jpg
       title: 3D Stills

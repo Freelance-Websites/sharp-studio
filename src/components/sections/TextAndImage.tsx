@@ -2,13 +2,14 @@ import Image from "next/image";
 
 import { MediumText, StandardText } from "@/components/Typography";
 
-export default function TextAndImage({ orientation, color, title, content, linkText, linkHref, image, imageCaption, imageCredit, imageProportion }: {
+export default function TextAndImage({ orientation, color, title, content, linkText, linkHref, image, imageHref, imageCaption, imageCredit, imageProportion }: {
   orientation: string,
   color: string,
   title?: string,
   content: string,
   linkText?: string,
   linkHref?: string,
+  imageHref?: string,
   image: string,
   imageCaption?: string,
   imageCredit?: string,
@@ -25,14 +26,18 @@ export default function TextAndImage({ orientation, color, title, content, linkT
           relative empty:hidden
           ${orientation === 'right' ? 'lg:order-last 2xl:col-start-7' : ''}
         `}>
-          <Image
-            src={image}
-            alt={`${imageCaption} – ${imageCredit}`}
-            fill={true}
-            className={`
-              w-full h-full object-contain
-            `}
-          />
+          <a
+            href={imageHref ? imageHref : linkHref ? linkHref : '#'}
+          >
+            <Image
+              src={image}
+              alt={`${imageCaption} – ${imageCredit}`}
+              fill={true}
+              className={`
+                w-full h-full object-contain
+              `}
+            />
+          </a>
         </li>
         <li className={`
           grid gap-2 md:gap-4 col-span-full lg:col-span-6
@@ -53,7 +58,12 @@ export default function TextAndImage({ orientation, color, title, content, linkT
           }
           {/* Need to use <a> so that it scrolls to the top */}
           {linkHref && linkText &&
-            <a href={linkHref}>
+            <a
+              href={linkHref}
+              target={linkHref.startsWith('http') ? '_blank' : '_self'}
+              rel={linkHref.startsWith('http') ? 'noopener roferrer' : ''}
+              className="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline"
+            >
               <MediumText
                 color="text-black"
               >

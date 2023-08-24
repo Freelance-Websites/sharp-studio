@@ -98,8 +98,9 @@ export default function Home() {
                     title={language === 'en' ? en.servicesTitle : es.servicesTitle}
                     content={language === 'en' ? en.servicesText : es.servicesText}
                     linkText={language === 'en' ? en.servicesLinkText : es.servicesLinkText}
-                    linkHref={'/brokers-and-realtors/services'}
+                    linkHref={language === 'en' ? en.servicesLinkHref : es.servicesLinkHref}
                     image={language === 'en' ? en.servicesImage : es.servicesImage}
+                    imageHref={language === 'en' ? en.servicesImageHref : es.servicesImageHref }
                     imageCaption={language === 'en' ? en.servicesImageCaption : es.servicesImageCaption}
                     imageCredit={language === 'en' ? en.servicesImageCredit : es.servicesImageCredit}
                   />
@@ -120,8 +121,9 @@ export default function Home() {
                     color="bg-light-gray"
                     content={language === 'en' ? en.immersiveServicesText : es.immersiveServicesText}
                     linkText={language === 'en' ? en.immersiveServicesLinkText : es.immersiveServicesLinkText}
-                    linkHref={'/brokers-and-realtors/services'}
+                    linkHref={language === 'en' ? en.immersiveServicesLinkHref : es.immersiveServicesLinkHref}
                     image={language === 'en' ? en.immersiveServicesImage : es.immersiveServicesImage}
+                    imageHref={language === 'en' ? en.immersiveServicesImageHref : es.immersiveServicesImageHref}
                     imageProportion="horizontal"
                   />
                 </section>
@@ -141,8 +143,9 @@ export default function Home() {
                     color="bg-salmon"
                     content={language === 'en' ? en.workflowText : es.workflowText}
                     linkText={language === 'en' ? en.workflowLinkText : es.workflowLinkText}
-                    linkHref={'/brokers-and-realtors/workflow'}
+                    linkHref={language === 'en' ? en.workflowLinkHref : es.workflowLinkHref}
                     image={language === 'en' ? en.workflowImage : es.workflowImage}
+                    imageHref={language === 'en' ? en.workflowImageHref : es.workflowImageHref}
                     imageCaption={language === 'en' ? en.workflowImageCaption : es.workflowImageCaption}
                     imageCredit={language === 'en' ? en.workflowImageCredit : es.workflowImageCredit}
                     imageProportion="horizontal"

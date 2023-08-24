@@ -26,6 +26,7 @@ export default function Showcase() {
   const contactTitleEsp = globals.es.contactTitle;
   const contactTextEng = globals.en.contactText;
   const contactTextEsp = globals.es.contactText;
+  const officesImage = globals.es.officesImage;
 
   const [language, setLanguage] = useState('en');
 
@@ -118,7 +119,7 @@ export default function Showcase() {
                 orientation="left"
                   color="bg-light-gray"
                   content={language === 'en' ? officesTextEng : officesTextEsp}
-                  image={en.officesImage}
+                  image={officesImage}
                 />
               </section>
             }

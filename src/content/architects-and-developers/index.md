@@ -26,6 +26,8 @@ en:
   servicesTitle: Services.
   servicesText: We offer tailor made solutions to all of our clients with the objective of making unbuilt projects into a reality. We do so by creating state of the art <a href="/architects-and-developers/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">high definition images for each project as well as immersive strategies</a> to captivate investors and potential clients alike.
   servicesLinkText: Contact us to get a quote!
+  servicesImageHref: /architects-and-developers/services
+  servicesLinkHref: https://wa.me/13054693227
   servicesImage: /images/architects-and-developers/services.jpg
   servicesImageCaption: Ixou Brusco
   servicesImageCredit: Klotz, Minond, Hauser
@@ -40,6 +42,7 @@ en:
       type: panoram
   immersiveServicesEnabled: true
   immersiveServicesText: At Sharp Studio Visuals we have countless options for bringing architecture to life even when it's not yet built. To do so, we rely on our highly trained human resources and state-of-the-art technology. That is why we offer <a href="/architects-and-developers/services/showcase#immersive-services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">3D virtual tours, 360 experiences, and even tools to visualize projects in Virtual Reality</a> to take the adventure of architecture to the next level.
+  immersiveServicesImageHref: /architects-and-developers/services/showcase#immersive-services
   immersiveServicesImage: /images/architects-and-developers/services-360.jpg
   immersiveServicesSlider:
     - image: /images/architects-and-developers/immersive-services-slider-1.jpg
@@ -54,6 +57,8 @@ en:
       theme: dark
   workflowEnabled: true
   workflowText: Each project has a dedicated team of architects and designers who are in constant contact with the client and their every need. <a href="/architects-and-developers/workflow" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Our workflow is meticulously supervised by a team of managers</a> with impeccable attention to detail and proactiveness whose function is to carry out the demands of each account in a timely manner.
+  workflowLinkHref: /architects-and-developers/workflow
+  workflowImageHref: /architects-and-developers/workflow
   workflowImage: /images/architects-and-developers/workflow-image.jpg
   workflowImageCaption: Rue 2
   workflowImageCredit: IVB
@@ -89,8 +94,10 @@ en:
       imageMobile: /images/architects-and-developers/documentation-slider-3-mobile.jpg
       imageFit: contain
       type: image
-  documentationText: At SSV we have created a team that specializes in <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">technical documentation of architectural projects, both for permitting, quotes for construction, and building project execution</a>. Our aim is to help companies running a very tight schedule, Architects with their firms stretched too thin with limited resources, or developers who cannot find permitting to build companies to fulfill their expectations.
+  documentationText: At SSV we have created a team that specializes in <a href="/architects-and-developers/services/architecture-and-developer-services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">technical documentation of architectural projects, both for permitting, quotes for construction, and building project execution</a>. Our aim is to help companies running a very tight schedule, Architects with their firms stretched too thin with limited resources, or developers who cannot find permitting to build companies to fulfill their expectations.
   documentationLinkText: Interested in pricing? Contact us and get a free quote.
+  documentationLinkHref: https://wa.me/13054693227
+  documentationImageHref: /architects-and-developers/services/architecture-and-developer-services
   documentationImage: /images/architects-and-developers/documentation.jpg
   faqsEnabled: true
   mapEnabled: true
@@ -123,7 +130,9 @@ es:
   servicesTitle: Servicios.
   servicesText: Tenemos servicios a la medida de cada cliente para llevar a la realidad los edificios aún no construidos. <a href="/architects-and-developers/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Nítidas imágenes de cada proyecto y experiencias inmersivas</a> para seducir a inversores y clientes.
   servicesLinkText: Contactanos para obtener una cotización!
+  servicesLinkHref: https://wa.me/13054693227
   servicesImage: /images/architects-and-developers/services.jpg
+  servicesImageHref: /architects-and-developers/services
   servicesImageCaption: Ixou Brusco
   servicesImageCredit: Klotz, Minond, Hauser
   servicesSlider:
@@ -138,6 +147,7 @@ es:
   immersiveServicesEnabled: true
   immersiveServicesText: Sharp Studio Visuals tiene un sinnumero de opciones para llevar la arquitectura a la realidad aún cuando no está construida. Nos basamos en nuestros recursos humanos altamente capacitados y en la tecnología de punta. Por eso ofrecemos <a href="/architects-and-developers/services/showcase#immersive-services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">tours virtuales 3D, experiencias 360, hasta herramientas para visualizar proyectos en Realidad Virtual</a> y llevar la aventura de la arquitectura realmente a otro nivel.
   immersiveServicesImage: /images/architects-and-developers/services-360.jpg
+  immersiveServicesImageHref: /architects-and-developers/services/showcase#immersive-services
   immersiveServicesSlider:
     - image: /images/architects-and-developers/immersive-services-slider-1.jpg
       title: Ixou Mini
@@ -152,6 +162,8 @@ es:
   workflowEnabled: true
   workflowText: Cada proyecto tiene la dedicación de un equipo de arquitectos y diseñadores que están en contacto constante con el cliente y sus indicaciones. <a href="/architects-and-developers/workflow" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">El workflow está minuciosamente supervisado por un equipo de managers</a> detallistas y obsesivos cuya función es llevar adelante en tiempo y forma las exigencias de cada cuenta.
   workflowImage: /images/architects-and-developers/workflow-image.jpg
+  workflowLinkHref: /architects-and-developers/workflow
+  workflowImageHref: /architects-and-developers/workflow
   workflowImageCaption: Rue 2
   workflowImageCredit: IVB
   workflowSlider:
@@ -186,8 +198,10 @@ es:
       imageMobile: /images/architects-and-developers/documentation-slider-3-mobile.jpg
       imageFit: contain
       type: image
-  documentationText: En SSV creamos un equipo que se especializa en <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">documentación técnica de proyectos de arquitectura, tanto para permitting, para cotizaciones de obras, o ejecución de edificios</a>. Nuestro objetivo es ayudar a las compañías que tienen poco tiempo para el deadline, recursos sobre exigidos en el estudio, o desarrolladores que no encuentran arquitectos que completen sus expectativas.
+  documentationText: En SSV creamos un equipo que se especializa en <a href="/architects-and-developers/services/architecture-and-developer-services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">documentación técnica de proyectos de arquitectura, tanto para permitting, para cotizaciones de obras, o ejecución de edificios</a>. Nuestro objetivo es ayudar a las compañías que tienen poco tiempo para el deadline, recursos sobre exigidos en el estudio, o desarrolladores que no encuentran arquitectos que completen sus expectativas.
   documentationLinkText: Interesado en una cotización? Contactanos y obtené una gratuita.
+  documentationLinkHref: https://wa.me/13054693227
+  documentationImageHref: /architects-and-developers/services/architecture-and-developer-services
   documentationImage: /images/architects-and-developers/documentation.jpg
   faqsEnabled: true
   mapEnabled: true

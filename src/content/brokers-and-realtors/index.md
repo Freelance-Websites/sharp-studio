@@ -26,6 +26,8 @@ en:
   servicesTitle: Services.
   servicesText: We excel by adjusting our tailor-made services to each of our clients' requirements by bringing your property ideals to reality. We do so by rendering <a href="/brokers-and-realtors/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">still images with fine lighting and textures, immersive animation and 360 visualization experiences, and 3D tours, and virtual stagings</a> to make sure your client and buyers are able to experience architecture.
   servicesLinkText: Interested in knowing more about what we can do?
+  servicesImageHref: /brokers-and-realtors/services
+  servicesLinkHref: https://wa.me/13054693227
   servicesImage: /images/brokers-and-realtors/services.jpg
   servicesImageCaption: Virrey Olaguer
   servicesImageCredit: BOOSARQ
@@ -41,6 +43,8 @@ en:
   immersiveServicesEnabled: true
   immersiveServicesText: There is even more! All of the services we offer are met with a high level of training from our team combined with the most cutting edge technologies which allow us to explore the realities of tomorrow with Virtual Reality solutions to introduce ourselves into the world of your listings.
   immersiveServicesLinkText: Want to see our interactive experiences?
+  immersiveServicesLinkHref: /brokers-and-realtors/services
+  immersiveServicesImageHref: /brokers-and-realtors/services
   immersiveServicesImage: /images/brokers-and-realtors/services-360.jpg
   immersiveServicesSlider:
     - image: /images/brokers-and-realtors/interactive-experiences-slider-1.jpg
@@ -58,7 +62,9 @@ en:
   workflowEnabled: true
   workflowText: Are you interested in knowing the steps that allow us to take our clients from rough ideas to hyper-realistic images?
   workflowLinkText: See a detailed step by step of our workflow and ask us all the questions that occur to you.
+  workflowLinkHref: /brokers-and-realtors/workflow
   workflowImage: /images/brokers-and-realtors/workflow-image.jpg
+  workflowImageHref: /brokers-and-realtors/workflow
   workflowImageCaption: LIV Guatemala
   workflowImageCredit: ATV
   workflowSlider:
@@ -113,6 +119,8 @@ es:
   servicesTitle: Servicios.
   servicesText: Nuestros servicios taylor made están ajustados a las más altas exigencias de nuestros clientes con el objetivo de llevar a la realidad tu propiedad. <a href="/brokers-and-realtors/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Renderings stills con delicadeza en su iluminación y texturas, experiencias inmersivas de animación y visualización 360, y tours 3D, virtual stagings:</a> Vas a poder vivir la arquitectura.
   servicesLinkText: Interesado en conocer más sobre lo que podemos hacer?
+  servicesImageHref: /brokers-and-realtors/services
+  servicesLinkHref: https://wa.me/13054693227
   servicesImage: /images/brokers-and-realtors/services.jpg
   servicesImageCaption: Virrey Olaguer
   servicesImageCredit: BOOSARQ
@@ -128,6 +136,8 @@ es:
   immersiveServicesEnabled: true
   immersiveServicesText: Aún hay más! Servicios con un alto nivel de capacitación de nuestro equipo que se combinan con la más alta tecnología de punta, nos permiten explorar las realidades del mañana con soluciones de Realidad Virtual para introducirnos en el mundo de tus activos.
   immersiveServicesLinkText: Querés conocer nuestras experiencias interactivas?
+  immersiveServicesLinkHref: /brokers-and-realtors/services
+  immersiveServicesImageHref: /brokers-and-realtors/services
   immersiveServicesImage: /images/brokers-and-realtors/services-360.jpg
   immersiveServicesSlider:
     - image: /images/brokers-and-realtors/interactive-experiences-slider-1.jpg
@@ -148,6 +158,8 @@ es:
   workflowImage: /images/brokers-and-realtors/workflow-image.jpg
   workflowImageCaption: LIV Guatemala
   workflowImageCredit: ATV
+  workflowLinkHref: /brokers-and-realtors/workflow
+  workflowImageHref: /brokers-and-realtors/workflow
   workflowSlider:
     - image: /images/brokers-and-realtors/workflow-slider-1.jpg
       title: LIV Plaza

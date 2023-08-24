@@ -98,7 +98,8 @@ export default function Home() {
                     title={language === 'en' ? en.servicesTitle : es.servicesTitle}
                     content={language === 'en' ? en.servicesText : es.servicesText}
                     linkText={language === 'en' ? en.servicesLinkText : es.servicesLinkText}
-                    linkHref={'/architects-and-developers/services'}
+                    linkHref={language === 'en' ? en.servicesLinkHref : es.servicesLinkHref}
+                    imageHref={language === 'en' ? en.servicesImageHref : es.servicesImageHref}
                     image={language === 'en' ? en.servicesImage : es.servicesImage}
                     imageCaption={language === 'en' ? en.servicesImageCaption : es.servicesImageCaption}
                     imageCredit={language === 'en' ? en.servicesImageCredit : es.servicesImageCredit}
@@ -120,7 +121,8 @@ export default function Home() {
                     color="bg-salmon"
                     content={language === 'en' ? en.immersiveServicesText : es.immersiveServicesText}
                     linkText={language === 'en' ? en.immersiveServicesLinkText : es.immersiveServicesLinkText}
-                    linkHref={'/architects-and-developers/services'}
+                    linkHref={language === 'en' ? en.immersiveServiceLinkHref : es.immersiveServicesLinkHref}
+                    imageHref={language === 'en' ? en.immersiveServiceImageHref : es.immersiveServicesImageHref}
                     image={language === 'en' ? en.immersiveServicesImage : es.immersiveServicesImage}
                   />
                 </section>
@@ -140,8 +142,9 @@ export default function Home() {
                     color="bg-light-green"
                     content={language === 'en' ? en.workflowText : es.workflowText}
                     linkText={language === 'en' ? en.workflowLinkText : es.workflowLinkText}
-                    linkHref={'/architects-and-developers/workflow'}
+                    linkHref={language === 'en' ? en.workflowLinkHref : es.workflowLinkHref}
                     image={language === 'en' ? en.workflowImage : es.workflowImage}
+                    imageHref={language === 'en' ? en.workflowImageHref : es.workflowImageHref}
                     imageCaption={language === 'en' ? en.workflowImageCaption : es.workflowImageCaption}
                     imageCredit={language === 'en' ? en.workflowImageCredit : es.workflowImageCredit}
                   />
@@ -177,8 +180,9 @@ export default function Home() {
                     color="bg-light-gray"
                     content={language === 'en' ? en.documentationText : es.documentationText}
                     linkText={language === 'en' ? en.documentationLinkText : es.documentationLinkText}
-                    linkHref={'/architects-and-developers/services'}
+                    linkHref={language === 'en' ? en.documentationLinkHref : es.documentationLinkHref}
                     image={language === 'en' ? en.documentationImage : es.documentationImage}
+                    imageHref={language === 'en' ? en.documentationImageHref : es.documentationImageHref}
                   />
                 </section>
               </>
