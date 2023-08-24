@@ -35,6 +35,11 @@ export default function Header({
             {type &&
               <>
                 <li>
+                  <Link href={`/${type}`} className="hover:opacity-80 duration-100 transition ease-in-out">
+                    <UpperCaseText color="text-black">Home</UpperCaseText>
+                  </Link>
+                </li>
+                <li>
                   <Link href={`/${type}/portfolio`} className="hover:opacity-80 duration-100 transition ease-in-out">
                     <UpperCaseText color="text-black">Portfolio</UpperCaseText>
                   </Link>
