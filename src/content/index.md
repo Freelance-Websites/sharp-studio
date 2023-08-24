@@ -27,8 +27,8 @@ en:
       credit: Munich Market
       type: Whitekitchen
     - image: /images/home/slide-7.jpg
-      title: '??'
-      credit: '??'
+      title: Estomba
+      credit: BAS + LABA
       type: image
   architectsAndDevelopersHover: /images/home/architects-and-developers-hover.jpg
   brokersAndRealtorsHover: /images/home/brokers-and-realtors-hover.jpg
