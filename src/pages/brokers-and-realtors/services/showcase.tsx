@@ -94,7 +94,7 @@ export default function Showcase() {
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={language === 'en' ? en.immersiveExperiencesSlider : es.immersiveExperiencesSlider}
+                    slides={language === 'en' ? en.interactiveExperiencesSlider : es.interactiveExperiencesSlider}
                     drag={false}
                   />
                 </section>
