@@ -11,20 +11,24 @@ en:
       credit: Whitekitchen
       type: image
     - image: /images/home/slide-3.jpg
+      title: Mendoza 1461
+      credit: Estudio Planta
+      type: image
+    - image: /images/home/slide-4.jpg
       title: Colombres
       credit: LVB
       type: image
-    - image: /images/home/slide-4.jpg
-      title: Concurso ITBA
-      credit: Matías Beccar Varela, Pablo Katz, Ignacio Beccar Varela
-      type: image
     - image: /images/home/slide-5.jpg
-      title: LIV Plaza
+      title: Sens Palermo Green
       credit: ATV
       type: image
     - image: /images/home/slide-6.jpg
-      title: Munich Market
-      credit: Whitekitchen
+      title: Sens Palermo Green
+      credit: Munich Market
+      type: Whitekitchen
+    - image: /images/home/slide-7.jpg
+      title: '??'
+      credit: '??'
       type: image
   architectsAndDevelopersHover: /images/home/architects-and-developers-hover.jpg
   brokersAndRealtorsHover: /images/home/brokers-and-realtors-hover.jpg
