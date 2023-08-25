@@ -7,8 +7,8 @@ en:
   heroCredit: MSGSSS
   studioEnabled: true
   studioTitle: The Studio.
-  studioText: Sharp Studio Visuals is a company made up of a team of professionals specialized in showing your properties with the highest quality standards. <a href="/brokers-and-realtors/about" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">We are a team of Architects and interior designers</a> dedicated to giving all their talent to transform your project into the best investment for your clients and prospective buyers.
-  studioLinkText: Want to meet? <a href="/brokers-and-realtors/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Contact us</a> and get a free quote, or drive to our offices in Aventura, FL, USA
+  studioText: "Sharp Studio Visuals is a company made up of a team of professionals specialized in showing your properties with the highest quality standards. [We are a team of Architects and interior designers](/brokers-and-realtors/about) dedicated to giving all their talent to transform your project into the best investment for your clients and prospective buyers."
+  studioLinkText: "Want to meet? [Contact us](/brokers-and-realtors/contact) and get a free quote, or drive to our offices in Aventura, FL, USA"
   studioSlider:
     - image: /images/brokers-and-realtors/studio-slider-1.jpg
       title: Casa Laguna Grande
@@ -24,7 +24,7 @@ en:
       type: image
   servicesEnabled: true
   servicesTitle: Services.
-  servicesText: We excel by adjusting our tailor-made services to each of our clients' requirements by bringing your property ideals to reality. We do so by rendering <a href="/brokers-and-realtors/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">still images with fine lighting and textures, immersive animation and 360 visualization experiences, and 3D tours, and virtual stagings</a> to make sure your client and buyers are able to experience architecture.
+  servicesText: "We excel by adjusting our tailor-made services to each of our clients' requirements by bringing your property ideals to reality. We do so by rendering [still images with fine lighting and textures, immersive animation and 360 visualization experiences, and 3D tours, and virtual stagings](/brokers-and-realtors/services) to make sure your client and buyers are able to experience architecture."
   servicesLinkText: Interested in knowing more about what we can do?
   servicesImageHref: /brokers-and-realtors/services
   servicesLinkHref: https://wa.me/13054693227
@@ -82,7 +82,7 @@ en:
       type: image
   portfolioEnabled: true
   portfolioText: In our Portfolio, you will see a reflection of our experience for over 10 years in the market, which is especially focused on the Real Estate industry.
-  portfolioLinkText: <a href="/brokers-and-realtors/portfolio" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Take a tour to see our work</a>.
+  portfolioLinkText: "[Take a tour to see our work](/brokers-and-realtors/portfolio)."
   virtualStagingEnabled: true
   virtualStagingImageOne: /images/brokers-and-realtors/virtual-staging-1.jpg
   virtualStagingImageTwo: /images/brokers-and-realtors/virtual-staging-2.jpg
@@ -100,8 +100,8 @@ es:
   heroCredit: MSGSSS
   studioEnabled: true
   studioTitle: El Estudio.
-  studioText: Sharp Studio Visuals es una compañía conformada por un equipo de profesionales especializados en mostrar tus propiedades con los mayores estándares de calidad. <a href="/brokers-and-realtors/about" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Arquitectos y diseñadores de interiores</a> dedicados a darlo todo su talento para transformar tu proyecto en la mejor inversión.
-  studioLinkText: Querés conocernos? <a href="/brokers-and-realtors/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Contactanos</a> y obtené una cotización gratuita, o visitanos en nuestras oficinas en Aventura, FL, USA
+  studioText: "Sharp Studio Visuals es una compañía conformada por un equipo de profesionales especializados en mostrar tus propiedades con los mayores estándares de calidad. [Arquitectos y diseñadores de interiores](/brokers-and-realtors/about) dedicados a darlo todo su talento para transformar tu proyecto en la mejor inversión."
+  studioLinkText: "Querés conocernos? [Contactanos](/brokers-and-realtors/contact) y obtené una cotización gratuita, o visitanos en nuestras oficinas en Aventura, FL, USA"
   studioSlider:
     - image: /images/brokers-and-realtors/studio-slider-1.jpg
       title: Casa Laguna Grande
@@ -117,7 +117,7 @@ es:
       type: image
   servicesEnabled: true
   servicesTitle: Servicios.
-  servicesText: Nuestros servicios taylor made están ajustados a las más altas exigencias de nuestros clientes con el objetivo de llevar a la realidad tu propiedad. <a href="/brokers-and-realtors/services" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Renderings stills con delicadeza en su iluminación y texturas, experiencias inmersivas de animación y visualización 360, y tours 3D, virtual stagings:</a> Vas a poder vivir la arquitectura.
+  servicesText: "Nuestros servicios taylor made están ajustados a las más altas exigencias de nuestros clientes con el objetivo de llevar a la realidad tu propiedad. [Renderings stills con delicadeza en su iluminación y texturas, experiencias inmersivas de animación y visualización 360, y tours 3D, virtual stagings:](/brokers-and-realtors/services) Vas a poder vivir la arquitectura."
   servicesLinkText: Interesado en conocer más sobre lo que podemos hacer?
   servicesImageHref: /brokers-and-realtors/services
   servicesLinkHref: https://wa.me/13054693227
@@ -175,7 +175,7 @@ es:
       type: image
   portfolioEnabled: true
   portfolioText: Más de 10 años en el mercado, se pueden recorrer en nuestro portfolio enfocado especialmente en la industria del Real Estate.
-  portfolioLinkText: <a href="/brokers-and-realtors/portfolio" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Comenzá el reccorido para ver nuestro trabajo</a>.
+  portfolioLinkText: "[Comenzá el recorido para ver nuestro trabajo](/brokers-and-realtors/portfolio)."
   virtualStagingEnabled: true
   virtualStagingImageOne: /images/brokers-and-realtors/virtual-staging-1.jpg
   virtualStagingImageTwo: /images/brokers-and-realtors/virtual-staging-2.jpg

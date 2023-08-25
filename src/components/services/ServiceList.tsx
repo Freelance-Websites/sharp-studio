@@ -1,3 +1,4 @@
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -21,9 +22,6 @@ export default function ServiceList({ type, services }: {
   return (
     <ul className="grid gap-16 lg:gap-24 xl:gap-32 container mx-auto px-4 py-16 md:py-20">
       {services.map((service, index) => {
-        let formattedLinkText;
-        formattedLinkText = service.linkText?.replace(/click here/gi, '<u class="decoration-1 underline-offset-4 md:underline-offset-8 group-hover:no-underline">$&</u>');
-
         let fullLink;
         if(service.linkHref.includes('architecture-and-developer-services')) {
           fullLink = `/${type}/services/${service.linkHref}`;
@@ -59,10 +57,11 @@ export default function ServiceList({ type, services }: {
             </div>
             <div className="col-span-full md:col-span-full lg:col-span-6 xl:col-span-5 grid gap-2">
               <h2><MediumText color="text-black" classes="font-neue-bold xl:text-2xl 2xl:text-3xl 2xl:leading-normal">{service.title}</MediumText></h2>
-              <p
+              <div
                 className="text-black text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal xl:text-2xl 2xl:text-3xl 2xl:leading-normal"
-                dangerouslySetInnerHTML={{ __html: service.description }}
-              />
+              >
+                <ReactMarkdown>{service.description}</ReactMarkdown>
+              </div>
               {service.bullets.length > 0 &&
                 <ol className={`ml-4 md:ml-8 list-disc grid ${service.bullets.length > 4 ? 'md:grid-cols-2' : ''} gap-1`}>
                   {service.bullets.map((bullet, index) =>
@@ -73,7 +72,7 @@ export default function ServiceList({ type, services }: {
                 </ol>
               }
               <MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal">
-                <span dangerouslySetInnerHTML={{ __html: formattedLinkText }} />
+                <ReactMarkdown>{service.linkText}</ReactMarkdown>
               </MediumText>
             </div>
           </li>

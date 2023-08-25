@@ -33,7 +33,7 @@ en:
   bimVideo: /images/architects-and-developers/services/architecture-and-developer/bim.mp4
   bimTitle: BIM Documentation
   bimText: The Building Information Model is mastered to perfection by our team of parametric modeling specialists. 
-  bimLinkText: <a href="/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Contact us</a> to get a quote for your project and any BIM image.
+  bimLinkText: "[Contact us](/contact) to get a quote for your project and any BIM image."
   cadEnabled: true
   cadTitle: CAD Documentation
   cadText: Architecture and MEP plans, plans required for any bid, preliminary and layout plans, etc...at SSVwe draw all types of projects on all types of platforms.
@@ -103,7 +103,7 @@ es:
   bimVideo: /images/architects-and-developers/services/architecture-and-developer/bim.mp4
   bimTitle: Documentación BIM
   bimText: Todo el poder del Building Information Model es dominado a la perfección por nuestro equipo de especialistas en modelado paramétrico.
-  bimLinkText: <a href="/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Ponete en contacto con nosotros</a> para obtener una cotización de tu proyecto.
+  bimLinkText: "[Ponete en contacto con nosotros](/contact) para obtener una cotización de tu proyecto."
   cadEnabled: true
   cadTitle: Documentación CAD
   cadText: Planos para obra, planos para licitar una obra, planos de anteproyecto, en SSV dibujamos todo tipo de proyecto en todo tipode plataforma.

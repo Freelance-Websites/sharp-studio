@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+
 import { MainHeading, BigText } from "../Typography";
 
 export default function TextOnly({ color, title, content, linkText, classes }: {
@@ -18,20 +20,15 @@ export default function TextOnly({ color, title, content, linkText, classes }: {
           </h2>
         }
         {content &&
-          <p>
-            <BigText color="text-black">
-              <span dangerouslySetInnerHTML={{ __html: content }} />
-            </BigText>
-          </p>
+          <BigText color="text-black">
+            <ReactMarkdown>{content}</ReactMarkdown>
+          </BigText>
         }
         {linkText &&
           <BigText
             color="text-black"
           >
-            <span
-              className="group relative"
-              dangerouslySetInnerHTML={{ __html: linkText }}
-            />
+            <ReactMarkdown>{linkText}</ReactMarkdown>
           </BigText>
         }
       </div>

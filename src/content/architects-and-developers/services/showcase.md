@@ -25,7 +25,7 @@ en:
   immersiveExperiencesEnabled: true
   immersiveExperiencesTitle: Immersive Experiences
   immersiveExperiencesText: We offer deeply immersive experiences at Sharp Studio Visuals. This means that, in addition to perceiving the space, you can explore it fully. Inquire about our services to fully experience your projects.
-  immersiveExperiencesLinkText: To know more about our interactive visual solutions, <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">contact us</a>!
+  immersiveExperiencesLinkText: "To know more about our interactive visual solutions, [contact us](https://wa.me/13054693227)!"
   immersiveExperiencesSlider:
     - image: /images/architects-and-developers/services/immersive-experiences-slider-1.mp4
       title: Sens Palermo Green
@@ -81,7 +81,7 @@ es:
   immersiveExperiencesEnabled: true
   immersiveExperiencesTitle: Experiencias Inmersivas
   immersiveExperiencesText: Las experiencias inmersivas que ofrecemos en Sharp Studio Visuals hacen que además de percibir el espacio, lo puedas vivir. Tenemos opciones de todo tipo para sentirte dentro de tus proyectos.
-  immersiveExperiencesLinkText: Para conocer más sobre nuestras soluciones visuales interactivas, <a href="https://wa.me/13054693227" target="_blank" rel="noopener noreferrer" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">contactanos</a>!
+  immersiveExperiencesLinkText: "Para conocer más sobre nuestras soluciones visuales interactivas, [contactanos](https://wa.me/13054693227)!"
   immersiveExperiencesSlider:
     - image: /images/architects-and-developers/services/immersive-experiences-slider-1.mp4
       title: Sens Palermo Green

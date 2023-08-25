@@ -2,7 +2,7 @@
 en:
   title: FAQs
   heroTitle: Here are the answers to some of our FAQs.
-  heroCTA: Have others? Don’t hesitate to <a href="/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">contact us</a>.
+  heroCTA: "Have others? Don’t hesitate to [contact us](/contact)."
   contactEnabled: true
   faqsEnabled: true
   mapEnabled: true
@@ -29,7 +29,7 @@ en:
     - title: Can you incorporate specific materials and finishes into the renderings?
       text: Absolutely! We can accurately depict various materials, finishes, and textures to provide a lifelike representation of the final product.
     - title: Do you offer revisions if I'm not satisfied with the initial rendering?
-      text: Yes, we provide a revision process to ensure your satisfaction. We'll work closely with you to make necessary adjustments until you're happy with the final result. See our workflow <a href="/architects-and-developers/workflow" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Here</a>.
+      text: "Yes, we provide a revision process to ensure your satisfaction. We'll work closely with you to make necessary adjustments until you're happy with the final result. See our workflow [Here](/architects-and-developers/workflow)."
     - title: What file formats will the final renderings be delivered in?
       text: We can deliver renderings in commonly used file formats, such as JPEG, PNG, TIFF, or PDF. We can also provide 3D model files if required.
     - title: Can you work with tight deadlines or rush projects?
@@ -54,7 +54,7 @@ es:
   mapEnabled: true
   officesEnabled: true
   heroTitle: Aquí están las respuestas a algunas de nuestras FAQs.
-  heroCTA: Tienes otras? No dudes en <a href="/contact" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">contactarnos</a>.
+  heroCTA: "Tienes otras? No dudes en [contactarnos](/contact)."
   faqs:
     - title: What are renderings, and why do I need them?
       text: Renderings are realistic visual representations of architectural or product designs. They help you visualize the final project before it is finished, allowing you to make informed decisions and showcase your vision to clients, investors, or stakeholders.
@@ -77,7 +77,7 @@ es:
     - title: Can you incorporate specific materials and finishes into the renderings?
       text: Absolutely! We can accurately depict various materials, finishes, and textures to provide a lifelike representation of the final product.
     - title: Do you offer revisions if I'm not satisfied with the initial rendering?
-      text: Yes, we provide a revision process to ensure your satisfaction. We'll work closely with you to make necessary adjustments until you're happy with the final result. See our workflow <a href="/architects-and-developers/workflow" class="decoration-1 underline underline-offset-4 md:underline-offset-8 hover:no-underline">Here</a>.
+      text: "Yes, we provide a revision process to ensure your satisfaction. We'll work closely with you to make necessary adjustments until you're happy with the final result. See our workflow [Here](/architects-and-developers/workflow)."
     - title: What file formats will the final renderings be delivered in?
       text: We can deliver renderings in commonly used file formats, such as JPEG, PNG, TIFF, or PDF. We can also provide 3D model files if required.
     - title: Can you work with tight deadlines or rush projects?

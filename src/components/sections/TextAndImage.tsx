@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 
 import { MediumText, StandardText } from "@/components/Typography";
@@ -51,10 +52,11 @@ export default function TextAndImage({ orientation, color, title, content, linkT
             </h3>
           }
           {content &&
-            <p
-              dangerouslySetInnerHTML={{ __html: content }}
+            <div
               className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal text-black"
-            />
+            >
+              <ReactMarkdown>{content}</ReactMarkdown>
+            </div>
           }
           {/* Need to use <a> so that it scrolls to the top */}
           {linkHref && linkText &&

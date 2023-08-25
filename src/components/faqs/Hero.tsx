@@ -1,5 +1,7 @@
 "use client";
 
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+
 import { BigText } from "../Typography";
 
 export default function Hero({
@@ -12,7 +14,11 @@ export default function Hero({
   return (
     <div className="mx-auto container px-4 pt-24 md:pt-48 pb-8 md:pb-32">
       <h1><BigText color="text-black">{title}</BigText></h1>
-      <p className="mt-2 md:mt-0"><BigText color="text-black"><span dangerouslySetInnerHTML={{ __html: cta }} /></BigText></p>
+      <div className="mt-2 md:mt-0">
+        <BigText color="text-black">
+          <ReactMarkdown>{cta}</ReactMarkdown>
+        </BigText>
+      </div>
     </div>
   )
 }
