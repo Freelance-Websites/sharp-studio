@@ -53,7 +53,7 @@ export default function TextAndImage({ orientation, color, title, content, linkT
           }
           {content &&
             <div
-              className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal text-black"
+              className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl leading-relaxed md:leading-relaxed lg:leading-relaxed  2xl:leading-relaxed text-black"
             >
               <ReactMarkdown>{content}</ReactMarkdown>
             </div>

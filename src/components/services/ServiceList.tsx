@@ -58,7 +58,7 @@ export default function ServiceList({ type, services }: {
             <div className="col-span-full md:col-span-full lg:col-span-6 xl:col-span-5 grid gap-2">
               <h2><MediumText color="text-black" classes="font-neue-bold xl:text-2xl 2xl:text-3xl 2xl:leading-normal">{service.title}</MediumText></h2>
               <div
-                className="text-black text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal xl:text-2xl 2xl:text-3xl 2xl:leading-normal"
+                className="text-black text-lg md:text-xl lg:text-2xl 2xl:text-3xl leading-relaxed md:leading-relaxed lg:leading-relaxed  2xl:leading-relaxed"
               >
                 <ReactMarkdown>{service.description}</ReactMarkdown>
               </div>
