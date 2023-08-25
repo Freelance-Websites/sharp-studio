@@ -44,6 +44,7 @@ export default function Hero({
           </li>
         )}
       </ul>
+      <p className="md:px-4 py-8 md:pt-16 md:pb-32"><StandardText color="text-black">{disclaimer}</StandardText></p>
     </div>
   )
 }
