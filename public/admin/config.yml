@@ -531,7 +531,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: heroImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
           - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -672,7 +672,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: "heroImage", widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
           - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección Intro?", name: "introEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -741,12 +741,12 @@ collections:
           - {label: "Habilitar sección Design Development?", name: "designDevelopmentEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Design Development", name: "designDevelopmentTitle", widget: "string", hint: "El título para la sección Design Development", i18n: true, required: false}
           - {label: "Texto sección Design Development", name: "designDevelopmentText", widget: "text", hint: "El texto para la sección Design Development", i18n: true, required: false}
-          - {label: Imagen sección Design Development, name: image, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Design Development, name: "designDevelopmentImage", widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Habilitar sección BIM?", name: "bimEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección BIM", name: "bimTitle", widget: "string", hint: "El título para la sección BIM", i18n: true, required: false}
           - {label: "Texto sección BIM", name: "bimText", widget: "text", hint: "El texto para la sección BIM", i18n: true, required: false}
           - {label: "Texto link sección BIM", name: "bimLinkText", widget: "markdown", hint: "El texto para el link de la sección BIM", i18n: true, required: false}
-          - {label: Video sección BIM, name: bimVideo, widget: image, hint: Tamaño recomendado 1440x900px o superior, i18n: duplicate, required: false}
+          - {label: Video sección BIM, name: "bimVideo", widget: image, hint: Tamaño recomendado 1440x900px o superior, i18n: duplicate, required: false}
           - {label: "Habilitar sección CAD?", name: "cadEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección CAD", name: "cadTitle", widget: "string", hint: "El título para la sección CAD", i18n: true, required: false}
           - {label: "Texto sección CAD", name: "cadText", widget: "text", hint: "El texto para la sección CAD", i18n: true, required: false}
@@ -1183,7 +1183,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: heroImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
           - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
