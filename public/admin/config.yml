@@ -23,7 +23,7 @@ collections:
           - {label: "Texto sección FAQs", name: "faqsText", widget: "text", hint: "El texto para la sección FAQs", i18n: true, required: false}
           - {label: "Texto links FAQs", name: "faqsLinkText", widget: "markdown", hint: "El texto para el link de la sección FAQs", i18n: true, required: false}
           - {label: "Texto sección Oficinas", name: "officesText", widget: "string", hint: "El texto para la sección Oficinas", i18n: true, required: false}
-          - {label: "Imagen sección Oficinas", name: "officesImage", widget: "image", hint: "Tamaño recomendado: 1000x1000 o superior", i18n: duplicate, required: false}
+          - {label: "Imagen sección Oficinas", name: "officesImage", widget: "image", hint: "Tamaño recomendado 1000x1000 o superior", i18n: duplicate, required: false}
           - {label: "Título sección Contacto", name: "contactTitle", widget: "string", hint: "El título para la sección Contacto", i18n: true, required: false}
           - {label: "Texto sección Contacto", name: "contactText", widget: "twxt", hint: "El texto para la sección Contacto", i18n: true, required: false}
       # Index Structure
@@ -54,8 +54,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -142,7 +142,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar sección Encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen sección ncabezado, name: heroImage, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección ncabezado, name: heroImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título sección Encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección El Estudio?", name: "studioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -170,8 +170,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -213,7 +213,7 @@ collections:
           - {label: "Texto sección Servicios", name: "servicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios", name: "servicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios", name: "servicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
-          - {label: Imagen sección Servicios, name: servicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Servicios, name: servicesImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Link Image sección Servicios", name: "servicesImageHref", widget: "string", hint: "El link para la imagen de la sección", i18n: duplicate, required: false}
           - {label: "Título imagen sección Servicios", name: "servicesImageCaption", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Servicios", name: "servicesImageCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
@@ -238,8 +238,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -281,7 +281,7 @@ collections:
           - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios inmersivos", name: "immersiveServicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios inmersivos", name: "immersiveServicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
-          - {label: Imagen sección Servicios inmersivos, name: immersiveServicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Servicios inmersivos, name: immersiveServicesImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Link Image sección Servicios inmersivos", name: "immersiveServicesImageHref", widget: "string", hint: "El link para la imagen de la sección", i18n: duplicate, required: false}
           - {label: "Título imagen sección Servicios inmersivos", name: "immersiveServicesImageCaption", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Servicios inmersivos", name: "immersiveServicesImageCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
@@ -306,8 +306,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -349,7 +349,7 @@ collections:
           - {label: "Texto sección Workflow", name: "workflowText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Workflow", name: "workflowLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Workflow", name: "workflowLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
-          - {label: Imagen sección Workflow, name: workflowImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Workflow, name: workflowImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Link Image sección Workflow", name: "workflowImageHref", widget: "string", hint: "El link para la imagen de la sección", i18n: duplicate, required: false}
           - {label: "Título imagen sección Workflow", name: "workflowImageCaption", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Workflow", name: "workflowImageCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
@@ -374,8 +374,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -421,7 +421,7 @@ collections:
           - {label: "Texto sección Documentación", name: "documentationText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Documentación", name: "documentationLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Documentación", name: "documentationLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
-          - {label: Imagen sección Documentación, name: documentationImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Documentación, name: documentationImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Link Image sección Documentación", name: "documentationImageHref", widget: "string", hint: "El link para la imagen de la sección", i18n: duplicate, required: false}
           - {label: "Título imagen sección Documentación", name: "documentationImageCaption", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Documentación", name: "documentationImageCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
@@ -446,8 +446,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -510,7 +510,7 @@ collections:
             allow_add: true
             i18n: true
             fields:
-              - {label: Imagen del servicio, name: image, widget: image, hint: Tamaño recomendado: 800x800px o superior, i18n: duplicate, required: false}
+              - {label: Imagen del servicio, name: image, widget: image, hint: Tamaño recomendado 800x800px o superior, i18n: duplicate, required: false}
               - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
               - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
               - {label: "Título servicio", name: "title", widget: "string", hint: "El título para el servicio", i18n: true, required: false}
@@ -531,7 +531,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
           - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -559,8 +559,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -622,8 +622,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -672,7 +672,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
           - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección Intro?", name: "introEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -700,8 +700,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -741,22 +741,22 @@ collections:
           - {label: "Habilitar sección Design Development?", name: "designDevelopmentEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Design Development", name: "designDevelopmentTitle", widget: "string", hint: "El título para la sección Design Development", i18n: true, required: false}
           - {label: "Texto sección Design Development", name: "designDevelopmentText", widget: "text", hint: "El texto para la sección Design Development", i18n: true, required: false}
-          - {label: Imagen sección Design Development, name: image, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Design Development, name: image, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Habilitar sección BIM?", name: "bimEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección BIM", name: "bimTitle", widget: "string", hint: "El título para la sección BIM", i18n: true, required: false}
           - {label: "Texto sección BIM", name: "bimText", widget: "text", hint: "El texto para la sección BIM", i18n: true, required: false}
           - {label: "Texto link sección BIM", name: "bimLinkText", widget: "markdown", hint: "El texto para el link de la sección BIM", i18n: true, required: false}
-          - {label: Video sección BIM, name: bimVideo, widget: image, hint: Tamaño recomendado: 1440x900px o superior, i18n: duplicate, required: false}
+          - {label: Video sección BIM, name: bimVideo, widget: image, hint: Tamaño recomendado 1440x900px o superior, i18n: duplicate, required: false}
           - {label: "Habilitar sección CAD?", name: "cadEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección CAD", name: "cadTitle", widget: "string", hint: "El título para la sección CAD", i18n: true, required: false}
           - {label: "Texto sección CAD", name: "cadText", widget: "text", hint: "El texto para la sección CAD", i18n: true, required: false}
-          - {label: Imagen sección CAD, name: cadImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección CAD, name: cadImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen CAD", name: "cadCaption", widget: "string", hint: "El título para la imagen de la sección CAD", i18n: true, required: false}
           - {label: "Crédito imagen CAD", name: "cadCredit", widget: "string", hint: "El crédito para la imagen de la sección CAD", i18n: true, required: false}
           - {label: "Habilitar sección Permitting Plans?", name: "permittingPlansEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Permitting Plans", name: "permittingPlansTitle", widget: "string", hint: "El título para la sección Permitting Plans", i18n: true, required: false}
           - {label: "Texto sección Permitting Plans", name: "permittingPlansText", widget: "text", hint: "El texto para la sección Permitting Plans", i18n: true, required: false}
-          - {label: Imagen sección Permitting Plans, name: permittingPlansImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Permitting Plans, name: permittingPlansImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen Permitting Plans", name: "permittingPlansCaption", widget: "string", hint: "El título para la imagen de la sección Permitting Plans", i18n: true, required: false}
           - {label: "Crédito imagen Permitting Plans", name: "permittingPlansCredit", widget: "string", hint: "El crédito para la imagen de la sección Permitting Plans", i18n: true, required: false}
           - label: "Slider Permitting Plans"
@@ -781,8 +781,8 @@ collections:
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
                   - { label: "Plano", value: "map" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -836,7 +836,7 @@ collections:
             allow_add: true
             i18n: true
             fields:
-              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 1440x1800px o superior, i18n: duplicate, required: false}
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 1440x1800px o superior, i18n: duplicate, required: false}
               - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
               - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
               - {label: "Título del paso", name: "title", widget: "string", hint: "El título para el paso", i18n: true, required: false}
@@ -857,7 +857,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar sección Encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen sección ncabezado, name: heroImage, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección ncabezado, name: heroImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título sección Encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección El Estudio?", name: "studioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -885,8 +885,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -928,7 +928,7 @@ collections:
           - {label: "Texto sección Servicios", name: "servicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios", name: "servicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios", name: "servicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
-          - {label: Imagen sección Servicios, name: servicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Servicios, name: servicesImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Link Image sección Servicios", name: "servicesImageHref", widget: "string", hint: "El link para la imagen de la sección", i18n: duplicate, required: false}
           - {label: "Título imagen sección Servicios", name: "servicesImageCaption", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Servicios", name: "servicesImageCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
@@ -953,8 +953,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -996,7 +996,7 @@ collections:
           - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios inmersivos", name: "immersiveServicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios inmersivos", name: "immersiveServicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
-          - {label: Imagen sección Servicios inmersivos, name: immersiveServicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Servicios inmersivos, name: immersiveServicesImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Link Image sección Servicios inmersivos", name: "immersiveServicesImageHref", widget: "string", hint: "El link para la imagen de la sección", i18n: duplicate, required: false}
           - {label: "Título imagen sección Servicios inmersivos", name: "immersiveServicesImageCaption", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Servicios inmersivos", name: "immersiveServicesImageCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
@@ -1021,8 +1021,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -1064,7 +1064,7 @@ collections:
           - {label: "Texto sección Workflow", name: "workflowText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Workflow", name: "workflowLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Workflow", name: "workflowLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
-          - {label: Imagen sección Workflow, name: workflowImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Workflow, name: workflowImage, widget: image, hint: Tamaño recomendado 1000x1000px o superior, i18n: duplicate, required: false}
           - {label: "Link Image sección Workflow", name: "workflowImageHref", widget: "string", hint: "El link para la imagen de la sección", i18n: duplicate, required: false}
           - {label: "Título imagen sección Workflow", name: "workflowImageCaption", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Workflow", name: "workflowImageCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
@@ -1089,8 +1089,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -1132,8 +1132,8 @@ collections:
           - {label: "Texto sección Portfolio", name: "portfolioText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Link texto sección Portfolio", name: "portfolioLinkText", widget: "markdown", hint: "El texto y link para la sección", i18n: true, required: false}
           - {label: "Habilitar sección Virtual Staging?", name: "virtualStagingEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen uno sección Virtual Staging, name: virtualStagingImageOne, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
-          - {label: Imagen dos sección Virtual Staging, name: virtualStagingImageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen uno sección Virtual Staging, name: virtualStagingImageOne, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen dos sección Virtual Staging, name: virtualStagingImageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen sección Virtual Staging", name: "virtualStagingTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Virtual Staging", name: "virtualStagingCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
           - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -1162,7 +1162,7 @@ collections:
             allow_add: true
             i18n: true
             fields:
-              - {label: Imagen del servicio, name: image, widget: image, hint: Tamaño recomendado: 800x800px o superior, i18n: duplicate, required: false}
+              - {label: Imagen del servicio, name: image, widget: image, hint: Tamaño recomendado 800x800px o superior, i18n: duplicate, required: false}
               - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
               - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
               - {label: "Título servicio", name: "title", widget: "string", hint: "El título para el servicio", i18n: true, required: false}
@@ -1183,7 +1183,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen encabezado, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título imagen encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen del encabezado", i18n: true, required: false}
           - {label: "Crédito imagen encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -1211,8 +1211,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -1274,8 +1274,8 @@ collections:
                   - { label: "Panorama", value: "panoram" }
                   - { label: "Walking Tour", value: "walking" }
                   - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
               - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
@@ -1329,7 +1329,7 @@ collections:
             allow_add: true
             i18n: true
             fields:
-              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 1840x1280px o superior, i18n: duplicate, required: false}
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 1840x1280px o superior, i18n: duplicate, required: false}
               - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
               - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
               - {label: "Título del paso", name: "title", widget: "string", hint: "El título para el paso", i18n: true, required: false}
@@ -1346,7 +1346,7 @@ collections:
     fields:
       - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", i18n: true, required: false}
       - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", i18n: true, required: false}
-      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado: 800x600px o superior"}
+      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado 800x600px o superior"}
       - label: "Slider"
         name: "slides"
         widget: "list"
@@ -1362,7 +1362,7 @@ collections:
               - { label: "Horizontal", value: "video" }
               - { label: "Vertical", value: "vertical" }
               - { label: "Cuadrado", value: "square" }
-          - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+          - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
   # B&R projects
   - label: "Proyectos Brokers & Realtors"
     name: "projectsBR"
@@ -1374,7 +1374,7 @@ collections:
     fields:
       - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", i18n: true, required: false}
       - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", i18n: true, required: false}
-      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado: 800x600px o superior"}
+      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado 800x600px o superior"}
       - label: "Slider"
         name: "slides"
         widget: "list"
@@ -1390,4 +1390,4 @@ collections:
               - { label: "Horizontal", value: "video" }
               - { label: "Vertical", value: "vertical" }
               - { label: "Cuadrado", value: "square" }
-          - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, required: false}
+          - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
