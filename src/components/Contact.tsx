@@ -29,6 +29,7 @@ export default function Contact({
         netlify-honeypot="bot-field"
       >
         {/* Honeypot */}
+        <input type="hidden" name="form-name" value="contact" />
         <input name="bot-field" className="hidden" />
         <Input
           type="text"
