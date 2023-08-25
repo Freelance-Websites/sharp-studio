@@ -21,7 +21,7 @@ collections:
         i18n: true
         fields:
           - {label: "Texto sección FAQs", name: "faqsText", widget: "text", hint: "El texto para la sección FAQs", i18n: true, required: false}
-          - {label: "Texto links FAQs", name: "faqsLinkText", widget: "string", hint: "El texto para el link de la sección FAQs", i18n: true, required: false}
+          - {label: "Texto links FAQs", name: "faqsLinkText", widget: "markdown", hint: "El texto para el link de la sección FAQs", i18n: true, required: false}
           - {label: "Texto sección Oficinas", name: "officesText", widget: "string", hint: "El texto para la sección Oficinas", i18n: true, required: false}
           - {label: "Imagen sección Oficinas", name: "officesImage", widget: "image", hint: "Tamaño recomendado: 1000x1000 o superior", i18n: duplicate, required: false}
           - {label: "Título sección Contacto", name: "contactTitle", widget: "string", hint: "El título para la sección Contacto", i18n: true, required: false}
@@ -94,6 +94,28 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: Imagen hover para A&D, name: architectsAndDevelopersHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
           - {label: Imagen hover para B&R, name: brokersAndRealtorsHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
+      # FAQs Structure
+      - label: "FAQs"
+        name: "faqs"
+        file: "src/content/faqs.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Título sección FAQs", name: "heroTitle", widget: "string", hint: "El título para la sección de FAQs", i18n: true, required: false}
+          - {label: "CTA sección FAQs", name: "heroCTA", widget: "markdown", hint: "El link para la sección de FAQs", i18n: true, required: false}
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.title}}"
+            i18n: true
+            fields:
+              - {label: Título, name: title, widget: string, hint: Título del FAQ, i18n: true, required: false}
+              - {label: Texto, name: text, widget: markdown, hint: Texto del FAQ, i18n: true, required: false}
+          - {label: "Habilitar formulario de contacto?", name: "contactEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Habilitar mapa?", name: "mapEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Habilitar sección Oficinas?", name: "officesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
       # Contact Structure
       - label: "Contacto"
         name: "contacto"
@@ -125,7 +147,8 @@ collections:
           - {label: "Crédito imagen Encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección El Estudio?", name: "studioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección El Estudio", name: "studioTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección El Estudio", name: "studioText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección El Estudio", name: "studioText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto link sección El Estudio", name: "studioLinkText", widget: "markdown", hint: "El texto para el link de la sección", i18n: true, required: false}
           - label: "Slider El Estudio"
             name: "studioSlider"
             widget: "list"
@@ -187,7 +210,7 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: "Habilitar sección Servicios?", name: "servicesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Servicios", name: "servicesTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección Servicios", name: "servicesText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección Servicios", name: "servicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios", name: "servicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios", name: "servicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
           - {label: Imagen sección Servicios, name: servicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
@@ -255,7 +278,7 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: "Habilitar sección Servicios inmersivos?", name: "immersiveServicesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Servicios inmersivos", name: "immersiveServicesTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios inmersivos", name: "immersiveServicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios inmersivos", name: "immersiveServicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
           - {label: Imagen sección Servicios inmersivos, name: immersiveServicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
@@ -323,7 +346,7 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: "Habilitar sección Workflow?", name: "workflowEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Workflow", name: "workflowTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección Workflow", name: "workflowText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección Workflow", name: "workflowText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Workflow", name: "workflowLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Workflow", name: "workflowLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
           - {label: Imagen sección Workflow, name: workflowImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
@@ -392,10 +415,10 @@ collections:
           - {label: "Habilitar sección Portfolio?", name: "portfolioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Portfolio", name: "portfolioTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Portfolio", name: "portfolioText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
-          - {label: "Link texto sección Portfolio", name: "portfolioLinkText", widget: "string", hint: "El texto y link para la sección", i18n: true, required: false}
+          - {label: "Link texto sección Portfolio", name: "portfolioLinkText", widget: "markdown", hint: "El texto y link para la sección", i18n: true, required: false}
           - {label: "Habilitar sección Documentación?", name: "documentationEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Documentación", name: "documentationTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección Documentación", name: "documentationText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección Documentación", name: "documentationText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Documentación", name: "documentationLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Documentación", name: "documentationLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
           - {label: Imagen sección Documentación, name: documentationImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
@@ -491,14 +514,14 @@ collections:
               - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
               - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
               - {label: "Título servicio", name: "title", widget: "string", hint: "El título para el servicio", i18n: true, required: false}
-              - {label: "Texto del servicio", name: "description", widget: "text", hint: "El texto para el servicio", i18n: true, required: false}
+              - {label: "Texto del servicio", name: "description", widget: "markdown", hint: "El texto para el servicio", i18n: true, required: false}
               - label: "Sub servicios"
                 name: "bullets"
                 widget: "list"
                 allow_add: true
                 i18n: true
                 field: {label: Texto, name: text, widget: text, hint: Texto para el sub servicio, i18n: true, required: false}
-              - {label: "Texto del botón", name: "linkText", widget: "string", hint: "El texto para el botón del servicio", i18n: true, required: false}
+              - {label: "Texto del botón", name: "linkText", widget: "markdown", hint: "El texto para el botón del servicio", i18n: true, required: false}
               - {label: "Link del botón", name: "linkHref", widget: "string", hint: "El link para el botón del servicio", i18n: true, required: false}
       # Showcase Structure
       - label: "Detalle Servicios"
@@ -514,6 +537,7 @@ collections:
           - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección 3D Stills", name: "stillsTitle", widget: "string", hint: "El título para la sección 3D Stills", i18n: true, required: false}
           - {label: "Texto sección 3D Stills", name: "stillsText", widget: "text", hint: "El texto para la sección 3D Stills", i18n: true, required: false}
+          - {label: "Link sección 3D Stills", name: "stillsLinkText", widget: "markdown", hint: "El texto para el link de la sección 3D Stills", i18n: true, required: false}
           - label: "Slider 3D Stills"
             name: "stillsSlider"
             widget: "list"
@@ -576,7 +600,7 @@ collections:
           - {label: "Habilitar sección experiencias inmersivas?", name: "immersiveExperiencesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Experiencias inmersivas", name: "immersiveExperiencesTitle", widget: "string", hint: "El título para la sección Experiencias inmersivas", i18n: true, required: false}
           - {label: "Texto sección Experiencias inmersivas", name: "immersiveExperiencesText", widget: "text", hint: "El texto para la sección Experiencias inmersivas", i18n: true, required: false}
-          - {label: "Link sección Experiencias inmersivas", name: "immersiveExperiencesLinkText", widget: "string", hint: "El link para la sección Experiencias inmersivas", i18n: true, required: false}
+          - {label: "Link sección Experiencias inmersivas", name: "immersiveExperiencesLinkText", widget: "markdown", hint: "El link para la sección Experiencias inmersivas", i18n: true, required: false}
           - label: "Slider Experiencias Inmersivas"
             name: "immersiveExperiencesSlider"
             widget: "list"
@@ -721,7 +745,7 @@ collections:
           - {label: "Habilitar sección BIM?", name: "bimEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección BIM", name: "bimTitle", widget: "string", hint: "El título para la sección BIM", i18n: true, required: false}
           - {label: "Texto sección BIM", name: "bimText", widget: "text", hint: "El texto para la sección BIM", i18n: true, required: false}
-          - {label: "Texto link sección BIM", name: "bimLinkText", widget: "string", hint: "El texto para el link de la sección BIM", i18n: true, required: false}
+          - {label: "Texto link sección BIM", name: "bimLinkText", widget: "markdown", hint: "El texto para el link de la sección BIM", i18n: true, required: false}
           - {label: Video sección BIM, name: bimVideo, widget: image, hint: Tamaño recomendado: 1440x900px o superior, i18n: duplicate, required: false}
           - {label: "Habilitar sección CAD?", name: "cadEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección CAD", name: "cadTitle", widget: "string", hint: "El título para la sección CAD", i18n: true, required: false}
@@ -838,7 +862,8 @@ collections:
           - {label: "Crédito imagen Encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección El Estudio?", name: "studioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección El Estudio", name: "studioTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección El Estudio", name: "studioText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección El Estudio", name: "studioText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto link sección El Estudio", name: "studioLinkText", widget: "markdown", hint: "El texto para el link de la sección", i18n: true, required: false}
           - label: "Slider El Estudio"
             name: "studioSlider"
             widget: "list"
@@ -900,7 +925,7 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: "Habilitar sección Servicios?", name: "servicesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Servicios", name: "servicesTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección Servicios", name: "servicesText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección Servicios", name: "servicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios", name: "servicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios", name: "servicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
           - {label: Imagen sección Servicios, name: servicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
@@ -968,7 +993,7 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: "Habilitar sección Servicios inmersivos?", name: "immersiveServicesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Servicios inmersivos", name: "immersiveServicesTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Servicios inmersivos", name: "immersiveServicesLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Servicios inmersivos", name: "immersiveServicesLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
           - {label: Imagen sección Servicios inmersivos, name: immersiveServicesImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
@@ -1036,7 +1061,7 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: "Habilitar sección Workflow?", name: "workflowEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Workflow", name: "workflowTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
-          - {label: "Texto sección Workflow", name: "workflowText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: "Texto sección Workflow", name: "workflowText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
           - {label: "Texto link sección Workflow", name: "workflowLinkText", widget: "string", hint: "El texto para el link de la sección", i18n: true, required: false}
           - {label: "Link CTA sección Workflow", name: "workflowLinkHref", widget: "string", hint: "El link para el botón de la sección", i18n: duplicate, required: false}
           - {label: Imagen sección Workflow, name: workflowImage, widget: image, hint: Tamaño recomendado: 1000x1000px o superior, i18n: duplicate, required: false}
@@ -1105,7 +1130,7 @@ collections:
           - {label: "Habilitar sección Portfolio?", name: "portfolioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Portfolio", name: "portfolioTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Portfolio", name: "portfolioText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
-          - {label: "Link texto sección Portfolio", name: "portfolioLinkText", widget: "string", hint: "El texto y link para la sección", i18n: true, required: false}
+          - {label: "Link texto sección Portfolio", name: "portfolioLinkText", widget: "markdown", hint: "El texto y link para la sección", i18n: true, required: false}
           - {label: "Habilitar sección Virtual Staging?", name: "virtualStagingEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: Imagen uno sección Virtual Staging, name: virtualStagingImageOne, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: Imagen dos sección Virtual Staging, name: virtualStagingImageTwo, widget: image, hint: Tamaño recomendado: 2880x1800px o superior, i18n: duplicate, required: false}
@@ -1122,6 +1147,34 @@ collections:
         i18n: true
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+      # Services Structure
+      - label: "Servicios"
+        name: "servicesBR"
+        file: "src/content/brokers-and-realtors/services.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - {label: "Título encabezado", name: "headingTitle", widget: "string", hint: "El título para la sección principal", i18n: true, required: false}
+          - {label: "Texto encabezado", name: "headingText", widget: "text", hint: "El texto para la sección principal", i18n: true, required: false}
+          - label: "Servicios"
+            name: "services"
+            widget: "list"
+            allow_add: true
+            i18n: true
+            fields:
+              - {label: Imagen del servicio, name: image, widget: image, hint: Tamaño recomendado: 800x800px o superior, i18n: duplicate, required: false}
+              - {label: "Título imagen", name: "imageTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
+              - {label: "Crédito imagen", name: "imageCredit", widget: "string", hint: "El crédito para la imagen", i18n: true, required: false}
+              - {label: "Título servicio", name: "title", widget: "string", hint: "El título para el servicio", i18n: true, required: false}
+              - {label: "Texto del servicio", name: "description", widget: "markdown", hint: "El texto para el servicio", i18n: true, required: false}
+              - label: "Sub servicios"
+                name: "bullets"
+                widget: "list"
+                allow_add: true
+                i18n: true
+                field: {label: Texto, name: text, widget: text, hint: Texto para el sub servicio, i18n: true, required: false}
+              - {label: "Texto del botón", name: "linkText", widget: "markdown", hint: "El texto para el botón del servicio", i18n: true, required: false}
+              - {label: "Link del botón", name: "linkHref", widget: "string", hint: "El link para el botón del servicio", i18n: true, required: false}
       # Showcase Structure
       - label: "Detalle Servicios"
         name: "showcaseBR"
@@ -1136,6 +1189,7 @@ collections:
           - {label: "Habilitar sección 3D Stills?", name: "stillsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección 3D Stills", name: "stillsTitle", widget: "string", hint: "El título para la sección 3D Stills", i18n: true, required: false}
           - {label: "Texto sección 3D Stills", name: "stillsText", widget: "text", hint: "El texto para la sección 3D Stills", i18n: true, required: false}
+          - {label: "Link sección 3D Stills", name: "stillsLinkText", widget: "markdown", hint: "El texto para el link de la sección 3D Stills", i18n: true, required: false}
           - label: "Slider 3D Stills"
             name: "stillsSlider"
             widget: "list"
@@ -1198,7 +1252,7 @@ collections:
           - {label: "Habilitar sección experiencias interactivas?", name: "interactiveExperiencesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Experiencias interactivas", name: "interactiveExperiencesTitle", widget: "string", hint: "El título para la sección Experiencias interactivas", i18n: true, required: false}
           - {label: "Texto sección Experiencias interactivas", name: "interactiveExperiencesText", widget: "text", hint: "El texto para la sección Experiencias interactivas", i18n: true, required: false}
-          - {label: "Link sección Experiencias interactivas", name: "interactiveExperiencesLinkText", widget: "string", hint: "El link para la sección Experiencias interactivas", i18n: true, required: false}
+          - {label: "Link sección Experiencias interactivas", name: "interactiveExperiencesLinkText", widget: "markdown", hint: "El link para la sección Experiencias interactivas", i18n: true, required: false}
           - label: "Slider Experiencias interactivas"
             name: "interactiveExperiencesSlider"
             widget: "list"
