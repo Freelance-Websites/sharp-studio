@@ -22,9 +22,9 @@ slider:
       credit: ATV
       type: image
     - image: /images/home/slide-6.jpg
-      title: Sens Palermo Green
-      credit: Munich Market
-      type: Whitekitchen
+      title: Munich Market
+      credit: Whitekitchen
+      type: image
     - image: /images/home/slide-7.jpg
       title: Estomba
       credit: BAS + LABA
