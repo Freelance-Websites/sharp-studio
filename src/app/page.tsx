@@ -40,14 +40,16 @@ export default function Home() {
         render={() => (
           <ReactFullpage.Wrapper>
             <section className="section">
-              <h1 className="absolute inset-16 z-10 h-full flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
+              <h1
+                className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 md:-translate-x-0 md:left-16 z-10 flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]"
+              >
                 <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left">
                   {language === 'en' ? en.slogan : es.slogan}
                 </MainHeading>
               </h1>
               <FullPageSlider
                 slides={language === 'en' ? en.slider : es.slider}
-                drag={false}
+                drag={true}
               />
             </section>
             <section className="section">
