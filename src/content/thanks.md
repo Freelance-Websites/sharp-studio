@@ -1,5 +1,6 @@
 ---
 en:
+  title: Thanks
   slogan: Thank you for getting in touch with us! We'll get back to you soon.
   slider:
     - image: /images/home/slide-1.jpg
@@ -33,6 +34,7 @@ en:
   architectsAndDevelopersHover: /images/home/architects-and-developers-hover.jpg
   brokersAndRealtorsHover: /images/home/brokers-and-realtors-hover.jpg
 es:
+  title: Gracias
   slogan: Gracias por contactarte con nosotros! Te contestaremos a la brevedad.
   slider:
     - image: /images/home/slide-1.jpg
