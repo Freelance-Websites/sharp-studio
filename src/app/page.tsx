@@ -47,7 +47,7 @@ export default function Home() {
               </h1>
               <FullPageSlider
                 slides={language === 'en' ? en.slider : es.slider}
-                drag={true}
+                drag={false}
               />
             </section>
             <section className="section">
