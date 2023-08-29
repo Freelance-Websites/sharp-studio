@@ -40,7 +40,7 @@ export default function Home() {
         render={() => (
           <ReactFullpage.Wrapper>
             <section className="section">
-              <h1 className="absolute md:left-16 z-10 h-full flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
+              <h1 className="absolute inset-16 z-10 h-full flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
                 <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left">
                   {language === 'en' ? en.slogan : es.slogan}
                 </MainHeading>

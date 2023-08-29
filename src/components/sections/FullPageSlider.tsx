@@ -72,6 +72,7 @@ export default function FullPageSlider({ slides, drag }: {
                 autoPlay
                 muted
                 loop
+                playsInline
               >
                 <source src={slide.image} type="video/mp4" />
               </video>
