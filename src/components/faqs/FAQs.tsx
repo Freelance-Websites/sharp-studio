@@ -28,7 +28,7 @@ export default function Hero({
             className={`${isActive === index ? '' : ''} border-b border-black`}
           >
             <button
-              className="md:px-4 py-4 md:py-6 w-full text-left flex items-center justify-between transition ease-in-out duration-100 group hover:opacity-80"
+              className="md:px-4 py-4 md:py-6 w-full text-left flex items-center justify-between gap-4 transition ease-in-out duration-100 group hover:opacity-80"
               onClick={() => setIsActive(index)}
             >
               <MediumText color="text-black">{faq.title}</MediumText>

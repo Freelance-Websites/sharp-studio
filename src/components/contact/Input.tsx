@@ -22,7 +22,7 @@ export default function Input({
         name={id}
         placeholder={placeholder}
         required={required}
-        className="text-xl md:text-2xl xl:text-3xl xl:leading-normal placeholder:text-black/20 pl-3 pb-3 border-b border-b-black/10 focus:outline-none text-black w-full md:h-16 bg-off-white"
+        className="text-xl md:text-2xl xl:text-3xl xl:leading-normal placeholder:text-black/20 pb-3 border-b border-b-black/10 focus:outline-none text-black w-full md:h-16 rounded-none background-white"
       />
     </div>
   )
