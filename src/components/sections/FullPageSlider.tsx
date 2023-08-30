@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 const { Splide, SplideTrack, SplideSlide } = require('@splidejs/react-splide');
 import '@splidejs/react-splide/css';
 import Image from 'next/image';
@@ -42,6 +43,24 @@ export default function FullPageSlider({ slides, drag }: {
   slides: Array<Slide>;
   drag: Boolean;
 }) {
+  const updateViewportHeight = () => {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  useEffect(() => {
+    updateViewportHeight();
+    window.addEventListener('resize', () => updateViewportHeight());
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('resize', updateViewportHeight);
+    }
+  }, []);
+
   return (
     <Splide
       hasTrack={false}
@@ -57,13 +76,13 @@ export default function FullPageSlider({ slides, drag }: {
         {slides.map((slide, index) =>
           <SplideSlide
             key={index}
-            className="w-full h-screen relative"
+            className="w-full h-custom relative"
           >
             {/* Image, gradient and overlay. We only show these for images and video overlays, and for places where we have text to add. */}
             {slide.type === 'video' || slide.type === 'image' &&
               <>
-                <div className="bg-gradient-to-t from-black absolute w-full h-screen z-20 to-20% opacity-60" />
-                <div className="bg-black/10 w-full h-screen z-10 absolute" />
+                <div className="bg-gradient-to-t from-black absolute w-full h-custom z-20 to-20% opacity-60" />
+                <div className="bg-black/10 w-full h-custom z-10 absolute" />
               </>
             }
             {slide.type === 'video' ?
@@ -114,7 +133,7 @@ export default function FullPageSlider({ slides, drag }: {
             : slide.type === 'walking' ?
               <iframe
                 src={slide.image}
-                className="w-full h-screen"
+                className="w-full h-custom"
               />
             : slide.image || slide.type === 'map' && slide.image ?
               <>
