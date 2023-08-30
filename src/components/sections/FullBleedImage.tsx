@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Image from 'next/image';
 
 import { StandardText } from '@/components/Typography';
@@ -8,14 +9,32 @@ export default function FullBleedImage({ image, title, credit, isMap }: {
   credit: string,
   isMap?: boolean,
 }) {
+  const updateViewportHeight = () => {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  useEffect(() => {
+    updateViewportHeight();
+    window.addEventListener('resize', () => updateViewportHeight());
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('resize', updateViewportHeight);
+    }
+  }, []);
+
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-custom">
       {/* Gradient and overlay */}
       {isMap && isMap === true ?
         '' :
         <>
-          <div className="bg-gradient-to-t from-black absolute w-full h-screen z-20 to-20% opacity-60" />
-          <div className="bg-black/10 w-full h-screen z-10 absolute" />
+          <div className="bg-gradient-to-t from-black absolute w-full h-custom z-20 to-20% opacity-60" />
+          <div className="bg-black/10 w-full h-custom z-10 absolute" />
         </>
       }
       <Image

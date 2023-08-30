@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { StandardText } from '@/components/Typography';
 
 export default function FullBleedVideo({ video, title, credit }: {
@@ -5,8 +7,26 @@ export default function FullBleedVideo({ video, title, credit }: {
   title?: string,
   credit?: string,
 }) {
+  const updateViewportHeight = () => {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  useEffect(() => {
+    updateViewportHeight();
+    window.addEventListener('resize', () => updateViewportHeight());
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('resize', updateViewportHeight);
+    }
+  }, []);
+
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full h-custom">
       <video
         className="w-full h-full object-cover"
         autoPlay

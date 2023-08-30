@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,8 +9,26 @@ export default function LandingPageSelector({ architectsAndDevelopersHover, brok
   architectsAndDevelopersHover: string,
   brokersAndRealtorsHover: string,
 }) {
+  const updateViewportHeight = () => {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+  useEffect(() => {
+    updateViewportHeight();
+    window.addEventListener('resize', () => updateViewportHeight());
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('resize', updateViewportHeight);
+    }
+  }, []);
+
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2 h-screen">
+    <ul className="grid grid-cols-1 md:grid-cols-2 h-custom">
       <li className="bg-off-white relative group">
         <Link href="/architects-and-developers" className="flex items-center justify-center absolute w-full h-full z-10">
           <div className="relative z-10 fill-black group-hover:fill-off-white z-20">

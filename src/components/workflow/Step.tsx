@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { useEffect } from 'react';
 import Image from "next/image";
 import { MediumText, StandardText } from "../Typography";
 
