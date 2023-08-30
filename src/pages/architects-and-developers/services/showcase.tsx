@@ -53,6 +53,7 @@ export default function Showcase() {
       <ReactFullpage
         credits={{ enabled: false }}
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
+        touchSensitivity={30}
         render={() => (
           <ReactFullpage.Wrapper>
             {heroEnabled &&
