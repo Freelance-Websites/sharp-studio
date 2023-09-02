@@ -95,6 +95,33 @@ collections:
                   - { label: "Rosa", value: "bg-salmon" }
           - {label: Imagen hover para A&D, name: architectsAndDevelopersHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
           - {label: Imagen hover para B&R, name: brokersAndRealtorsHover, widget: image, required: false, i18n: duplicate, hint: 1440x1600 o superior}
+      # Studio Structure
+      - label: "Studio"
+        name: "the-studio"
+        file: "src/content/the-studio.md"
+        i18n: true
+        fields:
+          - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
+          - {label: "Habilitar sección Encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: Imagen sección Encabezado, name: heroImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: "Título sección Encabezado", name: "heroTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
+          - {label: "Habilitar sección El Estudio?", name: "studioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Título sección El Estudio", name: "studioTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
+          - {label: "Texto sección El Estudio", name: "studioText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
+          - {label: Imagen sección El Estudio, name: teamImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: "Habilitar sección Equipo?", name: "teamEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - label: "Equipo"
+            name: "team"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.name}}"
+            i18n: true
+            fields:
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 600x600px o superior, required: false}
+              - {label: Nombre, name: name, widget: string, hint: Nombre de la persona, required: false}
+              - {label: Bio, name: bio, widget: markdown, hint: Bio de la persona, required: false}
+          - {label: "Habilitar formulario de contacto?", name: "contactEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
+          - {label: "Habilitar sección Oficinas?", name: "officesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
       # FAQs Structure
       - label: "FAQs"
         name: "faqs"
@@ -211,7 +238,7 @@ collections:
         fields:
           - {label: "Título", name: "title", widget: "string", hint: "El título para la barra del navegador", i18n: true, required: false}
           - {label: "Habilitar sección Encabezado?", name: "heroEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
-          - {label: Imagen sección ncabezado, name: heroImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
+          - {label: Imagen sección Encabezado, name: heroImage, widget: image, hint: Tamaño recomendado 2880x1800px o superior, i18n: duplicate, required: false}
           - {label: "Título sección Encabezado", name: "heroTitle", widget: "string", hint: "El título para la imagen", i18n: true, required: false}
           - {label: "Crédito imagen Encabezado", name: "heroCredit", widget: "string", hint: "El crédito para la imagen del encabezado", i18n: true, required: false}
           - {label: "Habilitar sección El Estudio?", name: "studioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}

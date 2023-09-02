@@ -61,8 +61,8 @@ export default function ADServices() {
               <section className="section">
                 <FullBleedImage
                   image={en.heroImage}
-                  title={language === 'en' ? en.heroTitle : es.heroTitle}
-                  credit={language === 'en' ? en.heroTitle : es.heroTitle}
+                  imageTitle={language === 'en' ? en.heroTitle : es.heroTitle}
+                  imageCredit={language === 'en' ? en.heroTitle : es.heroTitle}
                   isMap={true}
                 />
               </section>

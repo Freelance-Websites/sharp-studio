@@ -60,8 +60,8 @@ export default function Showcase() {
               <section className="section" id="3d-stills">
                 <FullBleedImage
                   image={en.heroImage}
-                  title={language === 'en' ? en.heroTitle : es.heroTitle}
-                  credit={language === 'en' ? en.heroCredit : es.heroCredit}
+                  imageTitle={language === 'en' ? en.heroTitle : es.heroTitle}
+                  imageCredit={language === 'en' ? en.heroCredit : es.heroCredit}
                 />
               </section>
             }

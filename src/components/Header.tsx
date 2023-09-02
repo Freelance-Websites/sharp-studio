@@ -53,6 +53,13 @@ export default function Header({
               </>
             }
             <li>
+              <a href="/the-studio" className="hover:opacity-80 duration-100 transition ease-in-out">
+                <UpperCaseText color="text-black">
+                  {activeLanguage === 'en' ? 'Studio' : 'Estudio'}
+                </UpperCaseText>
+              </a>
+            </li>
+            <li>
               <a href="/faqs" className="hover:opacity-80 duration-100 transition ease-in-out">
                 <UpperCaseText color="text-black">
                   FAQs
