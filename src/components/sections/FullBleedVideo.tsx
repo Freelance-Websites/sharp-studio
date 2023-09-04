@@ -32,6 +32,8 @@ export default function FullBleedVideo({ video, title, credit }: {
         autoPlay
         muted
         loop
+        playsInline
+        data-autoplay
       >
         <source src={video} type="video/mp4" />
       </video>

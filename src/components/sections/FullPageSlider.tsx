@@ -70,8 +70,6 @@ export default function FullPageSlider({ slides, drag }: {
         rewind: true,
         drag,
         rewindByDrag: drag,
-        preloadPages: 2,
-        lazyLoad: 'nearby',
       }}
     >
       <SplideTrack>
@@ -94,6 +92,7 @@ export default function FullPageSlider({ slides, drag }: {
                 muted
                 loop
                 playsInline
+                data-autoplay
               >
                 <source src={slide.image} type="video/mp4" />
               </video>
@@ -140,7 +139,6 @@ export default function FullPageSlider({ slides, drag }: {
             : slide.image || slide.type === 'map' && slide.image ?
               <>
                 <Image
-                  data-splide-lazy={slide.image}
                   src={slide.image}
                   alt={`${slide.title} – ${slide.credit}`}
                   fill={true}
@@ -148,7 +146,6 @@ export default function FullPageSlider({ slides, drag }: {
                 />
                 {slide.imageMobile &&
                   <Image
-                    data-splide-lazy={slide.imageMobile}  
                     src={slide.imageMobile}
                     alt={`${slide.title} – ${slide.credit}`}
                     fill={true}
