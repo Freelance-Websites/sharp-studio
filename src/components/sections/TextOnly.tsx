@@ -40,14 +40,14 @@ export default function TextOnly({ color, title, content, linkText, classes }: {
         }
         {content &&
           <BigText color="text-black">
-            <ReactMarkdown>{content}</ReactMarkdown>
+            <ReactMarkdown className="font-neue-regular">{content}</ReactMarkdown>
           </BigText>
         }
         {linkText &&
           <BigText
             color="text-black"
           >
-            <ReactMarkdown>{linkText}</ReactMarkdown>
+            <ReactMarkdown className="font-neue-regular">{linkText}</ReactMarkdown>
           </BigText>
         }
       </div>
