@@ -36,15 +36,13 @@ en:
   bimLinkText: "[Contact us](/contact) to get a quote for your project and any BIM image."
   cadEnabled: true
   cadTitle: CAD Documentation
-  cadText: Architecture and MEP plans, plans required for any bid, preliminary and layout plans, etc...at SSVwe draw all types of projects on all types of platforms.
+  cadText: Architecture and MEP plans, plans required for any bid, preliminary and layout plans, etc...at SSV we draw all types of projects on all types of platforms.
   cadCaption: Estomba 1046
   cadCredit: BAS + LABA
   cadImage: /images/architects-and-developers/services/architecture-and-developer/cad.jpg
   permittingPlansEnabled: true
   permittingPlansTitle: Permitting Plans
   permittingPlansText: In need of documentation for city permitting? You can count on our team of architects and our offices in North Miami, USA to execute these tasks and many more!
-  permittingPlansCaption: Estomba 1046
-  permittingPlansCredit: BAS + LABA
   permittingPlansImage: /images/architects-and-developers/services/architecture-and-developer/permitting-plans.jpg
   permittingPlansSlider:
     - image: /images/architects-and-developers/services/architecture-and-developer/permitting-plans-slider-1.jpg
