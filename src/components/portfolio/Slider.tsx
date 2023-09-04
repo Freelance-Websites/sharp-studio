@@ -40,6 +40,8 @@ export default function PortfolioSlider({ project, language }: {
           drag: true,
           rewindByDrag: true,
           arrows: translatedProject.slides.length > 1 ? true : false,
+          preloadPages: 2,
+          lazyLoad: 'nearby',
         }}
       >
         <SplideTrack>
@@ -58,6 +60,7 @@ export default function PortfolioSlider({ project, language }: {
               `}
             >
               <Image
+                data-splide-lazy={slide.image}
                 src={slide.image}
                 alt={`${translatedProject.title} – ${translatedProject.credit}`}
                 fill={true}
