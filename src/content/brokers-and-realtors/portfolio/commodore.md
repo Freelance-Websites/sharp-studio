@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 7
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/commodore/thumbnail.jpg
   title: Commodore

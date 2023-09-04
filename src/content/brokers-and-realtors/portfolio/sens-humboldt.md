@@ -1,5 +1,5 @@
 ---
-order: 11
+order: 5
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/sens-humboldt/thumbnail.jpg
   title: Sens Humboldt

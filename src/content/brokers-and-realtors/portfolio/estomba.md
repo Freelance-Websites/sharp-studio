@@ -1,5 +1,5 @@
 ---
-order: 8
+order: 10
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/estomba/thumbnail.jpg
   title: Estomba

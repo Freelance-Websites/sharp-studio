@@ -1,5 +1,5 @@
 ---
-order: 9
+order: 4
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/liv-guatemala/thumbnail.jpg
   title: LIV Guatemala

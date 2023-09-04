@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 11
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/liv-plaza/thumbnail.jpg
   title: LIV Plaza

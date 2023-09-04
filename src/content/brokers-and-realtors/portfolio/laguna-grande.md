@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 2
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/laguna-grande/thumbnail.jpg
   title: Casa Laguna Grande

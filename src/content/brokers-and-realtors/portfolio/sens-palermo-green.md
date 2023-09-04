@@ -1,5 +1,5 @@
 ---
-order: 7
+order: 3
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/sens-palermo-green/thumbnail.jpg
   title: Sens Palermo Green

@@ -1,5 +1,5 @@
 ---
-order: 12
+order: 8
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/virrey-olaguer/thumbnail.jpg
   title: Virrey Olaguer

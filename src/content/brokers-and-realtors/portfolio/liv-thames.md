@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 12
 en:
   thumbnail: /images/brokers-and-realtors/portfolio/liv-thames/thumbnail.jpg
   title: LIV Thames
