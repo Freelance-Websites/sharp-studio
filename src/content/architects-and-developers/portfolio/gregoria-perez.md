@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 3
 en:
   thumbnail: /images/architects-and-developers/portfolio/gregoria-perez/thumbnail.jpg
   title: Gregoria Perez

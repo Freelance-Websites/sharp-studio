@@ -1,5 +1,5 @@
 ---
-order: 7
+order: 4
 en:
   thumbnail: /images/architects-and-developers/portfolio/cuba/thumbnail.jpg
   title: Cuba

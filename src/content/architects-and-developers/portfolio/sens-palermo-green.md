@@ -1,5 +1,5 @@
 ---
-order: 13
+order: 8
 en:
   thumbnail: /images/architects-and-developers/portfolio/sens-palermo-green/thumbnail.jpg
   title: Sens Palermo Green

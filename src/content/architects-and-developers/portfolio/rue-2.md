@@ -1,5 +1,5 @@
 ---
-order: 15
+order: 16
 en:
   thumbnail: /images/architects-and-developers/portfolio/rue-2/thumbnail.jpg
   title: Rue 2

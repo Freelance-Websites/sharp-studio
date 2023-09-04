@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 12
 en:
   thumbnail: /images/architects-and-developers/portfolio/munich-market/thumbnail.jpg
   title: Munich Market

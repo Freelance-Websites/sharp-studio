@@ -1,5 +1,5 @@
 ---
-order: 12
+order: 9
 en:
   thumbnail: /images/architects-and-developers/portfolio/paris-rooftop/thumbnail.jpg
   title: Paris Rooftop

@@ -1,5 +1,5 @@
 ---
-order: 16
+order: 13
 en:
   thumbnail: /images/architects-and-developers/portfolio/sens-humboldt/thumbnail.jpg
   title: Sens Humboldt

@@ -1,5 +1,5 @@
 ---
-order: 9
+order: 7
 en:
   thumbnail: /images/architects-and-developers/portfolio/ixou-mini/thumbnail.jpg
   title: Ixou Mini

@@ -1,5 +1,5 @@
 ---
-order: 18
+order: 15
 en:
   thumbnail: /images/architects-and-developers/portfolio/estomba/thumbnail.jpg
   title: Estomba

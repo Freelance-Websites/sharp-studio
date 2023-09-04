@@ -1,5 +1,5 @@
 ---
-order: 6
+order: 14
 en:
   thumbnail: /images/architects-and-developers/portfolio/ixou-brusco/thumbnail.jpg
   title: Ixou Brusco

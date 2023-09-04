@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 6
 en:
   thumbnail: /images/architects-and-developers/portfolio/colombres/thumbnail.jpg
   title: Colombres
