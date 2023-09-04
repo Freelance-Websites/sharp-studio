@@ -37,6 +37,7 @@ en:
       credit: ATV
       type: video
     - image: /images/architects-and-developers/services-slider-2.jpg
+      imageOneCaption: 360 image
       title: Sens Palermo Green
       credit: ATV
       type: panoram
@@ -142,6 +143,7 @@ es:
       type: video
     - image: /images/architects-and-developers/services-slider-2.jpg
       title: Sens Palermo Green
+      imageOneCaption: Imagen 360
       credit: ATV
       type: panoram
   immersiveServicesEnabled: true

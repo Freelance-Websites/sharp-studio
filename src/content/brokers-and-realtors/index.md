@@ -37,6 +37,7 @@ en:
       credit: ATV
       type: video
     - image: /images/brokers-and-realtors/services-slider-2.jpg
+      imageOneCaption: 360 image
       title: Sens Palermo Green
       credit: ATV
       type: panoram
@@ -130,6 +131,7 @@ es:
       credit: ATV
       type: video
     - image: /images/brokers-and-realtors/services-slider-2.jpg
+      imageOneCaption: Imagen 360
       title: Sens Palermo Green
       credit: ATV
       type: panoram
