@@ -72,7 +72,7 @@ export default function PortfolioItem({ allProjectsData, projectData }: {
         activeLanguage={language}
         changeLanguage={changeLanguage}
       />
-      <section className="pt-[74px] px-4 container mx-auto">
+      <section className="pt-[60px] px-4 container mx-auto">
         <PortfolioSlider
           project={projectData}
           language={language}

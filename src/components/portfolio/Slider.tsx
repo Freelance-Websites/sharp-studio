@@ -45,13 +45,25 @@ export default function PortfolioSlider({ project, language }: {
           {translatedProject.slides.map((slide: Slide, index: number) =>
             <SplideSlide
               key={index}
-              className={`w-full h-full ${slide.proportion === 'vertical' ? `aspect-[9/16] max-h-[80vh] self-center` : `aspect-${slide.proportion}`} relative`}
+              className={`
+                w-full h-full relative self-center top-4
+                ${
+                  slide.proportion === 'vertical' ?
+                    `aspect-[9/16]`
+                  :
+                    `aspect-${slide.proportion}
+                `}
+                ${slide.proportion !== 'video' && 'max-h-[90vh]'}
+              `}
             >
               <Image
                 src={slide.image}
                 alt={`${translatedProject.title} – ${translatedProject.credit}`}
                 fill={true}
-                className={`w-full h-full ${slide.proportion === 'vertical' ? 'object-contain' : 'object-cover'}`}
+                className={`
+                  w-full h-full
+                  ${slide.proportion === 'vertical' || slide.proportion === 'square' ? 'object-contain' : 'object-cover'}
+                `}
               />
             </SplideSlide>
           )}
