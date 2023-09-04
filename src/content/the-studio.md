@@ -13,8 +13,8 @@ en:
     - image: /images/studio/ale-b.jpg
       name: Alejandro Bokser
       bio: Senior architect. Director of Sharp Studio Visuals. Founder.
-    - image: /images/studio/stefanie.jpg
-      name: Stefanie Goldstein
+    - image: /images/studio/stephanie.jpg
+      name: Stephanie Goldstein
       bio: Senior interior designer. Director of Sharp Studio Visuals. Founder.
     - image: /images/studio/ale-l.jpg
       name: Alejandro Laurido

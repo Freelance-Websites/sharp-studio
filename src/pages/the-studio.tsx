@@ -47,10 +47,11 @@ export default function Studio() {
       <ReactFullpage
         credits={{ enabled: false }}
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
+        paddingTop="3.25rem"
         render={() => (
           <ReactFullpage.Wrapper>
             {heroEnabled &&
-              <section className="section">
+              <section className="section fp-noscroll">
                 <FullBleedImage
                   image={heroImage}
                   title={language === 'en' ? en.heroTitle : es.heroTitle}
@@ -59,14 +60,16 @@ export default function Studio() {
             }
             {studioEnabled &&
               <>
-                <section className="section">
+                <section className="section fp-noscroll">
                   <TextOnly
                     color="bg-off-white"
                     title={language === 'en' ? en.studioTitle : es.studioTitle}
                     content={language === 'en' ? en.studioText : es.studioText}
                   />
                 </section>
-                <section className="section">
+                <section
+                  className="section fp-noscroll"
+                >
                   <FullBleedImage
                     image={teamImage}
                   />
@@ -82,7 +85,7 @@ export default function Studio() {
             }
             {officesEnabled &&
               <>
-                <section className="section">
+                <section className="section fp-noscroll">
                   <TextAndImage
                     orientation="left"
                     color="bg-light-gray"
@@ -94,7 +97,7 @@ export default function Studio() {
             }
             {contactEnabled &&
               <>
-                <section className="section relative">
+                <section className="section relative fp-noscroll">
                   <Contact
                     title={language === 'en' ? contactTitleEng : contactTitleEsp}
                     content={language === 'en' ? contactTextEng : contactTextEsp}
