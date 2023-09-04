@@ -44,7 +44,11 @@
   height: calc(var(--vh, 1vh) * 100);
 }
 
-/* Hide Splide carousel arrows */
+.splide__arrow {
+  @apply bg-white opacity-100 hover:opacity-80 !important;
+}
+
+/* OLD – Hide Splide carousel arrows */
 /* .splide__arrows.splide__arrows--ltr .splide__arrow {
   background: transparent !important;
   @apply h-screen top-0 rounded-none transform-none z-30 w-1/6;
