@@ -39,6 +39,7 @@ export default function PortfolioSlider({ project, language }: {
           rewind: true,
           drag: true,
           rewindByDrag: true,
+          arrows: translatedProject.slides.length > 1 ? true : false,
         }}
       >
         <SplideTrack>
