@@ -7,8 +7,8 @@ en:
   heroCredit: MSGSSS
   studioEnabled: true
   studioTitle: The Studio.
-  studioText: "Sharp Studio Visuals is a company made up of a team of professionals specialized in showing your properties with the highest quality standards. [We are a team of Architects and interior designers](/brokers-and-realtors/about) dedicated to giving all their talent to transform your project into the best investment for your clients and prospective buyers."
-  studioLinkText: "Want to meet? [Contact us](/brokers-and-realtors/contact) and get a free quote, or drive to our offices in Aventura, FL, USA"
+  studioText: "Sharp Studio Visuals is a company made up of a team of professionals specialized in showing your properties with the highest quality standards. [We are a team of Architects and interior designers](/the-studio) dedicated to giving all their talent to transform your project into the best investment for your clients and prospective buyers."
+  studioLinkText: "Want to meet? [Contact us](/contact) and get a free quote, or drive to our offices in Aventura, FL, USA"
   studioSlider:
     - image: /images/brokers-and-realtors/studio-slider-1.jpg
       title: Casa Laguna Grande
@@ -101,8 +101,8 @@ es:
   heroCredit: MSGSSS
   studioEnabled: true
   studioTitle: El Estudio.
-  studioText: "Sharp Studio Visuals es una compañía conformada por un equipo de profesionales especializados en mostrar tus propiedades con los mayores estándares de calidad. [Arquitectos y diseñadores de interiores](/brokers-and-realtors/about) dedicados a darlo todo su talento para transformar tu proyecto en la mejor inversión."
-  studioLinkText: "Querés conocernos? [Contactanos](/brokers-and-realtors/contact) y obtené una cotización gratuita, o visitanos en nuestras oficinas en Aventura, FL, USA"
+  studioText: "Sharp Studio Visuals es una compañía conformada por un equipo de profesionales especializados en mostrar tus propiedades con los mayores estándares de calidad. [Arquitectos y diseñadores de interiores](/the-studio) dedicados a darlo todo su talento para transformar tu proyecto en la mejor inversión."
+  studioLinkText: "Querés conocernos? [Contactanos](/contact) y obtené una cotización gratuita, o visitanos en nuestras oficinas en Aventura, FL, USA"
   studioSlider:
     - image: /images/brokers-and-realtors/studio-slider-1.jpg
       title: Casa Laguna Grande
