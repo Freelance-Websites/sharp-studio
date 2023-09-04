@@ -50,7 +50,7 @@ en:
       credit: ATV
       theme: light
       type: walking
-      imageOneCaption: Walking tour
+      imageOneCaption: Virtual tour
   faqsEnabled: true
   mapEnabled: true
   officesEnabled: true
@@ -106,7 +106,7 @@ es:
       credit: ATV
       theme: light
       type: walking
-      imageOneCaption: Walking tour
+      imageOneCaption: Virtual tour
   faqsEnabled: true
   mapEnabled: true
   officesEnabled: true
