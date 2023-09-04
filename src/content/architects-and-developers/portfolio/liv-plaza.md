@@ -8,7 +8,7 @@ en:
     - image: /images/architects-and-developers/portfolio/liv-plaza/slide-1.jpg
       proportion: video
     - image: /images/architects-and-developers/portfolio/liv-plaza/slide-2.jpg
-      proportion: verttical
+      proportion: vertical
 es:
   thumbnail: /images/architects-and-developers/portfolio/liv-plaza/thumbnail.jpg
   title: Liv Plaza
@@ -17,5 +17,5 @@ es:
     - image: /images/architects-and-developers/portfolio/liv-plaza/slide-1.jpg
       proportion: video
     - image: /images/architects-and-developers/portfolio/liv-plaza/slide-2.jpg
-      proportion: verttical
+      proportion: vertical
 ---
