@@ -25,7 +25,7 @@ export default function Hero({
         {content.map((faq, index) =>
           <li
             key={index}
-            className={`${isActive === index ? '' : ''} border-b border-black`}
+            className={`${isActive === index ? '' : ''} border-b border-black font-neue-regular`}
           >
             <button
               className="md:px-4 py-4 md:py-6 w-full text-left flex items-center justify-between gap-4 transition ease-in-out duration-100 group hover:opacity-80"

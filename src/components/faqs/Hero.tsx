@@ -12,7 +12,7 @@ export default function Hero({
   cta: string;
 }) {
   return (
-    <div className="mx-auto container px-4 pt-24 md:pt-48 pb-8 md:pb-32">
+    <div className="mx-auto container px-4 pt-24 md:pt-48 pb-8 md:pb-32 font-neue-regular">
       <h1><BigText color="text-black">{title}</BigText></h1>
       <div className="mt-2 md:mt-0">
         <BigText color="text-black">
