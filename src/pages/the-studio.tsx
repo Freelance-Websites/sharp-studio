@@ -77,11 +77,18 @@ export default function Studio() {
               </>
             }
             {teamEnabled &&
-              <section className="section">
-                <Team
-                  team={language === 'en' ? en.team : es.team}
-                />
-              </section>
+              <>
+                <section className="section">
+                  <Team
+                    team={language === 'en' ? en.team.slice(0, 4) : es.team.slice(0, 4)}
+                  />
+                </section>
+                <section className="section">
+                  <Team
+                    team={language === 'en' ? en.team.slice(4) : es.team.slice(4)}
+                  />
+                </section>
+              </>
             }
             {officesEnabled &&
               <>
