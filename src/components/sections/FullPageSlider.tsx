@@ -19,7 +19,7 @@ import TwoColumnImages from '@/components/sections/TwoColumnImages';
 import VirtualStaging from '@/components/sections/VirtualStaging';
 import TextOnly from '@/components/sections/TextOnly';
 
-import { StandardText } from '@/components/Typography';
+import { MediumText, StandardText } from '@/components/Typography';
 
 interface Slide {
   type: string;
@@ -164,16 +164,16 @@ export default function FullPageSlider({ slides, drag }: {
             {/* Captions */}
             {slide.imageOneCaption &&
               <p className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'} absolute top-20 left-4 z-10`}>
-                <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                <MediumText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                   <span className="font-neue-bold">{slide.imageOneCaption}</span>
-                </StandardText>
+                </MediumText>
               </p>
             }
             {slide.imageTwoCaption &&
               <p className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'} absolute top-20 right-4 z-10`}>
-                <StandardText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                <MediumText color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
                   <span className="font-neue-bold">{slide.imageTwoCaption}</span>
-                </StandardText>
+                </MediumText>
               </p>
             }
             {slide.titleTwo ?
