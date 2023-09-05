@@ -24,6 +24,7 @@ en:
       credit: ATV
       type: image
     - image: /images/brokers-and-realtors/services/floor-plans.jpg
+      imageOneCaption: Floor Plans
       title: TBD
       credit: TBD
       type: image
@@ -100,6 +101,7 @@ es:
     - image: /images/brokers-and-realtors/services/floor-plans.jpg
       title: TBD
       credit: TBD
+      imageOneCaption: Floor Plans
       type: image
   interactiveExperiencesEnabled: true
   interactiveExperiencesTitle: Experiencias Interactivas
