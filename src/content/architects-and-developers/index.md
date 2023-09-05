@@ -3,8 +3,8 @@ en:
   title: Architects & Developers
   heroEnabled: true
   heroImage: /images/architects-and-developers/hero.jpg
-  heroTitle: Competition for the New Administration Centre in Rawson
-  heroCredit: LABA + PIEZA
+  heroTitle: Mendoza 1461
+  heroCredit: Estudio Planta
   studioEnabled: true
   studioTitle: The Studio.
   studioText: Our team at Sharp Studio is composed of sworn perfectionists; Architects, 3D artists, and designers dedicated to the production of visual and technical solutions for architecture and real estate developments.
