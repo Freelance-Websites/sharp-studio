@@ -52,7 +52,7 @@ export default function Home() {
                 drag={true}
               />
             </section>
-            <section className="section">
+            <section className="section" data-anchor="selector">
               <LandingPageSelector
                 architectsAndDevelopersHover={en.architectsAndDevelopersHover}
                 brokersAndRealtorsHover={en.brokersAndRealtorsHover}
