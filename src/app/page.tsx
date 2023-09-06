@@ -35,7 +35,6 @@ export default function Home() {
     changeLanguage(storedLanguage ? storedLanguage : 'en');
 
     window.addEventListener('resize', checkIsPortrait);
-    
     return () => window.removeEventListener('resize', checkIsPortrait);
   }, []);
 

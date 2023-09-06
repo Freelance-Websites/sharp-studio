@@ -13,16 +13,29 @@ import { attributes } from '@/content/thanks.md';
 export default function Home() {
   const { en, es } = attributes;
   const [language, setLanguage] = useState('en');
+  const [isPortrait, setIsPortrait] = useState(false);
 
   const changeLanguage = (lang: string) => {
     setLanguage(lang);
     window.localStorage.setItem('language', lang);
   }
 
+  const checkIsPortrait = () => {
+    if (!window.matchMedia) {
+      return false;
+    }
+
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+    setIsPortrait(isPortrait);
+  }
+
   useEffect(() => {
     const storedLanguage = window.localStorage.getItem('language');
     changeLanguage(storedLanguage ? storedLanguage : 'en');
-  });
+
+    window.addEventListener('resize', checkIsPortrait);
+    return () => window.removeEventListener('resize', checkIsPortrait);
+  }, []);
 
   return (
     <main>
@@ -46,7 +59,15 @@ export default function Home() {
                 </MainHeading>
               </h1>
               <FullPageSlider
-                slides={language === 'en' ? en.slider : es.slider}
+                slides={
+                  language === 'en' && isPortrait === false ?
+                    en.slider
+                  : language === 'es' && isPortrait === false ?
+                    es.slider
+                  : language === 'en' && isPortrait === true ?
+                    en.sliderMobile
+                  : es.sliderMobile
+                }
                 drag={true}
               />
             </section>
