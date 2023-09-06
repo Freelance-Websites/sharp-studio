@@ -43,6 +43,7 @@ export default function Studio() {
       <Header
         activeLanguage={language}
         changeLanguage={changeLanguage}
+        type="architects-and-developers"
       />
       <ReactFullpage
         credits={{ enabled: false }}
