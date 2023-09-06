@@ -47,7 +47,7 @@ const TwoColumnImages = ({ imageUrl, title, credit, imageMobile }: {
             src={imageMobile}
             alt={`${title} – ${credit}`}
             fill={true}
-            className="w-full h-full object-contain block lg:hidden px-4"
+            className="w-full h-full object-contain block lg:hidden px-16"
           />
         }
       </div>
