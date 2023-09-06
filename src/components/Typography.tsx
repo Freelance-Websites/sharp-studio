@@ -17,7 +17,7 @@ export function BigText({ children, color, underline, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`text-xl md:text-2xl lg:text-3xl xl:text-4xl xl:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
+    <span className={`text-xl md:text-2xl lg:text-3xl xl:text-4xl xl:leading-normal font-neue-regular ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
   )
 }
 
@@ -28,7 +28,7 @@ export function MediumText({ children, color, underline, classes }: {
   classes?: string,
 }) {
   return (
-    <span className={`text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
+    <span className={`text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal font-neue-regular ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
   )
 }
 

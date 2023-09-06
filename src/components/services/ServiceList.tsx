@@ -56,9 +56,9 @@ export default function ServiceList({ type, services }: {
               </Link>
             </div>
             <div className="col-span-full md:col-span-full lg:col-span-6 xl:col-span-5 grid gap-2">
-              <h2><MediumText color="text-black" classes="font-neue-bold xl:text-2xl 2xl:text-3xl 2xl:leading-normal">{service.title}</MediumText></h2>
+              <h2><MediumText color="text-black" classes="font-neue-bold xl:text-2xl 2xl:text-3xl 2xl:leading-normal font-neue-bold">{service.title}</MediumText></h2>
               <div
-                className="text-black text-lg md:text-xl lg:text-2xl 2xl:text-3xl leading-relaxed md:leading-relaxed lg:leading-relaxed  2xl:leading-relaxed"
+                className="text-black text-lg md:text-xl lg:text-2xl 2xl:text-3xl leading-relaxed md:leading-relaxed lg:leading-relaxed  2xl:leading-relaxed font-neue-regular"
               >
                 <ReactMarkdown>{service.description}</ReactMarkdown>
               </div>
@@ -66,12 +66,12 @@ export default function ServiceList({ type, services }: {
                 <ol className={`ml-4 md:ml-8 list-disc grid ${service.bullets.length > 4 ? 'md:grid-cols-2' : ''} gap-1`}>
                   {service.bullets.map((bullet, index) =>
                     <li key={index}>
-                      <p><MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal">{bullet}</MediumText></p>
+                      <p><MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal font-neue-regular">{bullet}</MediumText></p>
                     </li>
                   )}
                 </ol>
               }
-              <MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal">
+              <MediumText color="text-black" classes="xl:text-2xl 2xl:text-3xl 2xl:leading-normal font-neue-regular">
                 <ReactMarkdown>{service.linkText}</ReactMarkdown>
               </MediumText>
             </div>
