@@ -1,6 +1,6 @@
 ---
 en:
-  title: B&R Portfolio
+  title: Portfolio – Brokers and Realtors
 es:
-  title: Portfolio B&R
+  title: Portfolio – Brokers y Realtors
 ---

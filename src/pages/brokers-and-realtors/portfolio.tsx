@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 
 import { getAllCollections } from '@/lib/collections';
 
+import { MediumText } from '@/components/Typography';
+
 import { attributes } from '@/content/brokers-and-realtors/portfolio.md';
 
 interface LanguageProjects {
@@ -55,6 +57,9 @@ export default function Portfolio({ projectsData }: {
         changeLanguage={changeLanguage}
       />
       <section className="pt-14 px-4 container mx-auto">
+        <div className="pt-8">
+          <h1 className="font-neue-bold"><MediumText color="text-black">{language === 'en' ? en.title : es.title}</MediumText></h1>
+        </div>
         <PortfolioGrid
           type="brokers-and-realtors"
           items={projectsData}

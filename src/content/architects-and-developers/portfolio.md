@@ -1,6 +1,6 @@
 ---
 en:
-  title: A&D Portfolio
+  title: Portfolio – Architects and Developers
 es:
-  title: Portfolio A&D
+  title: Portfolio – Arquitectos y Desarrolladores
 ---

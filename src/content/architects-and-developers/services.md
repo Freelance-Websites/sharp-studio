@@ -1,7 +1,7 @@
 ---
 en:
   title: A&D Services
-  headingTitle: Services.
+  headingTitle: Services - Architects and Developers.
   headingText: Sharp Studio Visuals has a solution for every type of architecture and development project. Our team of architects and digital artists have been working together with renowned architecture studios for over than 10 years always reaching the highest expectations across the industry. From first drafts to final images, SSV and each member of our team of professionals accompanies each project with outmost attention detail for each visual decision to be made.
   services:
     - image: /images/architects-and-developers/services/service-1.jpg
@@ -43,7 +43,7 @@ en:
       linkHref: architecture-and-developer-services
 es:
   title: Servicios A&D
-  headingTitle: Servicios.
+  headingTitle: Servicios - Arquitectos y Desarrolladores.
   headingText: Sharp Studio Visuals tiene soluciones para cada tipo de proyecto de arquitectura y desarrollo. Desde hace más de 10 años, nuestro equipo de arquitectos y artistas digitales viene trabajando junto renombrados estudios de arquitectura alcanzando las más altas expectativas de laindustria. Desde las primeras ideas hasta las imágenes finales, SSV y cada uno de sus profesionales acompaña cada proyecto con detalle y minuciosidad en cada una de las decisiones visuales.
   services:
     - image: /images/architects-and-developers/services/service-1.jpg
