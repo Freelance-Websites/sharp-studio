@@ -13,15 +13,22 @@ en:
     - image: /images/brokers-and-realtors/studio-slider-1.jpg
       title: Casa Laguna Grande
       credit: GO Arquitectos
-      type: image
     - image: /images/brokers-and-realtors/studio-slider-2.jpg
       title: Casa Laguna Grande
       credit: GO Arquitectos
-      type: image
     - image: /images/brokers-and-realtors/studio-slider-3.jpg
       title: Princeton II
       credit: Portland US
-      type: image
+  studioSliderMobile:
+    - image: /images/brokers-and-realtors/studio-slider-1-mobile.jpg
+      title: Casa Muelles
+      credit: Go Arquitectos
+    - image: /images/brokers-and-realtors/studio-slider-2-mobile.jpg
+      title: Cuba
+      credit: MSGSSS
+    - image: /images/brokers-and-realtors/studio-slider-3-mobile.jpg
+      title: Sens Palermo Green
+      credit: ATV
   servicesEnabled: true
   servicesTitle: Services.
   servicesText: "We excel by adjusting our tailor-made services to each of our clients' requirements by bringing your property ideals to reality. We do so by rendering [still images with fine lighting and textures, immersive animation and 360 visualization experiences, and 3D tours, and virtual stagings](/brokers-and-realtors/services) to make sure your client and buyers are able to experience architecture."
@@ -107,15 +114,22 @@ es:
     - image: /images/brokers-and-realtors/studio-slider-1.jpg
       title: Casa Laguna Grande
       credit: GO Arquitectos
-      type: image
     - image: /images/brokers-and-realtors/studio-slider-2.jpg
       title: Casa Laguna Grande
       credit: GO Arquitectos
-      type: image
     - image: /images/brokers-and-realtors/studio-slider-3.jpg
       title: Princeton II
       credit: Portland US
-      type: image
+  studioSliderMobile:
+    - image: /images/brokers-and-realtors/studio-slider-1-mobile.jpg
+      title: Casa Muelles
+      credit: Go Arquitectos
+    - image: /images/brokers-and-realtors/studio-slider-2-mobile.jpg
+      title: Cuba
+      credit: MSGSSS
+    - image: /images/brokers-and-realtors/studio-slider-3-mobile.jpg
+      title: Sens Palermo Green
+      credit: ATV
   servicesEnabled: true
   servicesTitle: Servicios.
   servicesText: "Nuestros servicios taylor made están ajustados a las más altas exigencias de nuestros clientes con el objetivo de llevar a la realidad tu propiedad. [Renderings stills con delicadeza en su iluminación y texturas, experiencias inmersivas de animación y visualización 360, y tours 3D, virtual stagings:](/brokers-and-realtors/services) Vas a poder vivir la arquitectura."

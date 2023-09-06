@@ -32,7 +32,10 @@ export default function Home() {
   const contactTextEsp = globals.es.contactText;
 
   const [language, setLanguage] = useState('en');
-  const translatedStudioSlider = language === 'en' ? en.studioSlider : es.studioSlider;
+  const [isPortrait, setIsPortrait] = useState(false);
+
+  const translatedStudioSliderDesktop = language === 'en' ? en.studioSlider : es.studioSlider;
+  const translatedStudioSliderMobile = language === 'en' ? en.studioSliderMobile : es.studioSliderMobile;
   const translatedServicesSlider = language === 'en' ? en.servicesSlider : es.servicesSlider;
   const translatedImmersiveServicesSlider = language === 'en' ? en.immersiveServicesSlider : es.immersiveServicesSlider;
   const translatedWorkflowSlider = language === 'en' ? en.workflowSlider : es.workflowSlider;
@@ -42,9 +45,23 @@ export default function Home() {
     window.localStorage.setItem('language', lang);
   }
 
+  const checkIsPortrait = () => {
+    if (!window.matchMedia) {
+      return false;
+    }
+
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+    setIsPortrait(isPortrait);
+  }
+
+
   useEffect(() => {
     const storedLanguage = window.localStorage.getItem('language');
     changeLanguage(storedLanguage ? storedLanguage : 'en');
+
+    checkIsPortrait();
+    window.addEventListener('resize', checkIsPortrait);
+    return () => window.removeEventListener('resize', checkIsPortrait);
   });
 
   return (
@@ -84,7 +101,7 @@ export default function Home() {
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={translatedStudioSlider}
+                    slides={isPortrait ? translatedStudioSliderMobile : translatedStudioSliderDesktop}
                     drag={true}
                   />
                 </section>
