@@ -25,7 +25,7 @@ en:
       credit: BAS + LABA
   sliderMobile:
     - image: /images/home/slide-1-mobile.jpg
-      title: Concurso Edenor
+      title: Ixou Mini
       credit: Monoblock
     - image: /images/home/slide-2-mobile.jpg
       title: Cuba
@@ -64,7 +64,7 @@ es:
       credit: Whitekitchen
   sliderMobile:
     - image: /images/home/slide-1-mobile.jpg
-      title: Concurso Edenor
+      title: Ixou Mini
       credit: Monoblock
     - image: /images/home/slide-2-mobile.jpg
       title: Cuba

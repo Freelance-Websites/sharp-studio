@@ -174,58 +174,19 @@ collections:
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
             fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
               - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
               - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
               - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+          - label: "Slider El Estudio Mobile"
+            name: "studioSliderMobile"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.title}} – {{ fields.credit}}"
+            i18n: true
+            fields:
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
           - {label: "Habilitar sección Servicios?", name: "servicesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Servicios", name: "servicesTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Servicios", name: "servicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
@@ -326,7 +287,6 @@ collections:
                   - { label: "Texto", value: "text" }
               - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
               - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
               - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
               - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
               - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
@@ -430,6 +390,16 @@ collections:
                   - { label: "Celeste", value: "bg-light-blue" }
                   - { label: "Beige", value: "bg-cream" }
                   - { label: "Rosa", value: "bg-salmon" }
+          - label: "Slider Workflow Mobile"
+            name: "workflowSliderMobile"
+            widget: "list"
+            allow_add: true
+            summary: "{{fields.title}} – {{ fields.credit}}"
+            i18n: true
+            fields:
+              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
           - {label: "Habilitar sección Portfolio?", name: "portfolioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Portfolio", name: "portfolioTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Portfolio", name: "portfolioText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}

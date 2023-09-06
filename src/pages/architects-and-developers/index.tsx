@@ -31,10 +31,15 @@ export default function Home() {
   const contactTextEsp = globals.es.contactText;
 
   const [language, setLanguage] = useState('en');
-  const translatedStudioSlider = language === 'en' ? en.studioSlider : es.studioSlider;
+  const [isPortrait, setIsPortrait] = useState(false);
+
+  const translatedStudioSliderDesktop = language === 'en' ? en.studioSlider : es.studioSlider;
+  const translatedStudioSliderMobile = language === 'en' ? en.studioSliderMobile : es.studioSliderMobile;
   const translatedServicesSlider = language === 'en' ? en.servicesSlider : es.servicesSlider;
-  const translatedImmersiveServicesSlider = language === 'en' ? en.immersiveServicesSlider : es.immersiveServicesSlider;
-  const translatedWorkflowSlider = language === 'en' ? en.workflowSlider : es.workflowSlider;
+  const translatedImmersiveServicesSliderDesktop = language === 'en' ? en.immersiveServicesSlider : es.immersiveServicesSlider;
+  const translatedImmersiveServicesSliderMobile = language === 'en' ? en.immersiveServicesSliderMobile : es.immersiveServicesSliderMobile;
+  const translatedWorkflowSliderDesktop = language === 'en' ? en.workflowSlider : es.workflowSlider;
+  const translatedWorkflowSliderMobile = language === 'en' ? en.workflowSliderMobile : es.workflowSliderMobile;
   const translatedDocumentationSlider = language === 'en' ? en.documentationSlider : es.documentationSlider;
 
   const changeLanguage = (lang: string) => {
@@ -42,10 +47,23 @@ export default function Home() {
     window.localStorage.setItem('language', lang);
   }
 
+  const checkIsPortrait = () => {
+    if (!window.matchMedia) {
+      return false;
+    }
+
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+    setIsPortrait(isPortrait);
+  }
+
   useEffect(() => {
     const storedLanguage = window.localStorage.getItem('language');
     changeLanguage(storedLanguage ? storedLanguage : 'en');
-  });
+
+    checkIsPortrait();
+    window.addEventListener('resize', checkIsPortrait);
+    return () => window.removeEventListener('resize', checkIsPortrait);
+  }, []);
 
   return (
     <main>
@@ -84,7 +102,7 @@ export default function Home() {
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={translatedStudioSlider}
+                    slides={isPortrait ? translatedStudioSliderMobile : translatedStudioSliderDesktop}
                     drag={true}
                   />
                 </section>
@@ -129,7 +147,7 @@ export default function Home() {
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={translatedImmersiveServicesSlider}
+                    slides={isPortrait ? translatedImmersiveServicesSliderMobile : translatedImmersiveServicesSliderDesktop}
                     drag={true}
                   />
                 </section>
@@ -152,7 +170,7 @@ export default function Home() {
                 </section>
                 <section className="section">
                   <FullPageSlider
-                    slides={translatedWorkflowSlider}
+                    slides={isPortrait ? translatedWorkflowSliderMobile : translatedWorkflowSliderDesktop}
                     drag={true}
                   />
                 </section>

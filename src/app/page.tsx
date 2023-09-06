@@ -26,6 +26,7 @@ export default function Home() {
       return false;
     }
 
+    checkIsPortrait();
     const isPortrait = window.matchMedia("(orientation: portrait)").matches;
     setIsPortrait(isPortrait);
   }

@@ -13,15 +13,25 @@ en:
     - image: /images/architects-and-developers/studio-slider-1.jpg
       title: Munich Market
       credit: Whitekitchen
-      type: image
     - image: /images/architects-and-developers/studio-slider-2.jpg
       title: Concurso ITBA
       credit: Matías Beccar Varela, Pablo Katz, Ignacio Beccar Varela
-      type: image
     - image: /images/architects-and-developers/studio-slider-3.jpg
       title: Paris Rooftop
       credit: Whitekitchen
-      type: image
+  studioSliderMobile:
+    - image: /images/architects-and-developers/studio-slider-1-mobile.jpg
+      title: Patagonia CoD
+      credit: BAVA
+    - image: /images/architects-and-developers/studio-slider-2-mobile.jpg
+      title: Ixou Mini
+      credit: Monoblock
+    - image: /images/architects-and-developers/studio-slider-3-mobile.jpg
+      title: Virrey Olaguer
+      credit: BOOSARQ
+    - image: /images/architects-and-developers/studio-slider-4-mobile.jpg
+      title: Mendoza 1416
+      credit: Estudio Planta
   servicesEnabled: true
   servicesTitle: Services.
   servicesText: "We offer tailor made solutions to all of our clients with the objective of making unbuilt projects into a reality. We do so by creating state of the art [high definition images for each project as well as immersive strategies](/architects-and-developers/services) to captivate investors and potential clients alike."
@@ -51,11 +61,20 @@ en:
       credit: Monoblock
       type: image
     - image: /images/architects-and-developers/immersive-services-slider-2.jpg
-      imageMobile: /images/architects-and-developers/immersive-services-mobile.jpg
       title: Ixou Mini
       credit: Monoblock
-      type: two-column
       theme: dark
+      type: two-column
+  immersiveServicesSliderMobile:
+    - image: /images/architects-and-developers/immersive-services-slider-1-mobile.jpg
+      title: Concurso Edenor
+      credit: Monoblock
+    - image: /images/architects-and-developers/immersive-services-slider-2-mobile.jpg
+      title: Patagonia CoD
+      credit: BAVA
+    - image: /images/architects-and-developers/immersive-services-slider-3-mobile.jpg
+      title: Estomba
+      credit: BAS + LABA
   workflowEnabled: true
   workflowText: "Each project has a dedicated team of architects and designers who are in constant contact with the client and their every need. [Our workflow is meticulously supervised by a team of managers](/architects-and-developers/workflow) with impeccable attention to detail and proactiveness whose function is to carry out the demands of each account in a timely manner."
   workflowLinkHref: /architects-and-developers/workflow
@@ -73,13 +92,25 @@ en:
       credit: Whitekitchen
       type: image
     - image: /images/architects-and-developers/workflow-slider-3.jpg
-      imageMobile: /images/architects-and-developers/workflow-mobile.jpg
       title: Concurso Edenor
       credit: Monoblock
       titleTwo: LIV Plaza
       creditTwo: ATV
       type: two-column
       theme: dark
+  workflowSliderMobile:
+    - image: /images/architects-and-developers/workflow-slider-1-mobile.jpg
+      title: LIV Plaza
+      credit: ATV
+    - image: /images/architects-and-developers/workflow-slider-2-mobile.jpg
+      title: Estomba
+      credit: BAS + LABA
+    - image: /images/architects-and-developers/workflow-slider-3-mobile.jpg
+      title: Sens Humboldt
+      credit: ATV
+    - image: /images/architects-and-developers/workflow-slider-4-mobile.jpg
+      title: Estomba
+      credit: BAS + LABA
   portfolioEnabled: true
   portfolioText: We have been creating projects for over 10 years and fulfilling all of our clients’ highest expectations.
   portfolioLinkText: "Want to see how we do it? [Head to our portfolio](/architects-and-developers/portfolio)."
@@ -118,15 +149,25 @@ es:
     - image: /images/architects-and-developers/studio-slider-1.jpg
       title: Munich Market
       credit: Whitekitchen
-      type: image
     - image: /images/architects-and-developers/studio-slider-2.jpg
       title: Concurso ITBA
       credit: Matías Beccar Varela, Pablo Katz, Ignacio Beccar Varela
-      type: image
     - image: /images/architects-and-developers/studio-slider-3.jpg
       title: Paris Rooftop
       credit: Whitekitchen
-      type: image
+  studioSliderMobile:
+    - image: /images/architects-and-developers/studio-slider-1-mobile.jpg
+      title: Patagonia CoD
+      credit: BAVA
+    - image: /images/architects-and-developers/studio-slider-2-mobile.jpg
+      title: Ixou Mini
+      credit: Monoblock
+    - image: /images/architects-and-developers/studio-slider-3-mobile.jpg
+      title: Virrey Olaguer
+      credit: BOOSARQ
+    - image: /images/architects-and-developers/studio-slider-4-mobile.jpg
+      title: Mendoza 1416
+      credit: Estudio Planta
   servicesEnabled: true
   servicesTitle: Servicios.
   servicesText: "Tenemos servicios a la medida de cada cliente para llevar a la realidad los edificios aún no construidos. [Nítidas imágenes de cada proyecto y experiencias inmersivas](/architects-and-developers/services) para seducir a inversores y clientes."
@@ -156,11 +197,20 @@ es:
       credit: Monoblock
       type: image
     - image: /images/architects-and-developers/immersive-services-slider-2.jpg
-      imageMobile: /images/architects-and-developers/immersive-services-mobile.jpg
       title: Ixou Mini
       credit: Monoblock
       type: two-column
       theme: dark
+  immersiveServicesSliderMobile:
+    - image: /images/architects-and-developers/immersive-services-slider-1-mobile.jpg
+      title: Concurso Edenor
+      credit: Monoblock
+    - image: /images/architects-and-developers/immersive-services-slider-2-mobile.jpg
+      title: Patagonia CoD
+      credit: BAVA
+    - image: /images/architects-and-developers/immersive-services-slider-3-mobile.jpg
+      title: Estomba
+      credit: BAS + LABA
   workflowEnabled: true
   workflowText: "Cada proyecto tiene la dedicación de un equipo de arquitectos y diseñadores que están en contacto constante con el cliente y sus indicaciones. [El workflow está minuciosamente supervisado por un equipo de managers](/architects-and-developers/workflow) detallistas y obsesivos cuya función es llevar adelante en tiempo y forma las exigencias de cada cuenta."
   workflowImage: /images/architects-and-developers/workflow-image.jpg
@@ -185,6 +235,19 @@ es:
       creditTwo: ATV
       type: two-column
       theme: dark
+  workflowSliderMobile:
+    - image: /images/architects-and-developers/workflow-slider-1-mobile.jpg
+      title: LIV Plaza
+      credit: ATV
+    - image: /images/architects-and-developers/workflow-slider-2-mobile.jpg
+      title: Estomba
+      credit: BAS + LABA
+    - image: /images/architects-and-developers/workflow-slider-3-mobile.jpg
+      title: Sens Humboldt
+      credit: ATV
+    - image: /images/architects-and-developers/workflow-slider-4-mobile.jpg
+      title: Estomba
+      credit: BAS + LABA
   portfolioEnabled: true
   portfolioText: Desde hace 10 años estamos creando proyectos y concretando las más altas expectativas de nuestros clientes.
   portfolioLinkText: "Querés ver cómo lo hacemos? [Visitá nuestro portfolio](/architects-and-developers/portfolio)."

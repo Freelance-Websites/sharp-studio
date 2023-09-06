@@ -33,6 +33,7 @@ export default function Home() {
     const storedLanguage = window.localStorage.getItem('language');
     changeLanguage(storedLanguage ? storedLanguage : 'en');
 
+    checkIsPortrait();
     window.addEventListener('resize', checkIsPortrait);
     return () => window.removeEventListener('resize', checkIsPortrait);
   }, []);
