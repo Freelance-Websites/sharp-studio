@@ -84,7 +84,7 @@ export default function Showcase() {
             }
             {immersiveExperiencesEnabled &&
               <>
-                <section className="section" data-anchor="immersive-services">
+                <section className="section">
                   <TextOnly
                     color="bg-light-green"
                     title={language === 'en' ? en.immersiveExperiencesTitle : es.immersiveExperiencesTitle}
@@ -92,7 +92,7 @@ export default function Showcase() {
                     linkText={language === 'en' ? en.immersiveExperiencesLinkText : es.immersiveExperiencesLinkText}
                   />
                 </section>
-                <section className="section">
+                <section className="section" data-anchor="immersive-services">
                   <FullPageSlider
                     slides={language === 'en' ? en.immersiveExperiencesSlider : es.immersiveExperiencesSlider}
                     drag={false}
