@@ -1,8 +1,8 @@
 ---
 order: 7
-thumbnail: /images/brokers-and-realtors/portfolio/commodore/thumbnail.jpg
 title: Commodore
-credit: BOOSARQ
+credit: Boosarq
+thumbnail: /images/brokers-and-realtors/portfolio/commodore/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/commodore/slide-1.jpg
     proportion: video
