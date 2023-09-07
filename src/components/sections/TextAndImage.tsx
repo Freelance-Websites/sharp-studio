@@ -66,8 +66,8 @@ export default function TextAndImage({ orientation, color, title, content, linkT
           ${orientation === 'left' ? '2xl:col-start-7' : ''}
         `}>
           {title &&
-            <h3 className="font-neue-bold">
-              <MediumText color="text-black">{title}</MediumText>
+            <h3>
+              <MediumText classes="font-neue-bold" color="text-black">{title}</MediumText>
             </h3>
           }
           {content &&

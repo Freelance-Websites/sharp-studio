@@ -84,7 +84,7 @@ export default function Showcase() {
             }
             {immersiveExperiencesEnabled &&
               <>
-                <section className="section" id="immersive-experiences">
+                <section className="section" data-anchor="immersive-services">
                   <TextOnly
                     color="bg-light-green"
                     title={language === 'en' ? en.immersiveExperiencesTitle : es.immersiveExperiencesTitle}
