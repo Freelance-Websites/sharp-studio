@@ -65,7 +65,7 @@ en:
       percentage: 0.50
       imageOneCaption: Virtual Staging
       type: slide
-    - image: https://virtual-tour-ad.netlify.app/
+    - image: https://virtual-tour-br.sharpstudiovisuals.com/
       title: Sens Palermo Green
       credit: ATV
       theme: light
@@ -140,7 +140,7 @@ es:
       percentage: 0.50
       imageOneCaption: Virtual Staging
       type: slide
-    - image: https://virtual-tour-ad.netlify.app/
+    - image: https://virtual-tour-br.sharpstudiovisuals.com/
       title: Sens Palermo Green
       credit: ATV
       theme: light

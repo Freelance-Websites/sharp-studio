@@ -45,7 +45,7 @@ en:
       theme: light
       type: panoram
       imageOneCaption: 360 Visualization
-    - image: https://virtual-tour-ad.netlify.app/
+    - image: https://virtual-tour-ad.sharpstudiovisuals.com/
       title: Sens Palermo Green
       credit: ATV
       theme: light
@@ -101,7 +101,7 @@ es:
       theme: light
       type: panoram
       imageOneCaption: 360 Visualization
-    - image: https://virtual-tour-realtors.netlify.app/
+    - image: https://virtual-tour-ad.sharpstudiovisuals.com/
       title: Sens Palermo Green
       credit: ATV
       theme: light
