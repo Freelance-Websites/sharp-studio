@@ -178,7 +178,7 @@ export default function FullPageSlider({ slides, drag }: {
             }
             {slide.titleTwo ?
               <>
-                <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
+                <div className="w-full p-4 absolute bottom-8 md:bottom-4 z-30">
                   <ul className="grid md:grid-cols-2 md:gap-4">
                     <li>
                       <h2 className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'}`}>
