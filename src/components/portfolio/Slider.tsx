@@ -9,18 +9,13 @@ interface Slide {
   proportion: string;
 }
 
-interface LanguageProject {
+interface Project {
+  id: string;
   slides: Array<Slide>;
   title: string;
   credit: string;
   thumbnail: string;
   order: number;
-}
-
-interface Project {
-  id: string;
-  en: LanguageProject;
-  es: LanguageProject;
   contentHtml: string;
 }
 
@@ -28,7 +23,6 @@ export default function PortfolioSlider({ project, language }: {
   project: Project;
   language: string;
 }) {
-  const translatedProject = language === 'en' ? project.en : project.es;
   return (
     <>
       <Splide
@@ -39,13 +33,13 @@ export default function PortfolioSlider({ project, language }: {
           rewind: true,
           drag: true,
           rewindByDrag: true,
-          arrows: translatedProject.slides.length > 1 ? true : false,
+          arrows: project.slides.length > 1 ? true : false,
           preloadPages: 2,
           lazyLoad: 'nearby',
         }}
       >
         <SplideTrack>
-          {translatedProject.slides.map((slide: Slide, index: number) =>
+          {project.slides.map((slide: Slide, index: number) =>
             <SplideSlide
               key={index}
               className={`
@@ -62,7 +56,7 @@ export default function PortfolioSlider({ project, language }: {
               <Image
                 data-splide-lazy={slide.image}
                 src={slide.image}
-                alt={`${translatedProject.title} – ${translatedProject.credit}`}
+                alt={`${project.title} – ${project.credit}`}
                 fill={true}
                 className={`
                   w-full h-full
@@ -76,10 +70,10 @@ export default function PortfolioSlider({ project, language }: {
       <div className="container mx-auto py-4 md:pb-8">
         <h2>
           <StandardText color="text-black">
-            <span className="font-neue-bold">{translatedProject.title}</span>
+            <span className="font-neue-bold">{project.title}</span>
           </StandardText>
           <StandardText color="text-black">
-            &nbsp;&mdash; {translatedProject.credit}
+            &nbsp;&mdash; {project.credit}
           </StandardText>
         </h2>
       </div>

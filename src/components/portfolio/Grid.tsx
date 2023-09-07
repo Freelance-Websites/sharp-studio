@@ -5,21 +5,15 @@ import { StandardText } from "@/components/Typography";
 
 interface Item {
   order: number;
-  en: TranslatedItem;
-  es: TranslatedItem;
-  id: string;
-}
-
-interface TranslatedItem {
   thumbnail: string;
   title: string;
   credit: string;
+  id: string;
 }
 
 export default function PortfolioGrid({
   items,
   type,
-  language
 }: {
   items: Array<Item>;
   type: string;
@@ -29,7 +23,6 @@ export default function PortfolioGrid({
   return (
     <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 py-4">
       {sortedItems.map((item: Item, index: number) => {
-        const translatedItem = language === 'en' ? item.en : item.es;
         const itemUrl = `/${type}/portfolio/${item.id}`;
 
         return(
@@ -41,8 +34,8 @@ export default function PortfolioGrid({
               href={itemUrl}
             >
               <Image
-                src={translatedItem.thumbnail}
-                alt={`${translatedItem.title} – ${translatedItem.credit}`}
+                src={item.thumbnail}
+                alt={`${item.title} – ${item.credit}`}
                 fill={true}
                 className="w-full h-full object-cover"
               />
@@ -51,7 +44,7 @@ export default function PortfolioGrid({
               </div>
               <p className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition ease-in-out duration-200 z-20">
                 <StandardText color="text-white">
-                  <strong>{translatedItem.title}</strong> – {translatedItem.credit}
+                  <strong>{item.title}</strong> – {item.credit}
                 </StandardText>
               </p>
             </Link>

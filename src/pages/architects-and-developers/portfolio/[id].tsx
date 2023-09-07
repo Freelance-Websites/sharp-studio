@@ -10,33 +10,22 @@ import { getAllCollections, getCollectionById, getCollectionIds } from '@/lib/co
 
 import { attributes } from '@/content/architects-and-developers/portfolio.md';
 
-interface LanguageProjects {
-  thumbnail: string;
-  title: string;
-  credit: string;
-  slides: Array<Slide>;
-}
-
 interface Projects {
   order: number;
   id: string;
-  en: LanguageProjects;
-  es: LanguageProjects;
-}
-
-interface LanguageProject {
-  id: string;
   thumbnail: string;
   title: string;
   credit: string;
-  order: number;
   slides: Array<Slide>;
 }
 
 interface Project {
   id: string;
-  en: LanguageProject;
-  es: LanguageProject;
+  thumbnail: string;
+  title: string;
+  credit: string;
+  order: number;
+  slides: Array<Slide>;
   contentHtml: string;
 }
 

@@ -11,18 +11,13 @@ import { MediumText } from '@/components/Typography';
 
 import { attributes } from '@/content/brokers-and-realtors/portfolio.md';
 
-interface LanguageProjects {
+interface Projects {
+  order: number;
+  id: string;
   thumbnail: string;
   title: string;
   credit: string;
   slides: Array<Slide>;
-}
-
-interface Projects {
-  order: number;
-  id: string;
-  en: LanguageProjects;
-  es: LanguageProjects;
 }
 
 interface Slide {
