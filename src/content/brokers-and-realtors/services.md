@@ -1,7 +1,7 @@
 ---
 en:
   title: B&R Services
-  headingTitle: Services - Brokers and Realtors.
+  headingTitle: Services <br /> Brokers and Realtors.
   headingText: Sharp Studio Visuals has a solution for every type of architecture and development project. Our team of architects and digital artists have been working together with renowned architecture studios for over than 10 years always reaching the highest expectations across the industry. From first drafts to final images, SSV and each member of our team of professionals accompanies each project with outmost attention detail for each visual decision to be made.
   services:
     - image: /images/brokers-and-realtors/services/service-1.jpg

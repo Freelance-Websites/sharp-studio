@@ -35,7 +35,9 @@ export default function TextOnly({ color, title, content, linkText, classes }: {
       <div className="container mx-auto p-4 grid gap-4 lg:max-w-5xl">
         {title &&
           <h2>
-            <MainHeading color="text-black">{title}</MainHeading>
+            <MainHeading color="text-black">
+              <span dangerouslySetInnerHTML={{ __html: title }} className="leading-tight" />
+            </MainHeading>
           </h2>
         }
         {content &&
