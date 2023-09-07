@@ -1,3 +1,4 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: main
@@ -1279,18 +1280,14 @@ collections:
     name: "projectsAD"
     folder: "src/content/architects-and-developers/portfolio"
     create: true
-    i18n:
-      structure: single_file
-      locales: [en, es]
     fields:
-      - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", i18n: true, required: false}
-      - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", i18n: true, required: false}
-      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado 800x600px o superior"}
+      - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", required: false}
+      - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", required: false}
+      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, hint: "Tamaño recomendado 800x600px o superior"}
       - label: "Slider"
         name: "slides"
         widget: "list"
         allow_add: true
-        i18n: true
         fields:
           - label: "Proporción"
             name: "proportion"
@@ -1307,18 +1304,14 @@ collections:
     name: "projectsBR"
     folder: "src/content/brokers-and-realtors/portfolio"
     create: true
-    i18n:
-      structure: single_file
-      locales: [en, es]
     fields:
-      - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", i18n: true, required: false}
-      - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", i18n: true, required: false}
-      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, i18n: duplicate, hint: "Tamaño recomendado 800x600px o superior"}
+      - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", required: false}
+      - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", required: false}
+      - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, hint: "Tamaño recomendado 800x600px o superior"}
       - label: "Slider"
         name: "slides"
         widget: "list"
         allow_add: true
-        i18n: true
         fields:
           - label: "Proporción"
             name: "proportion"
