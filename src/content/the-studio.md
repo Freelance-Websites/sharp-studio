@@ -60,7 +60,7 @@ es:
       name: Alejandro Laurido
       bio: Senior architect. Production manager of Sharp Studio Visuals. Architecture
         expert.
-    - image: /images/studio/nicolas.jpg
+    - image: /images/img_9792-byn.jpg
       name: Nicolás López
       bio: Senior architect. Production manager of Sharp Studio Visuals. 3d artist and
         rendering expert.
