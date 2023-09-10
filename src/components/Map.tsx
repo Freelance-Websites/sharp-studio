@@ -28,12 +28,12 @@ const Map = () => {
 
   return isLoaded ? (
     <div className="grid grid-cols-1 lg:grid-cols-2">
-      <div className="relative w-full h-full border-solid border-r-white border-r-2 hidden lg:block">
+      <div className="relative w-full h-full border-solid border-r-white border-r-2 hidden lg:block bg-[#EDEDED]">
         <Image
           src="/images/florida.jpg"
           alt="Florida, USA"
           fill={true}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain object-top"
         />
       </div>
       <GoogleMap
