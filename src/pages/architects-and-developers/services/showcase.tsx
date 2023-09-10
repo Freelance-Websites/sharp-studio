@@ -120,7 +120,7 @@ export default function Showcase() {
                 orientation="left"
                   color="bg-light-gray"
                   content={language === 'en' ? officesTextEng : officesTextEsp}
-                  image={officesImage}
+                  imageArray={officesImage}
                 />
               </section>
             }

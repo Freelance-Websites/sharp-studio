@@ -27,7 +27,6 @@ export function MediumText({ children, color, underline, classes }: {
   underline?: boolean,
   classes?: string,
 }) {
-  console.log()
   return (
     <span className={`text-lg md:text-xl lg:text-2xl 2xl:text-3xl 2xl:leading-normal ${!classes?.includes('font-neue') && 'font-neue-regular'} ${underline ? 'underline decoration-1 underline-offset-8 hover:no-underline' : ''} ${color} ${classes}`}>{children}</span>
   )

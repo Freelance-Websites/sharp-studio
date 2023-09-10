@@ -80,7 +80,7 @@ export default function Contact() {
                     orientation="left"
                     color="bg-light-gray"
                     content={language === 'en' ? en.officesText : es.officesText}
-                    image={en.officesImage}
+                    imageArray={en.officesImage}
                   />
                   <Footer classes="absolute bottom-4" />
                 </section>

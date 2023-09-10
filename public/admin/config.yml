@@ -25,7 +25,15 @@ collections:
           - {label: "Texto sección FAQs", name: "faqsText", widget: "text", hint: "El texto para la sección FAQs", i18n: true, required: false}
           - {label: "Texto links FAQs", name: "faqsLinkText", widget: "markdown", hint: "El texto para el link de la sección FAQs", i18n: true, required: false}
           - {label: "Texto sección Oficinas", name: "officesText", widget: "string", hint: "El texto para la sección Oficinas", i18n: true, required: false}
-          - {label: "Imagen sección Oficinas", name: "officesImage", widget: "image", hint: "Tamaño recomendado 1000x1000 o superior", i18n: duplicate, required: false}
+          - label: "Imagen sección Oficinas"
+            name: "officesImage"
+            widget: "image"
+            hint: "Tamaño recomendado 1000x1000 o superior"
+            i18n: duplicate
+            required: false
+            media_library:
+              config:
+                multiple: true
           - {label: "Título sección Contacto", name: "contactTitle", widget: "string", hint: "El título para la sección Contacto", i18n: true, required: false}
           - {label: "Texto sección Contacto", name: "contactText", widget: "text", hint: "El texto para la sección Contacto", i18n: true, required: false}
       # Index Structure

@@ -76,7 +76,7 @@ export default function Contact() {
                     orientation="left"
                     color="bg-light-gray"
                     content={language === 'en' ? officesTextEng : officesTextEsp}
-                    image={officesImage}
+                    imageArray={officesImage}
                   />
                   <Footer classes="absolute bottom-4" />
                 </section>

@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+const { Splide, SplideTrack, SplideSlide } = require('@splidejs/react-splide');
+import '@splidejs/react-splide/css';
 
 import { MediumText, StandardText } from "@/components/Typography";
 
-export default function TextAndImage({ orientation, color, title, content, linkText, linkHref, image, imageHref, imageCaption, imageCredit, imageProportion }: {
+export default function TextAndImage({ orientation, color, title, content, linkText, linkHref, image, imageArray, imageHref, imageCaption, imageCredit, imageProportion }: {
   orientation: string,
   color: string,
   title?: string,
@@ -12,7 +14,8 @@ export default function TextAndImage({ orientation, color, title, content, linkT
   linkText?: string,
   linkHref?: string,
   imageHref?: string,
-  image: string,
+  image?: string,
+  imageArray?: Array<string>,
   imageCaption?: string,
   imageCredit?: string,
   imageProportion?: string,
@@ -46,18 +49,52 @@ export default function TextAndImage({ orientation, color, title, content, linkT
           relative empty:hidden
           ${orientation === 'right' ? 'lg:order-last 2xl:col-start-7' : ''}
         `}>
-          <a
-            href={imageHref ? imageHref : linkHref ? linkHref : '#'}
-          >
-            <Image
-              src={image}
-              alt={`${imageCaption} – ${imageCredit}`}
-              fill={true}
-              className={`
-                w-full h-full object-contain
-              `}
-            />
-          </a>
+          {image === undefined ?
+            <Splide
+              hasTrack={false}
+              options={{
+                speed: '400',
+                autoplay: true,
+                rewind: true,
+                arrows: false,
+              }}
+            >
+              <SplideTrack>
+                {imageArray?.map((image, index) =>
+                  <SplideSlide
+                    key={index}
+                    className="w-full h-custom relative"
+                  >
+                    <a
+                      href={imageHref ? imageHref : linkHref ? linkHref : '#'}
+                    >
+                      <Image
+                        src={image}
+                        alt={`${imageCaption} – ${imageCredit}`}
+                        fill={true}
+                        className={`
+                          w-full h-full object-contain
+                        `}
+                      />
+                    </a>
+                  </SplideSlide>
+                )}
+              </SplideTrack>
+            </Splide>
+            :
+            <a
+              href={imageHref ? imageHref : linkHref ? linkHref : '#'}
+            >
+              <Image
+                src={image}
+                alt={`${imageCaption} – ${imageCredit}`}
+                fill={true}
+                className={`
+                  w-full h-full object-contain
+                `}
+              />
+            </a>
+          }
         </li>
         <li className={`
           grid gap-2 md:gap-4 col-span-full lg:col-span-6
