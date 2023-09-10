@@ -211,59 +211,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección Servicios inmersivos?", name: "immersiveServicesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Servicios inmersivos", name: "immersiveServicesTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
@@ -279,58 +371,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección Workflow?", name: "workflowEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Workflow", name: "workflowTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Workflow", name: "workflowText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
@@ -346,59 +531,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - label: "Slider Workflow Mobile"
             name: "workflowSliderMobile"
             widget: "list"
@@ -428,59 +705,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar sección Mapa?", name: "mapEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar sección Oficinas?", name: "officesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -541,59 +910,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección experiencias inmersivas?", name: "immersiveExperiencesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Experiencias inmersivas", name: "immersiveExperiencesTitle", widget: "string", hint: "El título para la sección Experiencias inmersivas", i18n: true, required: false}
           - {label: "Texto sección Experiencias inmersivas", name: "immersiveExperiencesText", widget: "text", hint: "El texto para la sección Experiencias inmersivas", i18n: true, required: false}
@@ -604,59 +1065,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar formulario de contacto?", name: "contactEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar mapa?", name: "mapEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -682,59 +1235,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección Design Development?", name: "designDevelopmentEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Design Development", name: "designDevelopmentTitle", widget: "string", hint: "El título para la sección Design Development", i18n: true, required: false}
           - {label: "Texto sección Design Development", name: "designDevelopmentText", widget: "text", hint: "El texto para la sección Design Development", i18n: true, required: false}
@@ -762,60 +1407,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-                  - { label: "Plano", value: "map" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar formulario de contacto?", name: "contactEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar mapa?", name: "mapEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
@@ -886,59 +1622,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección Servicios inmersivos?", name: "immersiveServicesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Servicios inmersivos", name: "immersiveServicesTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Servicios inmersivos", name: "immersiveServicesText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
@@ -954,59 +1782,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección Workflow?", name: "workflowEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Workflow", name: "workflowTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Workflow", name: "workflowText", widget: "markdown", hint: "El texto para la sección", i18n: true, required: false}
@@ -1022,59 +1942,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección Portfolio?", name: "portfolioEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Portfolio", name: "portfolioTitle", widget: "string", hint: "El título para la sección", i18n: true, required: false}
           - {label: "Texto sección Portfolio", name: "portfolioText", widget: "text", hint: "El texto para la sección", i18n: true, required: false}
@@ -1144,59 +2156,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar sección experiencias interactivas?", name: "interactiveExperiencesEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Título sección Experiencias interactivas", name: "interactiveExperiencesTitle", widget: "string", hint: "El título para la sección Experiencias interactivas", i18n: true, required: false}
           - {label: "Texto sección Experiencias interactivas", name: "interactiveExperiencesText", widget: "text", hint: "El texto para la sección Experiencias interactivas", i18n: true, required: false}
@@ -1207,59 +2311,151 @@ collections:
             allow_add: true
             summary: "{{fields.title}} – {{ fields.credit}}"
             i18n: true
-            fields:
-              - label: "Tipo"
-                name: "type"
-                widget: "select"
-                required: false
-                hint: "El tipo de contenido a mostrar en el slider"
-                options:
-                  - { label: "Imagen a pantalla completa", value: "image" }
-                  - { label: "Imagen centrada", value: "one-column" }
-                  - { label: "Imagen a dos columnas", value: "two-columns" }
-                  - { label: "Virtual Staging", value: "slide" }
-                  - { label: "Video", value: "video" }
-                  - { label: "Panorama", value: "panoram" }
-                  - { label: "Walking Tour", value: "walking" }
-                  - { label: "Texto", value: "text" }
-              - {label: Imagen o video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
-              - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior. Se usa para los Virtual Stagings, required: false}
-              - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical para los Virtual Stagings., required: false}
-              - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
-              - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
-              - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
-              - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
-              - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
-              - label: "Tema"
-                name: "theme"
-                widget: "select"
-                required: false
-                hint: "El tema de la imagen (claro u oscuro)"
-                options:
-                  - { label: "Claro", value: "light" }
-                  - { label: "Oscuro", value: "dark" }
-              - label: "Comportamiento de imagen"
-                name: "imageFit"
-                widget: "select"
-                required: false
-                hint: "El comportamiento que toma la imagen"
-                options:
-                  - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
-                  - { label: "No cropear y agregar margen", value: "object-contain" }
-              - label: "Color"
-                name: "color"
-                widget: "select"
-                required: false
-                hint: "El color de fondo para el slide"
-                options:
-                  - { label: "Negro", value: "bg-black" }
-                  - { label: "Gris claro", value: "bg-light-gray" }
-                  - { label: "Blanco no puro", value: "bg-off-white" }
-                  - { label: "Blanco puro", value: "bg-white" }
-                  - { label: "Verde claro", value: "bg-light-green" }
-                  - { label: "Celeste", value: "bg-light-blue" }
-                  - { label: "Beige", value: "bg-cream" }
-                  - { label: "Rosa", value: "bg-salmon" }
+            types:
+              - label: "Imagen a pantalla completa"
+                name: "image"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Comportamiento de imagen"
+                    name: "imageFit"
+                    widget: "select"
+                    required: false
+                    hint: "El comportamiento que toma la imagen"
+                    options:
+                      - { label: "Cubrir ancho y alto (cropear)", value: "object-cover" }
+                      - { label: "No cropear y agregar margen", value: "object-contain" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen centrada"
+                name: "one-column"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Color"
+                    name: "color"
+                    widget: "select"
+                    required: false
+                    hint: "El color de fondo para el slide"
+                    options:
+                      - { label: "Negro", value: "bg-black" }
+                      - { label: "Gris claro", value: "bg-light-gray" }
+                      - { label: "Blanco no puro", value: "bg-off-white" }
+                      - { label: "Blanco puro", value: "bg-white" }
+                      - { label: "Verde claro", value: "bg-light-green" }
+                      - { label: "Celeste", value: "bg-light-blue" }
+                      - { label: "Beige", value: "bg-cream" }
+                      - { label: "Rosa", value: "bg-salmon" }
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Imagen a dos columnas"
+                name: "two-columns"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Virtual Staging"
+                name: "slide"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Imagen dos, name: imageTwo, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Porcentaje, name: percentage, widget: number, hint: De 0 a 1. Se usa para ubicar el separador vertical, required: false}
+                  - {label: Subtítulo imagen 1, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen 1, required: false}
+                  - {label: Subtítulo imagen 2, name: imageTwoCaption, widget: string, hint: Subtítulo para la imagen 2, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Video"
+                name: "video"
+                fields:
+                  - {label: Video, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo video, name: imageOneCaption, widget: string, hint: Subtítulo para el video, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título del video, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito del video, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Panorama"
+                name: "panoram"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Walking tour"
+                name: "walking"
+                fields:
+                  - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+                  - {label: Subtítulo imagen, name: imageOneCaption, widget: string, hint: Subtítulo para la imagen, required: false}
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Crédito, name: credit, widget: string, hint: Crédito de la imagen, required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
+              - label: "Texto"
+                name: "text"
+                fields:
+                  - {label: Título, name: title, widget: string, hint: Título de la imagen, required: false}
+                  - {label: Descripción, name: description, widget: text, hint: Descripción. Se usa para los slides de texto., required: false}
+                  - label: "Tema"
+                    name: "theme"
+                    widget: "select"
+                    required: false
+                    hint: "El tema de la imagen (claro u oscuro)"
+                    options:
+                      - { label: "Claro", value: "light" }
+                      - { label: "Oscuro", value: "dark" }
           - {label: "Habilitar formulario de contacto?", name: "contactEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar sección FAQs?", name: "faqsEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
           - {label: "Habilitar mapa?", name: "mapEnabled", widget: "boolean", default: true, i18n: duplicate, required: false}
