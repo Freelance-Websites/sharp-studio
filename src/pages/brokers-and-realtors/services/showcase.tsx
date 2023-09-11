@@ -130,6 +130,7 @@ export default function Showcase() {
                 <Contact
                   title={language === 'en' ? contactTitleEng : contactTitleEsp}
                   content={language === 'en' ? contactTextEng : contactTextEsp}
+                  language={language}
                 />
               </section>
             }

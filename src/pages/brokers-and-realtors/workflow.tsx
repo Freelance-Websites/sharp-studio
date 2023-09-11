@@ -92,6 +92,7 @@ export default function Workflow() {
                 <Contact
                   title={language === 'en' ? contactTitleEng : contactTitleEsp}
                   content={language === 'en' ? contactTextEng : contactTextEsp}
+                  language={language}
                 />
               </div>
             </section>

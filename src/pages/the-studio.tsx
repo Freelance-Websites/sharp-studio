@@ -109,6 +109,7 @@ export default function Studio() {
                   <Contact
                     title={language === 'en' ? contactTitleEng : contactTitleEsp}
                     content={language === 'en' ? contactTextEng : contactTextEsp}
+                    language={language}
                   />
                 </section>
               </>

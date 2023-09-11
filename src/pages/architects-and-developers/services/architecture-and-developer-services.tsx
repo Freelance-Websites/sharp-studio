@@ -177,6 +177,7 @@ export default function ADServices() {
                 <Contact
                   title={language === 'en' ? contactTitleEng : contactTitleEsp}
                   content={language === 'en' ? contactTextEng : contactTextEsp}
+                  language={language}
                 />
               </section>
             }
