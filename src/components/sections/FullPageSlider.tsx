@@ -97,13 +97,19 @@ export default function FullPageSlider({ slides, drag }: {
                 <source src={slide.image} type="video/mp4" />
               </video>
             : slide.type === 'panoram' && slide.image ?
-              <ReactPhotoSphereViewer
-                src={slide.image}
-                height={'100vh'}
-                width={"100%"}
-                navbar={false}
-                container={""}
-              />
+              <>
+                <div
+                  className="absolute w-full h-full z-10 pointers-none"
+                  onClick={(e) => e.currentTarget.remove()}
+                />
+                <ReactPhotoSphereViewer
+                  src={slide.image}
+                  height={'100vh'}
+                  width={"100%"}
+                  navbar={false}
+                  container={""}
+                />
+              </>
             : slide.type === 'two-column' && slide.image ?
               <TwoColumnImages
                 imageUrl={slide.image}
