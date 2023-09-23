@@ -45,11 +45,20 @@ export default function Contact({
           placeholder={`${language === 'en' ? 'Your email goes here' : 'Tu email va aquí'}`}
           required={true}
         />
+        <Input
+          type="text"
+          id="company"
+          label="Company name"
+          placeholder={`${language === 'en' ? 'Your company name' : 'El nombre de tu empresa'}`}
+          required={true}
+          classes="md:col-span-2"
+        />
         <Textarea
           id="message"
           label={`${language === 'en' ? 'Message' : 'Mensaje'}`}
           placeholder={`${language === 'en' ? 'Your message goes here' : 'Tu mensaje va aquí'}`}
           required={true}
+          classes="col-span-full"
         />
         <div className="text-left">
           <Cta

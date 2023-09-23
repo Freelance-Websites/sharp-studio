@@ -6,16 +6,23 @@ export default function Input({
   label,
   placeholder,
   required,
+  classes,
 }: {
   type: string;
   id: string;
   label: string;
   placeholder: string;
   required: boolean;
+  classes?: string;
 }) {
   return (
-    <div>
-      <label className="block mb-2" htmlFor={id}><SmallText color="text-black">{label}</SmallText></label>
+    <div className={classes}>
+      <label className="block mb-2" htmlFor={id}>
+        <SmallText color="text-black">
+          {label}
+          {required && required === true && '*'}
+        </SmallText>
+      </label>
       <input
         type={type}
         id={id}

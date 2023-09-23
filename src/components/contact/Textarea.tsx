@@ -5,15 +5,22 @@ export default function Textarea({
   label,
   placeholder,
   required,
+  classes,
 }: {
   id: string;
   label: string;
   placeholder: string;
   required: boolean;
+  classes?: string;
 }) {
   return (
-    <div className="col-span-full">
-      <label className="block mb-2" htmlFor={id}><SmallText color="text-black">{label}</SmallText></label>
+    <div className={classes}>
+      <label className="block mb-2" htmlFor={id}>
+        <SmallText color="text-black">
+          {label}
+          {required && required === true && '*'}
+        </SmallText>
+      </label>
       <textarea
         id={id}
         name={id}
