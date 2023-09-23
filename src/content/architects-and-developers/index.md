@@ -52,8 +52,8 @@ en:
       credit: ATV
       type: panoram
   immersiveServicesEnabled: true
-  immersiveServicesText: "At Sharp Studio Visuals we have countless options for bringing architecture to life even when it's not yet built. To do so, we rely on our highly trained human resources and state-of-the-art technology. That is why we offer [3D virtual tours, 360 experiences, and even tools to visualize projects in Virtual Reality](/architects-and-developers/services/showcase#immersive-services) to take the adventure of architecture to the next level."
-  immersiveServicesImageHref: /architects-and-developers/services/showcase#immersive-services
+  immersiveServicesText: "At Sharp Studio Visuals we have countless options for bringing architecture to life even when it's not yet built. To do so, we rely on our highly trained human resources and state-of-the-art technology. That is why we offer [3D virtual tours, 360 experiences, and even tools to visualize projects in Virtual Reality](/architects-and-developers/services/showcase#immersive-experiences) to take the adventure of architecture to the next level."
+  immersiveServicesImageHref: /architects-and-developers/services/showcase#immersive-experiences
   immersiveServicesImage: /images/architects-and-developers/services-360.jpg
   immersiveServicesSlider:
     - image: /images/architects-and-developers/immersive-services-slider-1.jpg
@@ -139,8 +139,8 @@ es:
   title: Arquitectos & Desarrolladores
   heroEnabled: true
   heroImage: /images/architects-and-developers/hero.jpg
-  heroTitle: Competition for the New Administration Centre in Rawson
-  heroCredit: LABA + PIEZA
+  heroTitle: Mendoza 1461
+  heroCredit: Estudio Planta
   studioEnabled: true
   studioTitle: El Estudio.
   studioText: En Sharp Studio somos un equipo de perfeccionistas. Arquitectos, artistas 3D, diseñadores dedicados a la producción de soluciones visuales y técnicas para arquitectura y desarrollos inmobiliarios.
@@ -188,9 +188,9 @@ es:
       credit: ATV
       type: panoram
   immersiveServicesEnabled: true
-  immersiveServicesText: "Sharp Studio Visuals tiene un sinnumero de opciones para llevar la arquitectura a la realidad aún cuando no está construida. Nos basamos en nuestros recursos humanos altamente capacitados y en la tecnología de punta. Por eso ofrecemos [tours virtuales 3D, experiencias 360, hasta herramientas para visualizar proyectos en Realidad Virtual](/architects-and-developers/services/showcase#immersive-services) y llevar la aventura de la arquitectura realmente a otro nivel."
+  immersiveServicesText: "Sharp Studio Visuals tiene un sinnumero de opciones para llevar la arquitectura a la realidad aún cuando no está construida. Nos basamos en nuestros recursos humanos altamente capacitados y en la tecnología de punta. Por eso ofrecemos [tours virtuales 3D, experiencias 360, hasta herramientas para visualizar proyectos en Realidad Virtual](/architects-and-developers/services/showcase#immersive-experiences) y llevar la aventura de la arquitectura realmente a otro nivel."
   immersiveServicesImage: /images/architects-and-developers/services-360.jpg
-  immersiveServicesImageHref: /architects-and-developers/services/showcase#immersive-services
+  immersiveServicesImageHref: /architects-and-developers/services/showcase#immersive-experiences
   immersiveServicesSlider:
     - image: /images/architects-and-developers/immersive-services-slider-1.jpg
       title: Ixou Mini
