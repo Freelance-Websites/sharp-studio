@@ -41,7 +41,7 @@ export default function FullBleedVideo({ video, title, credit }: {
       {title &&
         <div className="container mx-auto p-4 absolute bottom-0 md:bottom-4 z-30">
           <h2 className="drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]">
-            <StandardText color="text-white">
+            <StandardText color="text-white" classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
               <span className="font-neue-bold">{title}</span>
             </StandardText>
             <StandardText color="text-white">

@@ -55,9 +55,17 @@ export default function Home() {
           <ReactFullpage.Wrapper>
             <section className="section">
               <h1
-                className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 md:-translate-x-0 md:left-16 z-10 flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]"
+                className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 md:-translate-x-0 md:left-16 z-10 flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]"
               >
-                <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left">
+                <MainHeading
+                  color="text-off-white"
+                  classes="
+                    max-w-[200px] md:max-w-lg
+                    mx-auto md:mx-0
+                    text-center md:text-left
+                    drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]
+                  "
+                >
                   {language === 'en' ? en.slogan : es.slogan}
                 </MainHeading>
               </h1>

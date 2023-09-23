@@ -47,9 +47,9 @@ export default function FullBleedImage({ image, title, imageTitle, imageCredit, 
       {/* Title */}
       {title &&
         <h1
-          className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 md:-translate-x-0 md:left-16 z-10 flex items-center drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]"
+          className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 md:-translate-x-0 md:left-16 z-10 flex items-center drop-shadow-[0_5px_15px_rgba(0,0,0,0.85)]"
         >
-          <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left">
+          <MainHeading color="text-off-white" classes="max-w-[200px] md:max-w-lg mx-auto md:mx-0 text-center md:text-left drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]">
             {title}
           </MainHeading>
         </h1>
@@ -58,7 +58,7 @@ export default function FullBleedImage({ image, title, imageTitle, imageCredit, 
       {imageTitle && imageCredit &&
         <div className="container mx-auto p-4 absolute bottom-0 md:bottom-4 z-30">
           <h2 className={isMap && isMap === true ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'}>
-            <StandardText color={isMap && isMap === true ? 'text-black' : 'text-off-white'}>
+            <StandardText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={isMap && isMap === true ? 'text-black' : 'text-off-white'}>
               <span className="font-neue-bold">{imageTitle}</span>
             </StandardText>
             <StandardText color={isMap && isMap === true ? 'text-black' : 'text-off-white'}>
