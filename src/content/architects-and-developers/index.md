@@ -27,8 +27,8 @@ en:
       title: LIV Plaza
       credit: ATV
     - image: /images/architects-and-developers/workflow-slider-2-mobile.jpg
-      title: Estomba
-      credit: BAS + LABA
+      title: Gregoria Perez
+      credit: Diego Cherbenco
     - image: /images/architects-and-developers/workflow-slider-3-mobile.jpg
       title: Sens Humboldt
       credit: ATV
