@@ -101,7 +101,7 @@ en:
   title: Architects & Developers
   portfolioEnabled: true
   studioSliderMobile:
-    - image: /images/architects-and-developers/studio-slider-1-mobile.jpg
+    - image: /images/patagobia-cod-aerea.jpg
       title: Patagonia CoD
       credit: BAVA
     - image: /images/architects-and-developers/studio-slider-2-mobile.jpg
