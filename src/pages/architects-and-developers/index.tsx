@@ -32,6 +32,7 @@ export default function Home() {
 
   const [language, setLanguage] = useState('en');
   const [isPortrait, setIsPortrait] = useState(false);
+  const [scrolling, setScrolling] = useState(true);
 
   const translatedStudioSliderDesktop = language === 'en' ? en.studioSlider : es.studioSlider;
   const translatedStudioSliderMobile = language === 'en' ? en.studioSliderMobile : es.studioSliderMobile;
@@ -62,6 +63,7 @@ export default function Home() {
 
     checkIsPortrait();
     window.addEventListener('resize', checkIsPortrait);
+
     return () => window.removeEventListener('resize', checkIsPortrait);
   }, []);
 
@@ -78,172 +80,182 @@ export default function Home() {
       <ReactFullpage
         credits={{ enabled: false }}
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
-        render={() => (
-          <ReactFullpage.Wrapper>
-            {heroEnabled &&
-              <section className="section">
-                <FullBleedImage
-                  image={heroImage}
-                  imageTitle={language === 'en' ? en.heroTitle : es.heroTitle}
-                  imageCredit={language === 'en' ? en.heroCredit : es.heroCredit}
-                />
-              </section>
-            }
-            {studioEnabled &&
-              <>
+        normalScrollElements={".no-scroll"}
+        render={({ fullpageApi }) => {
+          const slideDown = () => {
+            fullpageApi.moveSectionDown();
+          }
+          return (
+            <ReactFullpage.Wrapper>
+              {heroEnabled &&
+                <section className="section">
+                  <FullBleedImage
+                    image={heroImage}
+                    imageTitle={language === 'en' ? en.heroTitle : es.heroTitle}
+                    imageCredit={language === 'en' ? en.heroCredit : es.heroCredit}
+                  />
+                </section>
+              }
+              {studioEnabled &&
+                <>
+                  <section className="section">
+                    <TextOnly
+                      color="bg-cream"
+                      title={language === 'en' ? en.studioTitle : es.studioTitle}
+                      content={language === 'en' ? en.studioText : es.studioText}
+                      linkText={language === 'en' ? en.studioLinkText : es.studioLinkText}
+                    />
+                  </section>
+                  <section className="section">
+                    <FullPageSlider
+                      slides={isPortrait ? translatedStudioSliderMobile : translatedStudioSliderDesktop}
+                      drag={true}
+                    />
+                  </section>
+                </>
+              }
+              {servicesEnabled &&
+                <>
+                  <section className="section overflow-x-hidden">
+                    <TextAndImage
+                      orientation="left"
+                      color="bg-light-gray"
+                      title={language === 'en' ? en.servicesTitle : es.servicesTitle}
+                      content={language === 'en' ? en.servicesText : es.servicesText}
+                      linkText={language === 'en' ? en.servicesLinkText : es.servicesLinkText}
+                      linkHref={language === 'en' ? en.servicesLinkHref : es.servicesLinkHref}
+                      imageHref={language === 'en' ? en.servicesImageHref : es.servicesImageHref}
+                      image={language === 'en' ? en.servicesImage : es.servicesImage}
+                      imageCaption={language === 'en' ? en.servicesImageCaption : es.servicesImageCaption}
+                      imageCredit={language === 'en' ? en.servicesImageCredit : es.servicesImageCredit}
+                    />
+                  </section>
+                  <section className="section">
+                    <div className="no-scroll">
+                      <FullPageSlider
+                        slides={translatedServicesSlider}
+                        drag={false}
+                        hasArrow={true}
+                        slideDown={slideDown}
+                      />
+                    </div>
+                  </section>
+                </>
+              }
+              {immersiveServicesEnabled &&
+                <>
+                  <section className="section">
+                    <TextAndImage
+                      orientation="right"
+                      color="bg-salmon"
+                      content={language === 'en' ? en.immersiveServicesText : es.immersiveServicesText}
+                      linkText={language === 'en' ? en.immersiveServicesLinkText : es.immersiveServicesLinkText}
+                      linkHref={language === 'en' ? en.immersiveServiceLinkHref : es.immersiveServicesLinkHref}
+                      imageHref={language === 'en' ? en.immersiveServiceImageHref : es.immersiveServicesImageHref}
+                      image={language === 'en' ? en.immersiveServicesImage : es.immersiveServicesImage}
+                    />
+                  </section>
+                  <section className="section">
+                    <FullPageSlider
+                      slides={isPortrait ? translatedImmersiveServicesSliderMobile : translatedImmersiveServicesSliderDesktop}
+                      drag={true}
+                    />
+                  </section>
+                </>
+              }
+              {workflowEnabled &&
+                <>
+                  <section className="section">
+                    <TextAndImage
+                      orientation="left"
+                      color="bg-light-green"
+                      content={language === 'en' ? en.workflowText : es.workflowText}
+                      linkText={language === 'en' ? en.workflowLinkText : es.workflowLinkText}
+                      linkHref={language === 'en' ? en.workflowLinkHref : es.workflowLinkHref}
+                      image={language === 'en' ? en.workflowImage : es.workflowImage}
+                      imageHref={language === 'en' ? en.workflowImageHref : es.workflowImageHref}
+                      imageCaption={language === 'en' ? en.workflowImageCaption : es.workflowImageCaption}
+                      imageCredit={language === 'en' ? en.workflowImageCredit : es.workflowImageCredit}
+                    />
+                  </section>
+                  <section className="section">
+                    <FullPageSlider
+                      slides={isPortrait ? translatedWorkflowSliderMobile : translatedWorkflowSliderDesktop}
+                      drag={true}
+                    />
+                  </section>
+                </>
+              }
+              {portfolioEnabled &&
                 <section className="section">
                   <TextOnly
-                    color="bg-cream"
-                    title={language === 'en' ? en.studioTitle : es.studioTitle}
-                    content={language === 'en' ? en.studioText : es.studioText}
-                    linkText={language === 'en' ? en.studioLinkText : es.studioLinkText}
+                    color="bg-light-blue"
+                    content={language === 'en' ? en.portfolioText : es.portfolioText}
+                    linkText={language === 'en' ? en.portfolioLinkText : es.portfolioLinkText}
                   />
                 </section>
+              }
+              {documentationEnabled &&
+                <>
+                  <section className="section">
+                    <FullPageSlider
+                      slides={translatedDocumentationSlider}
+                      drag={true}
+                    />
+                  </section>
+                  <section className="section">
+                    <TextAndImage
+                      orientation="right"
+                      color="bg-light-gray"
+                      content={language === 'en' ? en.documentationText : es.documentationText}
+                      linkText={language === 'en' ? en.documentationLinkText : es.documentationLinkText}
+                      linkHref={language === 'en' ? en.documentationLinkHref : es.documentationLinkHref}
+                      image={language === 'en' ? en.documentationImage : es.documentationImage}
+                      imageHref={language === 'en' ? en.documentationImageHref : es.documentationImageHref}
+                    />
+                  </section>
+                </>
+              }
+              {faqsEnabled &&
                 <section className="section">
-                  <FullPageSlider
-                    slides={isPortrait ? translatedStudioSliderMobile : translatedStudioSliderDesktop}
-                    drag={true}
+                  <TextOnly
+                    color="bg-off-white"
+                    content={language === 'en' ? faqsTextEng : faqsTextEsp}
+                    linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
                   />
                 </section>
-              </>
-            }
-            {servicesEnabled &&
-              <>
-                <section className="section overflow-x-hidden">
-                  <TextAndImage
-                    orientation="left"
-                    color="bg-light-gray"
-                    title={language === 'en' ? en.servicesTitle : es.servicesTitle}
-                    content={language === 'en' ? en.servicesText : es.servicesText}
-                    linkText={language === 'en' ? en.servicesLinkText : es.servicesLinkText}
-                    linkHref={language === 'en' ? en.servicesLinkHref : es.servicesLinkHref}
-                    imageHref={language === 'en' ? en.servicesImageHref : es.servicesImageHref}
-                    image={language === 'en' ? en.servicesImage : es.servicesImage}
-                    imageCaption={language === 'en' ? en.servicesImageCaption : es.servicesImageCaption}
-                    imageCredit={language === 'en' ? en.servicesImageCredit : es.servicesImageCredit}
-                  />
-                </section>
+              }
+              {mapEnabled &&
                 <section className="section">
-                  <FullPageSlider
-                    slides={translatedServicesSlider}
-                    drag={false}
-                  />
+                  <Map />
                 </section>
-              </>
-            }
-            {immersiveServicesEnabled &&
-              <>
-                <section className="section">
-                  <TextAndImage
-                    orientation="right"
-                    color="bg-salmon"
-                    content={language === 'en' ? en.immersiveServicesText : es.immersiveServicesText}
-                    linkText={language === 'en' ? en.immersiveServicesLinkText : es.immersiveServicesLinkText}
-                    linkHref={language === 'en' ? en.immersiveServiceLinkHref : es.immersiveServicesLinkHref}
-                    imageHref={language === 'en' ? en.immersiveServiceImageHref : es.immersiveServicesImageHref}
-                    image={language === 'en' ? en.immersiveServicesImage : es.immersiveServicesImage}
-                  />
-                </section>
-                <section className="section">
-                  <FullPageSlider
-                    slides={isPortrait ? translatedImmersiveServicesSliderMobile : translatedImmersiveServicesSliderDesktop}
-                    drag={true}
-                  />
-                </section>
-              </>
-            }
-            {workflowEnabled &&
-              <>
-                <section className="section">
-                  <TextAndImage
-                    orientation="left"
-                    color="bg-light-green"
-                    content={language === 'en' ? en.workflowText : es.workflowText}
-                    linkText={language === 'en' ? en.workflowLinkText : es.workflowLinkText}
-                    linkHref={language === 'en' ? en.workflowLinkHref : es.workflowLinkHref}
-                    image={language === 'en' ? en.workflowImage : es.workflowImage}
-                    imageHref={language === 'en' ? en.workflowImageHref : es.workflowImageHref}
-                    imageCaption={language === 'en' ? en.workflowImageCaption : es.workflowImageCaption}
-                    imageCredit={language === 'en' ? en.workflowImageCredit : es.workflowImageCredit}
-                  />
-                </section>
-                <section className="section">
-                  <FullPageSlider
-                    slides={isPortrait ? translatedWorkflowSliderMobile : translatedWorkflowSliderDesktop}
-                    drag={true}
-                  />
-                </section>
-              </>
-            }
-            {portfolioEnabled &&
-              <section className="section">
-                <TextOnly
-                  color="bg-light-blue"
-                  content={language === 'en' ? en.portfolioText : es.portfolioText}
-                  linkText={language === 'en' ? en.portfolioLinkText : es.portfolioLinkText}
-                />
-              </section>
-            }
-            {documentationEnabled &&
-              <>
-                <section className="section">
-                  <FullPageSlider
-                    slides={translatedDocumentationSlider}
-                    drag={true}
-                  />
-                </section>
-                <section className="section">
-                  <TextAndImage
-                    orientation="right"
-                    color="bg-light-gray"
-                    content={language === 'en' ? en.documentationText : es.documentationText}
-                    linkText={language === 'en' ? en.documentationLinkText : es.documentationLinkText}
-                    linkHref={language === 'en' ? en.documentationLinkHref : es.documentationLinkHref}
-                    image={language === 'en' ? en.documentationImage : es.documentationImage}
-                    imageHref={language === 'en' ? en.documentationImageHref : es.documentationImageHref}
-                  />
-                </section>
-              </>
-            }
-            {faqsEnabled &&
-              <section className="section">
-                <TextOnly
-                  color="bg-off-white"
-                  content={language === 'en' ? faqsTextEng : faqsTextEsp}
-                  linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
-                />
-              </section>
-            }
-            {mapEnabled &&
-              <section className="section">
-                <Map />
-              </section>
-            }
-            {officesEnabled &&
-              <>
-                <section className="section">
-                  <TextAndImage
-                    orientation="left"
-                    color="bg-light-gray"
-                    content={language === 'en' ? officesTextEng : officesTextEsp}
-                    imageArray={officesImage}
-                  />
-                </section>
-              </>
-            }
-            {contactEnabled &&
-              <>
-                <section className="section relative">
-                  <Contact
-                    title={language === 'en' ? contactTitleEng : contactTitleEsp}
-                    content={language === 'en' ? contactTextEng : contactTextEsp}
-                    language={language}
-                  />
-                </section>
-              </>
-            }
-          </ReactFullpage.Wrapper>
-        )}
+              }
+              {officesEnabled &&
+                <>
+                  <section className="section">
+                    <TextAndImage
+                      orientation="left"
+                      color="bg-light-gray"
+                      content={language === 'en' ? officesTextEng : officesTextEsp}
+                      imageArray={officesImage}
+                    />
+                  </section>
+                </>
+              }
+              {contactEnabled &&
+                <>
+                  <section className="section relative">
+                    <Contact
+                      title={language === 'en' ? contactTitleEng : contactTitleEsp}
+                      content={language === 'en' ? contactTextEng : contactTextEsp}
+                      language={language}
+                    />
+                  </section>
+                </>
+              }
+            </ReactFullpage.Wrapper>
+          )
+        }}
       />
     </main>
   )

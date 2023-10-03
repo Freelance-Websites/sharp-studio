@@ -53,87 +53,97 @@ export default function Showcase() {
       <ReactFullpage
         credits={{ enabled: false }}
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
-        render={() => (
-          <ReactFullpage.Wrapper>
-            {heroEnabled &&
-              <section className="section" id="3d-stills">
-                <FullBleedImage
-                  image={en.heroImage}
-                  imageTitle={language === 'en' ? en.heroTitle : es.heroTitle}
-                  imageCredit={language === 'en' ? en.heroCredit : es.heroCredit}
-                />
-              </section>
-            }
-            {stillsEnabled &&
-              <>
+        normalScrollElements={".no-scroll"}
+        render={({ fullpageApi }) => {
+          const slideDown = () => {
+            fullpageApi.moveSectionDown();
+          }
+          return (
+            <ReactFullpage.Wrapper>
+              {heroEnabled &&
+                <section className="section" id="3d-stills">
+                  <FullBleedImage
+                    image={en.heroImage}
+                    imageTitle={language === 'en' ? en.heroTitle : es.heroTitle}
+                    imageCredit={language === 'en' ? en.heroCredit : es.heroCredit}
+                  />
+                </section>
+              }
+              {stillsEnabled &&
+                <>
+                  <section className="section">
+                    <TextOnly
+                      color="bg-cream"
+                      title={language === 'en' ? en.stillsTitle : es.stillsTitle}
+                      content={language === 'en' ? en.stillsText : es.stillsText}
+                    />
+                  </section>
+                  <section className="section">
+                    <FullPageSlider
+                      slides={language === 'en' ? en.stillsSlider : es.stillsSlider}
+                      drag={false}
+                    />
+                  </section>
+                </>
+              }
+              {immersiveExperiencesEnabled &&
+                <>
+                  <section className="section" data-anchor="immersive-experiences">
+                    <TextOnly
+                      color="bg-light-green"
+                      title={language === 'en' ? en.immersiveExperiencesTitle : es.immersiveExperiencesTitle}
+                      content={language === 'en' ? en.immersiveExperiencesText : es.immersiveExperiencesText}
+                      linkText={language === 'en' ? en.immersiveExperiencesLinkText : es.immersiveExperiencesLinkText}
+                    />
+                  </section>
+                  <section className="section">
+                    <div className="no-scroll">
+                      <FullPageSlider
+                        slides={language === 'en' ? en.immersiveExperiencesSlider : es.immersiveExperiencesSlider}
+                        drag={false}
+                        hasArrow={true}
+                        slideDown={slideDown}
+                      />
+                    </div>
+                  </section>
+                </>
+              }
+              {faqsEnabled &&
                 <section className="section">
                   <TextOnly
-                    color="bg-cream"
-                    title={language === 'en' ? en.stillsTitle : es.stillsTitle}
-                    content={language === 'en' ? en.stillsText : es.stillsText}
+                    color="bg-off-white"
+                    content={language === 'en' ? faqsTextEng : faqsTextEsp}
+                    linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
                   />
                 </section>
+              }
+              {mapEnabled &&
                 <section className="section">
-                  <FullPageSlider
-                    slides={language === 'en' ? en.stillsSlider : es.stillsSlider}
-                    drag={false}
-                  />
+                  <Map />
                 </section>
-              </>
-            }
-            {immersiveExperiencesEnabled &&
-              <>
-                <section className="section" data-anchor="immersive-experiences">
-                  <TextOnly
-                    color="bg-light-green"
-                    title={language === 'en' ? en.immersiveExperiencesTitle : es.immersiveExperiencesTitle}
-                    content={language === 'en' ? en.immersiveExperiencesText : es.immersiveExperiencesText}
-                    linkText={language === 'en' ? en.immersiveExperiencesLinkText : es.immersiveExperiencesLinkText}
-                  />
-                </section>
+              }
+              {officesEnabled &&
                 <section className="section">
-                  <FullPageSlider
-                    slides={language === 'en' ? en.immersiveExperiencesSlider : es.immersiveExperiencesSlider}
-                    drag={false}
+                  <TextAndImage
+                  orientation="left"
+                    color="bg-light-gray"
+                    content={language === 'en' ? officesTextEng : officesTextEsp}
+                    imageArray={officesImage}
                   />
                 </section>
-              </>
-            }
-            {faqsEnabled &&
-              <section className="section">
-                <TextOnly
-                  color="bg-off-white"
-                  content={language === 'en' ? faqsTextEng : faqsTextEsp}
-                  linkText={language === 'en' ? faqsLinkTextEng : faqsLinkTextEsp}
-                />
-              </section>
-            }
-            {mapEnabled &&
-              <section className="section">
-                <Map />
-              </section>
-            }
-            {officesEnabled &&
-              <section className="section">
-                <TextAndImage
-                orientation="left"
-                  color="bg-light-gray"
-                  content={language === 'en' ? officesTextEng : officesTextEsp}
-                  imageArray={officesImage}
-                />
-              </section>
-            }
-            {contactEnabled &&
-              <section className="section relative">
-                <Contact
-                  title={language === 'en' ? contactTitleEng : contactTitleEsp}
-                  content={language === 'en' ? contactTextEng : contactTextEsp}
-                  language={language}
-                />
-              </section>
-            }
-          </ReactFullpage.Wrapper>
-        )}
+              }
+              {contactEnabled &&
+                <section className="section relative">
+                  <Contact
+                    title={language === 'en' ? contactTitleEng : contactTitleEsp}
+                    content={language === 'en' ? contactTextEng : contactTextEsp}
+                    language={language}
+                  />
+                </section>
+              }
+            </ReactFullpage.Wrapper>
+          )
+        }}
       />
     </main>
   )
