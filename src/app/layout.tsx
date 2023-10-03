@@ -2,11 +2,7 @@
 
 import '@/styles/globals.css';
 
-import dynamic from 'next/dynamic';
-
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
-  ssr: false
-});
+import AnimatedCursor from "react-animated-cursor";
 
 export default function RootLayout({
   children,
