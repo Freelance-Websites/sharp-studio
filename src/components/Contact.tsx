@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Input from '@/components/contact/Input';
 import Textarea from '@/components/contact/Textarea';
 import Cta from '@/components/contact/Cta';
+import ReactMarkdown from "react-markdown";
 
 export default function Contact({
   title,
@@ -19,7 +20,13 @@ export default function Contact({
   return (
     <div className="container mx-auto px-4 grid gap-2">
       <h4><UpperCaseText color="text-black">{title}</UpperCaseText></h4>
-      <p><MediumText color="text-black">{content}</MediumText></p>
+      <div>
+        <MediumText color="text-black">
+          <ReactMarkdown>
+            {content}
+          </ReactMarkdown>
+        </MediumText>
+      </div>
       <form
         data-netlify="true"
         name="contact"
