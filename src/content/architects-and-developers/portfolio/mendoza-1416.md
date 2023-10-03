@@ -12,8 +12,6 @@ slides:
     proportion: video
   - image: /images/architects-and-developers/portfolio/mendoza-1416/slide-4.jpg
     proportion: video
-  - image: /images/architects-and-developers/portfolio/mendoza-1416/slide-5.jpg
-    proportion: video
   - image: /images/architects-and-developers/portfolio/mendoza-1416/slide-7.jpg
     proportion: video
 ---
