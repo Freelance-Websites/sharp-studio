@@ -17,6 +17,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         outerScale={2}
         outerAlpha={0}
         trailingSpeed={1}
+        showSystemCursor={true}
         outerStyle={{
           border: '2px solid var(--cursor-color)',
           mixBlendMode: 'darken'
