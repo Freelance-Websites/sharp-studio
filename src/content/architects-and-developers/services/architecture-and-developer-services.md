@@ -32,13 +32,13 @@ en:
       title: Concept Design
       description: An idea brought to life with impressive realism to communicate to
         your clients with art + concept design in each image.
-    - image: /images/patagobia-cod-peatonal.jpg
+    - image: /images/patagonia-cod-peatonal.jpg
       title: Patagonia CoD
       credit: VABA
       type: one-column
       theme: dark
       color: bg-light-green
-    - image: /images/patagobia-cod-aerea.jpg
+    - image: /images/patagonia-cod-aeria.jpg
       title: Patagonia CoD
       credit: VABA
       type: one-column
