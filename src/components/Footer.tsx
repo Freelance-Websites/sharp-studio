@@ -25,6 +25,15 @@ export default function Footer({
         <ul className="flex gap-4 items-center">
           <li>
             <a
+              href="http://eepurl.com/ixZB4c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg fill="none" height="15" viewBox="0 0 18 15" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m15.75.75c1.2305 0 2.25 1.01953 2.25 2.25v9c0 1.2656-1.0195 2.25-2.25 2.25h-13.5c-1.265625 0-2.25-.9844-2.25-2.25v-9c0-1.23047.984375-2.25 2.25-2.25zm-13.5 1.6875c-.31641 0-.5625.28125-.5625.5625v.80859l5.83594 4.85157c.80859.66797 2.10937.66797 2.91796 0l5.8711-4.85157v-.80859c0-.28125-.2812-.5625-.5625-.5625zm13.5 10.125c.2813 0 .5625-.2461.5625-.5625v-6.01172l-4.8164 4.00781c-.7031.56251-1.58204.87891-2.4961.87891-.94922 0-1.82812-.3164-2.53125-.87891l-4.78125-4.00781v6.01172c0 .3164.24609.5625.5625.5625z" fill="#101010"/></svg>
+            </a>
+          </li>
+          <li>
+            <a
               href="https://instagram.com/sharpstudiovisuals"
               target="_blank"
               rel="noopener noreferrer"

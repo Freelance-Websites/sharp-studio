@@ -77,7 +77,7 @@ export default function Contact({
       {showFooter !== undefined && showFooter === false ? null
         :
         <Footer
-          classes="absolute bottom-6 left-0"
+          classes="relative md:absolute md:bottom-6 md:left-0 pl-0 md:px-4 pt-4"
         />
       }
     </div>

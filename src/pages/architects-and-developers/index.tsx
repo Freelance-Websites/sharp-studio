@@ -65,7 +65,7 @@ export default function Home() {
     window.addEventListener('resize', checkIsPortrait);
 
     return () => window.removeEventListener('resize', checkIsPortrait);
-  }, []);
+  }, [isPortrait]);
 
   return (
     <main>

@@ -26,7 +26,6 @@ export default function Home() {
       return false;
     }
 
-    checkIsPortrait();
     const isPortrait = window.matchMedia("(orientation: portrait)").matches;
     setIsPortrait(isPortrait);
   }
@@ -34,10 +33,11 @@ export default function Home() {
   useEffect(() => {
     const storedLanguage = window.localStorage.getItem('language');
     changeLanguage(storedLanguage ? storedLanguage : 'en');
-
+    
+    checkIsPortrait();
     window.addEventListener('resize', checkIsPortrait);
     return () => window.removeEventListener('resize', checkIsPortrait);
-  }, []);
+  }, [isPortrait]);
 
   return (
     <main>

@@ -63,7 +63,7 @@ export default function TextAndImage({ orientation, color, title, content, linkT
                 {imageArray?.map((image, index) =>
                   <SplideSlide
                     key={index}
-                    className="w-full h-custom relative"
+                    className="w-full aspect-square relative"
                   >
                     <a
                       href={imageHref ? imageHref : linkHref ? linkHref : '#'}
@@ -73,7 +73,7 @@ export default function TextAndImage({ orientation, color, title, content, linkT
                         alt={`${imageCaption} – ${imageCredit}`}
                         fill={true}
                         className={`
-                          w-full h-full object-contain
+                          w-full h-full object-cover
                         `}
                       />
                     </a>
