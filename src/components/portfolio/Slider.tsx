@@ -1,6 +1,7 @@
 const { Splide, SplideTrack, SplideSlide } = require('@splidejs/react-splide');
+import InnerImageZoom from 'react-inner-image-zoom';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 import '@splidejs/react-splide/css';
-import Image from 'next/image';
 
 import { StandardText } from '@/components/Typography';
 
@@ -53,11 +54,12 @@ export default function PortfolioSlider({ project, language }: {
                 ${slide.proportion !== 'video' && 'max-h-[90vh]'}
               `}
             >
-              <Image
+              <InnerImageZoom
                 data-splide-lazy={slide.image}
                 src={slide.image}
-                alt={`${project.title} – ${project.credit}`}
-                fill={true}
+                hideHint={true}
+                fullscreenOnMobile={true}
+                mobileBreakpoint={640}
                 className={`
                   w-full h-full
                   ${slide.proportion === 'vertical' || slide.proportion === 'square' ? 'object-contain' : 'object-cover'}
