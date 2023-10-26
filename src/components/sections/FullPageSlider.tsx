@@ -39,10 +39,11 @@ interface Slide {
   imageTwoCaption?: string;
 }
 
-export default function FullPageSlider({ slides, drag, hasArrow, slideDown }: {
+export default function FullPageSlider({ slides, drag, hasArrows, slideUp, slideDown }: {
   slides: Array<Slide>;
   drag: Boolean;
-  hasArrow?: Boolean;
+  hasArrows?: Boolean;
+  slideUp?: () => void;
   slideDown?: () => void;
 }) {
   const updateViewportHeight = () => {
@@ -224,13 +225,21 @@ export default function FullPageSlider({ slides, drag, hasArrow, slideDown }: {
           </SplideSlide>
         )}
       </SplideTrack>
-      {hasArrow === true &&
-        <button
-          className="z-10 absolute bottom-24 md:bottom-10 w-full"
-          onClick={slideDown}
-        >
-          <svg className="mx-auto" fill="none" height="42" viewBox="0 0 42 42" width="42" xmlns="http://www.w3.org/2000/svg"><circle cx="21" cy="21" fill="#fff" r="21" transform="matrix(0 1 -1 0 42 0)"/><path d="m13.7242 22.0146 1.3274-1.3424 4.6608 4.6609v-11.7081h1.939v11.7081l4.6534-4.6609 1.3348 1.3424-6.9577 6.9577z" fill="#000"/></svg>
-        </button>
+      {hasArrows === true &&
+        <>
+          <button
+            className="z-10 absolute top-24 w-full"
+            onClick={slideUp}
+          >
+            <svg className="mx-auto" fill="none" height="42" viewBox="0 0 42 42" width="42" xmlns="http://www.w3.org/2000/svg"><circle cx="21" cy="21" fill="#fff" r="21" transform="matrix(0 -1 1 0 0 42)"/><path d="m28.2758 19.9854-1.3274 1.3424-4.6608-4.6609v11.7081h-1.939v-11.7081l-4.6534 4.6609-1.3348-1.3424 6.9577-6.9577z" fill="#000"/></svg>
+          </button>
+          <button
+            className="z-10 absolute bottom-24 md:bottom-10 w-full"
+            onClick={slideDown}
+          >
+            <svg className="mx-auto" fill="none" height="42" viewBox="0 0 42 42" width="42" xmlns="http://www.w3.org/2000/svg"><circle cx="21" cy="21" fill="#fff" r="21" transform="matrix(0 1 -1 0 42 0)"/><path d="m13.7242 22.0146 1.3274-1.3424 4.6608 4.6609v-11.7081h1.939v11.7081l4.6534-4.6609 1.3348 1.3424-6.9577 6.9577z" fill="#000"/></svg>
+          </button>
+        </>
       }
     </Splide>
   )

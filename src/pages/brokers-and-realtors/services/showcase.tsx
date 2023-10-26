@@ -55,6 +55,10 @@ export default function Showcase() {
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
         normalScrollElements={".no-scroll"}
         render={({ fullpageApi }) => {
+          const slideUp = () => {
+            fullpageApi.moveSectionUp();
+          }
+
           const slideDown = () => {
             fullpageApi.moveSectionDown();
           }
@@ -103,7 +107,8 @@ export default function Showcase() {
                       <FullPageSlider
                         slides={language === 'en' ? en.interactiveExperiencesSlider : es.interactiveExperiencesSlider}
                         drag={false}
-                        hasArrow={true}
+                        hasArrows={true}
+                        slideUp={slideUp}
                         slideDown={slideDown}
                       />
                     </div>

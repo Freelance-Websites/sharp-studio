@@ -58,6 +58,10 @@ export default function Showcase() {
           const slideDown = () => {
             fullpageApi.moveSectionDown();
           }
+          
+          const slideUp = () => {
+            fullpageApi.moveSectionUp();
+          }
           return (
             <ReactFullpage.Wrapper>
               {heroEnabled &&
@@ -101,8 +105,9 @@ export default function Showcase() {
                       <FullPageSlider
                         slides={language === 'en' ? en.immersiveExperiencesSlider : es.immersiveExperiencesSlider}
                         drag={false}
-                        hasArrow={true}
+                        hasArrows={true}
                         slideDown={slideDown}
+                        slideUp={slideUp}
                       />
                     </div>
                   </section>

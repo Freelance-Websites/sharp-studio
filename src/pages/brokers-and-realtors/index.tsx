@@ -79,6 +79,10 @@ export default function Home() {
         licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE || ''}
         normalScrollElements={".no-scroll"}
         render={({ fullpageApi }) => {
+          const slideUp = () => {
+            fullpageApi.moveSectionUp();
+          }
+
           const slideDown = () => {
             fullpageApi.moveSectionDown();
           }
@@ -132,7 +136,8 @@ export default function Home() {
                       <FullPageSlider
                         slides={translatedServicesSlider}
                         drag={false}
-                        hasArrow={true}
+                        hasArrows={true}
+                        slideUp={slideUp}
                         slideDown={slideDown}
                       />
                     </div>
