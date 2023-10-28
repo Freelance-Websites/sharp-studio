@@ -171,14 +171,20 @@ export default function FullPageSlider({ slides, drag, hasArrows, slideUp, slide
             {/* Captions */}
             {slide.imageOneCaption &&
               <p className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'} absolute top-20 left-4 z-10`}>
-                <MediumText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                <MediumText 
+                  classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                  color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                >
                   <span className="font-neue-bold">{slide.imageOneCaption}</span>
                 </MediumText>
               </p>
             }
             {slide.imageTwoCaption &&
               <p className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'} absolute top-20 right-4 z-10`}>
-                <MediumText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                <MediumText
+                  classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                  color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                >
                   <span className="font-neue-bold">{slide.imageTwoCaption}</span>
                 </MediumText>
               </p>
@@ -189,10 +195,16 @@ export default function FullPageSlider({ slides, drag, hasArrows, slideUp, slide
                   <ul className="grid md:grid-cols-2 md:gap-4">
                     <li>
                       <h2 className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'}`}>
-                        <StandardText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                        <StandardText
+                          classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                          color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                        >
                           <span className="font-neue-bold">{slide.title}</span>
                         </StandardText>
-                        <StandardText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                        <StandardText
+                          classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                          color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                        >
                           &nbsp;&mdash; {slide.credit}
                         </StandardText>
                       </h2>
@@ -200,10 +212,16 @@ export default function FullPageSlider({ slides, drag, hasArrows, slideUp, slide
                     {/* Hide the second one on mobile */}
                     <li className="hidden md:block">
                       <h2 className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'}`}>
-                        <StandardText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                        <StandardText
+                          classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                          color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                        >
                           <span className="font-neue-bold">{slide.titleTwo}</span>
                         </StandardText>
-                        <StandardText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                        <StandardText
+                          classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                          color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                        >
                           &nbsp;&mdash; {slide.creditTwo}
                         </StandardText>
                       </h2>
@@ -214,10 +232,16 @@ export default function FullPageSlider({ slides, drag, hasArrows, slideUp, slide
               : slide.type !== 'text' ?
               <div className="container mx-auto p-4 absolute bottom-8 md:bottom-4 z-30">
                 <h2 className={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_2px_2px_rgba(0,0,0,0.25)]'}`}>
-                  <StandardText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                  <StandardText
+                    classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                    color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                  >
                     <span className="font-neue-bold">{slide.title}</span>
                   </StandardText>
-                  <StandardText classes="drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]" color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}>
+                  <StandardText
+                    classes={`${slide.type === 'two-column' || slide.type === 'one-column' ? '' : 'drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]'}`}
+                    color={slide.theme && slide.theme === 'dark' ? "text-black" : "text-off-white"}
+                  >
                     &nbsp;&mdash; {slide.credit}
                   </StandardText>
                 </h2>

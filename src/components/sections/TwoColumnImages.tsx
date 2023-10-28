@@ -11,7 +11,7 @@ const TwoColumnImages = ({ imageUrl, title, credit, imageMobile }: {
   titleTwo?: string;
   creditTwo?: string;
 }) => {
-  const [backgroundColor, setBackgroundColor] = useState('');
+  const [backgroundColor, setBackgroundColor] = useState('#FFFFFF');
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const TwoColumnImages = ({ imageUrl, title, credit, imageMobile }: {
 
   return (
       <div
-        style={{ backgroundColor: backgroundColor }}
+        style={{ backgroundColor: backgroundColor}}
         className="w-full h-full relative"
       >
         <canvas ref={canvasRef} width="1" height="1" style={{ display: 'none' }}></canvas>
