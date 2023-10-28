@@ -39,6 +39,7 @@ export default function Step({
           alt={`${imageTitle} – ${imageCredit}`}
           className="w-full h-full object-cover"
           fill={true}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
         <p className="absolute left-4 bottom-4"><StandardText color="text-off-white"><strong>{imageTitle}</strong> &mdash; {imageCredit}</StandardText></p>
       </li>

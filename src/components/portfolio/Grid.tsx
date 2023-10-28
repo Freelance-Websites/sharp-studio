@@ -32,10 +32,12 @@ export default function PortfolioGrid({
           >
             <Link
               href={itemUrl}
+              className="absolute w-full h-full"
             >
               <Image
                 src={item.thumbnail}
                 alt={`${item.title} – ${item.credit}`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 fill={true}
                 className="w-full h-full object-cover"
               />

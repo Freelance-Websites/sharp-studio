@@ -37,13 +37,14 @@ export default function ServiceList({ type, services }: {
             <div className="col-span-full md:col-span-5 lg:col-span-4 relative aspect-square">
               <Link
                 href={fullLink}
-                className="group"
+                className="group absolute w-full h-full"
               >
                 <Image
                   src={service.image}
                   alt={`${service.imageTitle} – ${service.imageCredit}`}
                   fill={true}
                   className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="opacity-0 group-hover:opacity-100 transition ease-in-out duration-200 h-full">
                   <div className="bg-gradient-to-t from-black absolute w-full h-full z-10 to-20% opacity-60" />

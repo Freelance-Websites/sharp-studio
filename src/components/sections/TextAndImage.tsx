@@ -67,7 +67,7 @@ export default function TextAndImage({ orientation, color, title, content, linkT
                   >
                     <a
                       href={imageHref ? imageHref : linkHref ? linkHref : '#'}
-                      className="relative"
+                      className="absolute w-full h-full"
                     >
                       <Image
                         src={image}
@@ -86,7 +86,7 @@ export default function TextAndImage({ orientation, color, title, content, linkT
             :
             <a
               href={imageHref ? imageHref : linkHref ? linkHref : '#'}
-              className="relative"
+              className="absolute w-full h-full"
             >
               <Image
                 src={image}
