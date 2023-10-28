@@ -67,11 +67,13 @@ export default function TextAndImage({ orientation, color, title, content, linkT
                   >
                     <a
                       href={imageHref ? imageHref : linkHref ? linkHref : '#'}
+                      className="relative"
                     >
                       <Image
                         src={image}
                         alt={`${imageCaption} – ${imageCredit}`}
                         fill={true}
+                        sizes="(max-width: 768px) 375px, (max-width: 1200px) 50vw, 33vw"
                         className={`
                           w-full h-full object-cover
                         `}
@@ -84,11 +86,13 @@ export default function TextAndImage({ orientation, color, title, content, linkT
             :
             <a
               href={imageHref ? imageHref : linkHref ? linkHref : '#'}
+              className="relative"
             >
               <Image
                 src={image}
                 alt={`${imageCaption} – ${imageCredit}`}
                 fill={true}
+                sizes="(max-width: 768px) 375px, (max-width: 1200px) 50vw, 33vw"
                 className={`
                   w-full h-full object-contain
                 `}

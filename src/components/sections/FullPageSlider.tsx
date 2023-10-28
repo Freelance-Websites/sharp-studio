@@ -147,6 +147,7 @@ export default function FullPageSlider({ slides, drag, hasArrows, slideUp, slide
                   src={slide.image}
                   alt={`${slide.title} – ${slide.credit}`}
                   fill={true}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                   className={`w-full h-full ${slide.imageFit ? slide.imageFit : 'object-cover'} ${slide.imageMobile ? 'hidden lg:block' : ''}`}
                 />
                 {slide.imageMobile &&
@@ -154,6 +155,7 @@ export default function FullPageSlider({ slides, drag, hasArrows, slideUp, slide
                     src={slide.imageMobile}
                     alt={`${slide.title} – ${slide.credit}`}
                     fill={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                     className="w-full h-full object-contain block lg:hidden"
                   />
                 }

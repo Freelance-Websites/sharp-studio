@@ -42,6 +42,7 @@ export default function FullBleedImage({ image, title, imageTitle, imageCredit, 
         src={image}
         alt={`${imageTitle} – ${imageCredit}`}
         fill={true}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         className={`w-full h-full ${isMap && isMap === true ? 'object-contain' : 'object-cover'}`}
       />
       {/* Title */}

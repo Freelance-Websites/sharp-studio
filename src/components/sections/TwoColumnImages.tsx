@@ -30,13 +30,14 @@ const TwoColumnImages = ({ imageUrl, title, credit, imageMobile }: {
   return (
       <div
         style={{ backgroundColor: backgroundColor }}
-        className="w-full h-full"
+        className="w-full h-full relative"
       >
         <canvas ref={canvasRef} width="1" height="1" style={{ display: 'none' }}></canvas>
         <Image
           src={imageUrl}
           alt={`${title} – ${credit}`}
           fill={true}
+          sizes="(max-width: 768px) 767px, (max-width: 1200px) 50vw, 33vw"
           className={`
             ${imageMobile && 'hidden lg:block'}
             w-full h-full object-contain
@@ -47,6 +48,7 @@ const TwoColumnImages = ({ imageUrl, title, credit, imageMobile }: {
             src={imageMobile}
             alt={`${title} – ${credit}`}
             fill={true}
+            sizes="(max-width: 768px) 767px, (max-width: 1200px) 50vw, 33vw"
             className="w-full h-full object-contain block lg:hidden px-16"
           />
         }

@@ -40,6 +40,7 @@ export default function LandingPageSelector({ architectsAndDevelopersHover, brok
               alt="Architects and Developers"
               className="w-full h-full absolute object-cover z-10 opacity-70"
               fill={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <span className="hidden group-hover:block bg-black absolute w-full h-full" />
           </div>
@@ -55,6 +56,7 @@ export default function LandingPageSelector({ architectsAndDevelopersHover, brok
             alt="Brokers and Realtors"
             className="w-full h-full absolute object-cover opacity-0 group-hover:opacity-70 transition-all ease-in-out duration-300"
             fill={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </Link>
       </li>
