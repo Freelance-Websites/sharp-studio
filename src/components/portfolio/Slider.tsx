@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 const { Splide, SplideTrack, SplideSlide } = require('@splidejs/react-splide');
 import InnerImageZoom from 'react-inner-image-zoom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
@@ -24,6 +26,25 @@ export default function PortfolioSlider({ project, language }: {
   project: Project;
   language: string;
 }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const checkIsMobile = () => {
+    if (!window.matchMedia) {
+      return false;
+    }
+
+    const isMobile = window.innerWidth <= 768;
+    setIsMobile(isMobile);
+  }
+
+  useEffect(() => {
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => {
+        window.removeEventListener('resize', checkIsMobile);
+    }
+  }, [isMobile]);
+
   return (
     <>
       <Splide
@@ -54,17 +75,30 @@ export default function PortfolioSlider({ project, language }: {
                 ${slide.proportion !== 'video' && 'max-h-[90vh]'}
               `}
             >
-              <InnerImageZoom
-                data-splide-lazy={slide.image}
-                src={slide.image}
-                hideHint={true}
-                fullscreenOnMobile={true}
-                mobileBreakpoint={640}
-                className={`
-                  w-full h-full
-                  ${slide.proportion === 'vertical' || slide.proportion === 'square' ? 'object-contain' : 'object-cover'}
-                `}
-              />
+              {isMobile ?
+                <InnerImageZoom
+                  data-splide-lazy={slide.image}
+                  src={slide.image}
+                  hideHint={true}
+                  fullscreenOnMobile={true}
+                  mobileBreakpoint={640}
+                  className={`
+                    w-full h-full
+                    ${slide.proportion === 'vertical' || slide.proportion === 'square' ? `object-contain` : `object-cover`}
+                  `}
+                />
+                :
+                <Image
+                  data-splide-lazy={slide.image}
+                  src={slide.image}
+                  alt={`${project.title} – ${project.credit}`}
+                  fill={true}
+                  className={`
+                    w-full h-full
+                    ${slide.proportion === 'vertical' || slide.proportion === 'square' ? 'object-contain' : 'object-cover'}
+                  `}
+                />
+              }
             </SplideSlide>
           )}
         </SplideTrack>
