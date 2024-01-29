@@ -53,14 +53,14 @@ es:
     - image: /images/studio/ale-b.jpg
       name: Alejandro Bokser
       bio: Senior architect. Director of Sharp Studio Visuals. Founder.
-    - image: /images/studio/stefanie.jpg
+    - image: /images/steph-para-web.jpg
       name: Stefanie Goldstein
       bio: Senior interior designer. Director of Sharp Studio Visuals. Founder.
     - image: /images/studio/ale-l.jpg
       name: Alejandro Laurido
       bio: Senior architect. Production manager of Sharp Studio Visuals. Architecture
         expert.
-    - image: /images/nico2.jpg
+    - image: /images/nico-para-wenb.jpg
       name: Nicolás López
       bio: Senior architect. Production manager of Sharp Studio Visuals. 3d artist and
         rendering expert.
