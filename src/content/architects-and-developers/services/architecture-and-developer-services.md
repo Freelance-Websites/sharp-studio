@@ -127,7 +127,7 @@ es:
       color: bg-light-green
   officesEnabled: true
   designDevelopmentText: En Sharp Studio Visuals, somos un equipo de arquitectos
-    que puede ser también tuequipo profesional. Te ayudamos a llevar una idea
+    que puede ser también tu equipo profesional. Te ayudamos a llevar una idea
     desde los primeros bocetos hasta la documentación para licitar la
     construcción.
   introTitle: Servicios para Arquitectos & Desarrolladores
@@ -139,7 +139,7 @@ es:
   bimTitle: Documentación BIM
   cadTitle: Documentación CAD
   cadText: Planos para obra, planos para licitar una obra, planos de anteproyecto,
-    en SSV dibujamos todo tipo de proyecto en todo tipode plataforma.
+    en SSV dibujamos todo tipo de proyecto en todo tipo de plataforma.
   bimText: Todo el poder del Building Information Model es dominado a la
     perfección por nuestro equipo de especialistas en modelado paramétrico.
   heroCredit: BAS + LABA
