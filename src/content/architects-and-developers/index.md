@@ -179,7 +179,7 @@ es:
       creditTwo: ATV
       type: two-column
       theme: dark
-  documentationLinkText: Interesado en una cotización? Contactanos y obtené una gratuita.
+  documentationLinkText: Interesado en una cotización? Contactanos y obtienes una gratuita.
   heroImage: /images/architects-and-developers/hero.jpg
   documentationImage: /images/architects-and-developers/documentation.jpg
   contactEnabled: true
@@ -242,7 +242,7 @@ es:
     función es llevar adelante en tiempo y forma las exigencias de cada cuenta.
   documentationImageHref: /architects-and-developers/services/architecture-and-developer-services
   immersiveServicesImageHref: /architects-and-developers/services/showcase#immersive-experiences
-  portfolioLinkText: Querés ver cómo lo hacemos? [Visitá nuestro
+  portfolioLinkText: Quierés ver cómo lo hacemos? [Visita nuestro
     portfolio](/architects-and-developers/portfolio).
   heroCredit: Estudio Planta
   portfolioText: Desde hace 10 años estamos creando proyectos y concretando las
@@ -307,7 +307,7 @@ es:
     - image: /images/architects-and-developers/immersive-services-slider-3-mobile.jpg
       title: Estomba
       credit: BAS + LABA
-  studioLinkText: "[Querés conocernos y obtener una cotización gratuita? O
+  studioLinkText: "[Quierés conocernos y obtener una cotización gratuita? O
     visitanos en nuestras oficinas en Aventura, FL,
     USA](https://wa.me/13054693227)."
   servicesImage: /images/architects-and-developers/services.jpg
