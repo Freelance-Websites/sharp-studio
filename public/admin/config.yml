@@ -2492,17 +2492,24 @@ collections:
         name: "slides"
         widget: "list"
         allow_add: true
-        fields:
-          - label: "Proporción"
-            name: "proportion"
-            widget: "select"
-            required: false
-            hint: "La proporción de la imagen. Se usa para adaptar el tamaño que ocupa en la pantalla."
-            options:
-              - { label: "Horizontal", value: "video" }
-              - { label: "Vertical", value: "vertical" }
-              - { label: "Cuadrado", value: "square" }
-          - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+        types:
+          - label: "Imagen"
+            name: "image"
+            fields:
+              - {label: Imagen, name: image, widget: image, hint: Tamaño recomendado 2880x1800px o superior, required: false}
+              - label: "Proporción"
+                name: "proportion"
+                widget: "select"
+                required: false
+                hint: "La proporción de la imagen. Se usa para adaptar el tamaño que ocupa en la pantalla."
+                options:
+                  - { label: "Horizontal", value: "video" }
+                  - { label: "Vertical", value: "vertical" }
+                  - { label: "Cuadrado", value: "square" }
+          - label: "Video"
+            name: "video"
+            fields:
+              - {label: URL del video, name: videoURL, widget: string, hint: URLs de Vimeo/Youtube son válidas. Formato URL Vimeo: https://vimeo.com/903456026 Formato URL Youtube: https://www.youtube.com/watch?v=t8UKQJZsv4o, required: false}
   # B&R projects
   - label: "Proyectos Brokers & Realtors"
     name: "projectsBR"

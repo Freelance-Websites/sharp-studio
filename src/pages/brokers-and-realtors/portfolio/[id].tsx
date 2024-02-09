@@ -21,8 +21,9 @@ interface Project {
 }
 
 interface Slide {
-  image: string;
-  proportion: string;
+  image?: string;
+  proportion?: string;
+  video?: string;
 }
 
 export default function PortfolioItem({ allProjectsData, projectData }: {

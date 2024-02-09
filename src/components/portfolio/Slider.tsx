@@ -6,10 +6,13 @@ import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 import '@splidejs/react-splide/css';
 
 import { StandardText } from '@/components/Typography';
+import VimeoEmbed from '@/components/portfolio/VimeoEmbed'
+import YoutubeEmbed from '@/components/portfolio/YoutubeEmbed'
 
 interface Slide {
-  image: string;
-  proportion: string;
+  image?: string;
+  proportion?: string;
+  video?: string;
 }
 
 interface Project {
@@ -75,29 +78,39 @@ export default function PortfolioSlider({ project, language }: {
                 ${slide.proportion !== 'video' && 'max-h-[90vh]'}
               `}
             >
-              {isMobile ?
-                <InnerImageZoom
-                  data-splide-lazy={slide.image}
-                  src={slide.image}
-                  hideHint={true}
-                  fullscreenOnMobile={true}
-                  mobileBreakpoint={640}
-                  className={`
-                    w-full h-full
-                    ${slide.proportion === 'vertical' || slide.proportion === 'square' ? `object-contain` : `object-cover`}
-                  `}
-                />
+              {slide.image ?
+                isMobile ?
+                  <InnerImageZoom
+                    data-splide-lazy={slide.image}
+                    src={slide.image}
+                    hideHint={true}
+                    fullscreenOnMobile={true}
+                    mobileBreakpoint={640}
+                    className={`
+                      w-full h-full
+                      ${slide.proportion === 'vertical' || slide.proportion === 'square' ? `object-contain` : `object-cover`}
+                    `}
+                  />
                 :
-                <Image
-                  data-splide-lazy={slide.image}
-                  src={slide.image}
-                  alt={`${project.title} – ${project.credit}`}
-                  fill={true}
-                  className={`
-                    w-full h-full
-                    ${slide.proportion === 'vertical' || slide.proportion === 'square' ? 'object-contain' : 'object-cover'}
-                  `}
-                />
+                  <Image
+                    data-splide-lazy={slide.image}
+                    src={slide.image}
+                    alt={`${project.title} – ${project.credit}`}
+                    fill={true}
+                    className={`
+                      w-full h-full
+                      ${slide.proportion === 'vertical' || slide.proportion === 'square' ? 'object-contain' : 'object-cover'}
+                    `}
+                  />
+                :
+                slide.video?.includes('vimeo') ?
+                  <VimeoEmbed
+                    url={slide.video}
+                  />
+                :
+                  <YoutubeEmbed
+                    url={slide.video}
+                  />
               }
             </SplideSlide>
           )}
