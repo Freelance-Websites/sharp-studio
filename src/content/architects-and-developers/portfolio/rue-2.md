@@ -6,4 +6,5 @@ credit: IVB
 slides:
   - image: /images/architects-and-developers/portfolio/rue-2/slide-1.jpg
     proportion: square
+    type: image
 ---
