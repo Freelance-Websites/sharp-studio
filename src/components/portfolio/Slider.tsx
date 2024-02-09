@@ -12,7 +12,7 @@ import YoutubeEmbed from '@/components/portfolio/YoutubeEmbed'
 interface Slide {
   image?: string;
   proportion?: string;
-  video?: string;
+  videoURL?: string;
 }
 
 interface Project {
@@ -103,13 +103,13 @@ export default function PortfolioSlider({ project, language }: {
                     `}
                   />
                 :
-                slide.video?.includes('vimeo') ?
+                slide.videoURL?.includes('vimeo') ?
                   <VimeoEmbed
-                    url={slide.video}
+                    url={slide.videoURL}
                   />
                 :
                   <YoutubeEmbed
-                    url={slide.video}
+                    url={slide.videoURL}
                   />
               }
             </SplideSlide>
