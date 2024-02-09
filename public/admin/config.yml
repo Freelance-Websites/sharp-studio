@@ -2509,7 +2509,7 @@ collections:
           - label: "Video"
             name: "video"
             fields:
-              - {label: URL del video, name: videoURL, widget: string, hint: URLs de Vimeo/Youtube son válidas. Formato URL Vimeo: https://vimeo.com/903456026 Formato URL Youtube: https://www.youtube.com/watch?v=t8UKQJZsv4o, required: false}
+              - {label: URL del video, name: videoURL, widget: string, hint: URLs de Vimeo/Youtube son válidas. Formato URL Vimeo https://vimeo.com/903456026 Formato URL Youtube https://www.youtube.com/watch?v=t8UKQJZsv4o, required: false}
   # B&R projects
   - label: "Proyectos Brokers & Realtors"
     name: "projectsBR"
