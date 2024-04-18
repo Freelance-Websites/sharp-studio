@@ -19,7 +19,7 @@ export default function Team({
       {team?.map((team, index) =>
         <li
           key={index}
-          className="grid gap-4 md:gap-6 items-start"
+          className="grid gap-4 md:gap-6 content-start"
         >
           <div className="relative aspect-square">
             <Image
@@ -30,7 +30,7 @@ export default function Team({
               className="w-full h-full object-cover grayscale"
             />
           </div>
-          <div>
+          <div className="align-self-start">
             <MediumText color="text-black"><h4 dangerouslySetInnerHTML={{ __html: team.name}} className="font-neue-bold" /></MediumText>
             <StandardText color="text-black">{team.bio}</StandardText>
           </div>
