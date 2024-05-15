@@ -9,7 +9,7 @@ slides:
     image: /images/8.jpg
     proportion: video
   - type: image
-    image: /images/8.jpg
+    image: /images/7.jpg
     proportion: video
   - type: image
     image: /images/9.jpg
