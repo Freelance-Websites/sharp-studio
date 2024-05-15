@@ -1,8 +1,11 @@
 ---
 title: Mendoza 1416
 credit: Estudio Planta
-thumbnail: /images/portada.jpg
+thumbnail: /images/portada-mendoza.jpg
 slides:
+  - proportion: video
+    type: image
+    image: /images/medoza-web-3.jpg
   - proportion: video
     type: image
     image: /images/medoza-web-1.jpg
@@ -12,7 +15,4 @@ slides:
   - proportion: video
     type: image
     image: /images/medoza-web-4.jpg
-  - proportion: video
-    type: image
-    image: /images/medoza-web-3.jpg
 ---
