@@ -6,7 +6,7 @@ slides:
   - type: video
     videoURL: https://vimeo.com/911674901
   - type: image
-    image: /images/1-dim-.jpg
+    image: /images/8.jpg
     proportion: video
   - type: image
     image: /images/8.jpg
