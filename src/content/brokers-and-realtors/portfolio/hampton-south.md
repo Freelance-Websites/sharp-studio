@@ -1,6 +1,6 @@
 ---
 title: Hampton South
-credit: "Nomadas "
+credit: NMD
 thumbnail: /images/portada-h.jpg
 slides:
   - proportion: video
