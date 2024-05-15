@@ -1,6 +1,6 @@
 ---
 title: Bella Vista
-credit: Nomadas
+credit: NMD
 thumbnail: /images/portada.jpg
 slides:
   - proportion: video
