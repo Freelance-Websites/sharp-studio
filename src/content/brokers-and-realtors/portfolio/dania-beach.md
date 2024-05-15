@@ -1,6 +1,6 @@
 ---
 title: Dania Beach
-credit: Nomadas
+credit: NMD
 thumbnail: /images/portada-dania-beach.jpg
 slides:
   - proportion: video
