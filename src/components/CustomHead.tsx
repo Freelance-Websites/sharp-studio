@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 import Script from 'next/script';
 import Head from 'next/head';
 
@@ -6,6 +8,11 @@ export default function CustomHead({
 }: {
   title?: string
 }) {
+
+  useEffect(() => {
+    ReactGA.initialize("G-P7WPTM041R");
+  }, []);
+
   return (
     <Head>
       <title>{`${title} • SSV`}</title>

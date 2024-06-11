@@ -1,4 +1,6 @@
 "use client";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 import '@/styles/globals.css';
 
@@ -7,6 +9,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
+  useEffect(() => {
+    ReactGA.initialize("G-P7WPTM041R");
+  }, []);
+
   return (
     <html lang="en">
       <head>
