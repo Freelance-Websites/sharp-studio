@@ -1,8 +1,8 @@
 ---
 order: 5
-thumbnail: /images/brokers-and-realtors/portfolio/sens-humboldt/thumbnail.jpg
 title: Sens Humboldt
-credit: ATV
+credit: ATV - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/sens-humboldt/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/sens-humboldt/slide-1.jpg
     type: image
