@@ -1,8 +1,8 @@
 ---
 order: 6
-thumbnail: /images/brokers-and-realtors/portfolio/muelles/thumbnail.jpg
 title: Casa Muelles
-credit: GO Arquitectos
+credit: GO Arquitectos - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/muelles/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/muelles/slide-1.jpg
     type: image
