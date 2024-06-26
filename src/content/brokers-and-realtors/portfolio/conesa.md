@@ -1,8 +1,8 @@
 ---
 order: 9
-thumbnail: /images/brokers-and-realtors/portfolio/conesa/thumbnail.jpg
 title: Conesa
-credit: Monoblock
+credit: Monoblock - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/conesa/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/conesa/slide-1.jpg
     type: image
