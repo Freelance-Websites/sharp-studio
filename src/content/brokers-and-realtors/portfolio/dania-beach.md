@@ -1,6 +1,6 @@
 ---
 title: Dania Beach
-credit: NMD
+credit: NMD - Dania Beach, Florida
 thumbnail: /images/portada-dania-beach.jpg
 slides:
   - proportion: video
