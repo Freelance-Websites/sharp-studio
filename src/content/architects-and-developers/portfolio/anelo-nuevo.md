@@ -1,6 +1,6 @@
 ---
 order: 18
-title: Añelo Nuevo
+title: Housing Complex Añelo Nuevo
 credit: 4L Arquitectura - Neuquen, Argentina
 thumbnail: /images/architects-and-developers/portfolio/anelo-nuevo/thumbnail.jpg
 slides:
