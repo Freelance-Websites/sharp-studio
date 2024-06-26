@@ -1,8 +1,8 @@
 ---
 order: 12
-thumbnail: /images/architects-and-developers/portfolio/munich-market/thumbnail.jpg
 title: Munich Market
-credit: White Kitchen
+credit: White Kitchen - Munich, Alemania
+thumbnail: /images/architects-and-developers/portfolio/munich-market/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/munich-market/slide-1.jpg
     type: image
