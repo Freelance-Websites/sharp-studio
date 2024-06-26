@@ -1,8 +1,8 @@
 ---
 order: 10
-thumbnail: /images/brokers-and-realtors/portfolio/estomba/thumbnail.jpg
 title: Estomba
-credit: BAS + LABA
+credit: BAS + LABA - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/estomba/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/estomba/slide-1.jpg
     type: image
