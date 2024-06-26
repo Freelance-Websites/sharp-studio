@@ -1,8 +1,8 @@
 ---
 order: 11
-thumbnail: /images/brokers-and-realtors/portfolio/liv-plaza/thumbnail.jpg
 title: LIV Plaza
-credit: ATV
+credit: ATV - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/liv-plaza/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/liv-plaza/slide-1.jpg
     type: image
