@@ -1,6 +1,6 @@
 ---
 title: Mendoza 1416
-credit: Estudio Planta
+credit: Estudio Planta - Buenos Aires, Argentina
 thumbnail: /images/portada-mendoza.jpg
 slides:
   - proportion: video
