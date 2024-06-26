@@ -1,8 +1,8 @@
 ---
 order: 9
-thumbnail: /images/architects-and-developers/portfolio/paris-rooftop/thumbnail.jpg
 title: Paris Rooftop
-credit: White Kitchen
+credit: White Kitchen - Paris, France
+thumbnail: /images/architects-and-developers/portfolio/paris-rooftop/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/paris-rooftop/slide-1.jpg
     type: image
