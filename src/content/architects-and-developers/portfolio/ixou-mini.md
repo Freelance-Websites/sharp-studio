@@ -1,8 +1,8 @@
 ---
 order: 7
-thumbnail: /images/architects-and-developers/portfolio/ixou-mini/thumbnail.jpg
 title: Ixou Mini
-credit: Monoblock
+credit: Monoblock - Montevideo, Uruguay
+thumbnail: /images/architects-and-developers/portfolio/ixou-mini/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/ixou-mini/slide-1.jpg
     type: image
