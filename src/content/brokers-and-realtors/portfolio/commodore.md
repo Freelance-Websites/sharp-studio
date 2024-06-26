@@ -1,7 +1,7 @@
 ---
 order: 7
 title: Commodore
-credit: BOOSARQ
+credit: BOOSARQ - Buenos Aires, Argentina
 thumbnail: /images/brokers-and-realtors/portfolio/commodore/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/commodore/slide-1.jpg
