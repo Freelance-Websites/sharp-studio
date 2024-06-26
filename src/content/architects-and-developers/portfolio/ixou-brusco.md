@@ -1,8 +1,8 @@
 ---
 order: 14
-thumbnail: /images/architects-and-developers/portfolio/ixou-brusco/thumbnail.jpg
 title: Ixou Brusco
-credit: Klotz, Minond, Hauser
+credit: Klotz, Minond, Hauser - Montevideo, Uruguay
+thumbnail: /images/architects-and-developers/portfolio/ixou-brusco/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/ixou-brusco/slide-1.jpg
     type: image
