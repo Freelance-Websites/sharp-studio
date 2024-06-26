@@ -1,6 +1,6 @@
 ---
 title: Hampton South
-credit: NMD
+credit: NMD - Miami, Florida
 thumbnail: /images/portada-h.jpg
 slides:
   - proportion: video
