@@ -1,8 +1,8 @@
 ---
 order: 3
-thumbnail: /images/brokers-and-realtors/portfolio/sens-palermo-green/thumbnail.jpg
 title: Sens Palermo Green
-credit: ATV
+credit: ATV - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/sens-palermo-green/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/sens-palermo-green/slide-1.jpg
     type: image
