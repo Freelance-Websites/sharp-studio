@@ -1,6 +1,6 @@
 ---
 title: Beechwood
-credit: Sharp Studio Visuals
+credit: Sharp Studio Visuals - Key Biscayne, Florida
 thumbnail: /images/portada-beech.jpg
 slides:
   - type: image
