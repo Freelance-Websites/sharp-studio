@@ -1,8 +1,8 @@
 ---
 order: 1
-thumbnail: /images/brokers-and-realtors/portfolio/cuba/thumbnail.jpg
 title: Cuba
-credit: MSGSSS
+credit: MSGSSS - Buenos Aires Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/cuba/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/cuba/slide-1.jpg
     type: image
