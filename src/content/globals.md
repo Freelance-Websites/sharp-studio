@@ -6,7 +6,8 @@ en:
   officesText: From our Aventura offices located in North Miami, we offer visual
     solutions to Florida, the entire United States, and the entire world.
   contactTitle: Contact us
-  contactText: Reach out to us through the form below and schedule a meeting, or [email us](mailto:hello@sharpstudiovisuals.com).
+  contactText: Contact us through the form below or send an email to
+    hello@sharpstudiovisuals.com
   officesImage:
     - /images/office-4.jpg
     - /images/office-1.jpg
@@ -20,7 +21,8 @@ es:
     ofrecemos soluciones visuales para Florida, los Estados Unidos, y el mundo
     entero.
   contactTitle: Contactanos
-  contactText: Escribinos desde el formulario debajo y agendemos una reunión, o envianos un [email](mailto:hello@sharpstudiovisuals.com).
+  contactText: Escribinos desde el formulario debajo y agendemos una reunión, o
+    envianos un [email](mailto:hello@sharpstudiovisuals.com).
   officesImage:
     - /images/office-4.jpg
     - /images/office-1.jpg
