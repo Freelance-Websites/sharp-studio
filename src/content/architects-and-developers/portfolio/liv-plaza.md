@@ -1,8 +1,8 @@
 ---
 order: 11
-thumbnail: /images/architects-and-developers/portfolio/liv-plaza/thumbnail.jpg
 title: Liv Plaza
-credit: ATV
+credit: ATV - Buenos Aires, Argentina
+thumbnail: /images/architects-and-developers/portfolio/liv-plaza/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/liv-plaza/slide-1.jpg
     type: image
