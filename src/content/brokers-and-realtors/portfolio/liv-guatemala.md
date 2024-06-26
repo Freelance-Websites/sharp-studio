@@ -1,8 +1,8 @@
 ---
 order: 4
-thumbnail: /images/brokers-and-realtors/portfolio/liv-guatemala/thumbnail.jpg
 title: LIV Guatemala
-credit: ATV
+credit: ATV - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/liv-guatemala/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/liv-guatemala/slide-1.jpg
     type: image
