@@ -1,6 +1,6 @@
 ---
 title: Bella Vista
-credit: NMD
+credit: NMD - Miami, Florida
 thumbnail: /images/portada.jpg
 slides:
   - proportion: video
