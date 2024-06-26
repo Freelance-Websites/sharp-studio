@@ -1,8 +1,8 @@
 ---
 order: 8
-thumbnail: /images/architects-and-developers/portfolio/sens-palermo-green/thumbnail.jpg
 title: Sens Palermo Green
-credit: ATV
+credit: ATV - Buenos Aires, Argentina
+thumbnail: /images/architects-and-developers/portfolio/sens-palermo-green/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/sens-palermo-green/slide-1.jpg
     type: image
