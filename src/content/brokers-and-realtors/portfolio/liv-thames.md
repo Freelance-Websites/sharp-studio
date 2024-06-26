@@ -1,8 +1,8 @@
 ---
 order: 12
-thumbnail: /images/brokers-and-realtors/portfolio/liv-thames/thumbnail.jpg
 title: LIV Thames
-credit: ATV
+credit: ATV - Buenos Aires, Argentina
+thumbnail: /images/brokers-and-realtors/portfolio/liv-thames/thumbnail.jpg
 slides:
   - image: /images/brokers-and-realtors/portfolio/liv-thames/slide-1.jpg
     type: image
