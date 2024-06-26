@@ -1,8 +1,8 @@
 ---
 order: 17
-thumbnail: /images/architects-and-developers/portfolio/viviendas-procrear/thumbnail.jpg
 title: Viviendas Procrear
-credit: Ministerio de hábitat y desarrollo territorial
+credit: Ministerio de hábitat y desarrollo territorial - Tierra del Fuego, Argentina
+thumbnail: /images/architects-and-developers/portfolio/viviendas-procrear/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/viviendas-procrear/slide-1.jpg
     type: image
