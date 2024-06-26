@@ -1,5 +1,5 @@
 ---
-title: Beechwood
+title: Home Remodeling Beechwood
 credit: Sharp Studio Visuals - Key Biscayne, Florida
 thumbnail: /images/portada-beech.jpg
 slides:
