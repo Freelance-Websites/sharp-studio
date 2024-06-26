@@ -1,8 +1,8 @@
 ---
 order: 5
-thumbnail: /images/architects-and-developers/portfolio/concurso-edenor/thumbnail.jpg
 title: Concurso Edenor
-credit: Monoblock
+credit: Monoblock - Buenos Aires, Argentina
+thumbnail: /images/architects-and-developers/portfolio/concurso-edenor/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/concurso-edenor/slide-1.jpg
     type: image
