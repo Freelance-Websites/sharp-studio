@@ -1,8 +1,8 @@
 ---
 order: 18
-thumbnail: /images/architects-and-developers/portfolio/anelo-nuevo/thumbnail.jpg
 title: Añelo Nuevo
-credit: 4L Arquitectura
+credit: 4L Arquitectura - Neuquen
+thumbnail: /images/architects-and-developers/portfolio/anelo-nuevo/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/anelo-nuevo/slide-1.jpg
     proportion: video
