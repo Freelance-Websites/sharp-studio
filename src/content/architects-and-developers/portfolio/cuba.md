@@ -1,8 +1,8 @@
 ---
 order: 4
-thumbnail: /images/architects-and-developers/portfolio/cuba/thumbnail.jpg
 title: Cuba
-credit: MSGSSS
+credit: MSGSSS - Buenos Aires, Argentina
+thumbnail: /images/architects-and-developers/portfolio/cuba/thumbnail.jpg
 slides:
   - image: /images/architects-and-developers/portfolio/cuba/slide-1.jpg
     type: image
