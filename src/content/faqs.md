@@ -166,10 +166,11 @@ es:
         creemos que se necesita más de una imagen para crear la experiencia de
         usuario adecuada. No dudes en comentarnos tus necesidades para explorar
         las opciones disponibles.
-    - title: What sets your rendering services apart from other companies?
-      text: Our rendering services stand out due to our commitment to quality,
-        attention to detail, quick turnaround times, and excellent customer
-        service. We prioritize client satisfaction above all else.
+    - title: ¿Qué diferencia sus servicios de rendering de los de otras empresas?
+      text: Nuestros servicios de renderizado se destacan por nuestro compromiso con
+        la calidad, la atención al detalle, los plazos de entrega y un excelente
+        servicio de atención al cliente. Priorizamos la satisfacción del cliente
+        por encima de todo.
     - title: Can you animate the renderings or create walkthroughs?
       text: Yes, we offer animation and walkthrough services to provide dynamic and
         engaging visualizations of your project.
