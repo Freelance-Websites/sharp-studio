@@ -171,18 +171,20 @@ es:
         la calidad, la atención al detalle, los plazos de entrega y un excelente
         servicio de atención al cliente. Priorizamos la satisfacción del cliente
         por encima de todo.
-    - title: Can you animate the renderings or create walkthroughs?
-      text: Yes, we offer animation and walkthrough services to provide dynamic and
-        engaging visualizations of your project.
-    - title: What is your experience in working with different industries or types of
-        projects?
-      text: We have extensive experience working with various industries, including
-        architecture, real estate, interior design, product design, yacht design
-        and more. Our over 10 years of experience enables us to tackle diverse
-        projects effectively.
-    - title: Can you sign a Non-Disclosure Agreement (NDA) to protect my project's
-        confidentiality?
-      text: Yes, we respect the confidentiality of our clients' projects and are
-        willing to sign NDAs to ensure the protection of sensitive information.
+    - title: ¿Puedes animar los renders o crear recorridos?
+      text: Sí, ofrecemos servicios de animación y recorrido para proporcionar
+        visualizaciones dinámicas y atractivas de su proyecto.
+    - title: ¿Qué experiencia tiene trabajando con distintos sectores o tipos de
+        proyectos?
+      text: Contamos con una amplia experiencia de trabajo en diversos sectores, como
+        la arquitectura, el sector inmobiliario, el diseño de interiores, el
+        diseño de productos y el diseño de yates, entre otros. Nuestros más de
+        10 años de experiencia nos permiten abordar proyectos diversos con
+        eficacia.
+    - title: ¿Puede firmar un Acuerdo de Confidencialidad (NDA) para proteger la
+        confidencialidad de mi proyecto?
+      text: Sí, respetamos la confidencialidad de los proyectos de nuestros clientes y
+        estamos dispuestos a firmar acuerdos de confidencialidad para garantizar
+        la protección de información sensible.
   heroTitle: Aquí están las respuestas a algunas de nuestras FAQs.
 ---
