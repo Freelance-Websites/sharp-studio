@@ -153,14 +153,14 @@ es:
       text: Podemos entregar renderizados en formatos de archivo de uso común, como
         JPEG, PNG, TIFF o PDF. También podemos proporcionar archivos de modelos
         3D si es necesario.
-    - title: Can you work with tight deadlines or rush projects?
-      text: Yes, we understand the importance of meeting deadlines. We offer rush
-        services for projects that require quick turnaround times.
-    - title: Are there any restrictions on how I can use the renderings once they are
-        delivered?
-      text: Once the renderings are delivered, you have full ownership and rights to
-        use them for marketing, presentations, or any other purposes related to
-        your project.
+    - title: ¿Pueden trabajar con plazos ajustados o proyectos urgentes?
+      text: Sí, comprendemos la importancia de cumplir los plazos. Ofrecemos servicios
+        urgentes para proyectos que requieren plazos de entrega rápidos.
+    - title: ¿Existe alguna restricción sobre cómo puedo utilizar los renderizados una
+        vez entregados?
+      text: Una vez entregados los renders, el propietario tiene plena libertad para
+        utilizarlos con fines de marketing, presentaciones o cualquier otro fin
+        relacionado con su proyecto.
     - title: Do you offer packaged rendering projects?
       text: Yes, we offer competitive pricing for rendering projects as we believe you
         need more than one image to create the right user experience. Feel free
