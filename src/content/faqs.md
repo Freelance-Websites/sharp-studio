@@ -161,10 +161,11 @@ es:
       text: Una vez entregados los renders, el propietario tiene plena libertad para
         utilizarlos con fines de marketing, presentaciones o cualquier otro fin
         relacionado con su proyecto.
-    - title: Do you offer packaged rendering projects?
-      text: Yes, we offer competitive pricing for rendering projects as we believe you
-        need more than one image to create the right user experience. Feel free
-        to discuss your requirements with us to explore the available options.
+    - title: ¿Ofrecen paquetes de proyectos de renderizado?
+      text: Sí, ofrecemos precios competitivos para proyectos de renderizado, ya que
+        creemos que se necesita más de una imagen para crear la experiencia de
+        usuario adecuada. No dudes en comentarnos tus necesidades para explorar
+        las opciones disponibles.
     - title: What sets your rendering services apart from other companies?
       text: Our rendering services stand out due to our commitment to quality,
         attention to detail, quick turnaround times, and excellent customer
