@@ -94,7 +94,7 @@ es:
   faqsEnabled: true
   mapEnabled: true
   officesEnabled: true
-  heroCTA: Tienes otras? No dudes en [contactarnos](/contact).
+  heroCTA: ¿Tienes otras? No dudes en [contactarnos](/contact).
   title: FAQs
   disclaimer: Please note that the answers provided here are generalized and may
     need to be adapted to your company's specific services and practices.
@@ -103,7 +103,7 @@ es:
       text: Los renders son representaciones visuales realistas de diseños
         arquitectónicos o de productos. Ayudan a visualizar el proyecto final
         antes de que esté terminado, lo que permite tomar decisiones con
-        conocimiento y mostrar su visión a clientes, inversores o interesados.
+        conocimiento y mostrar tu visión a clientes, inversores o interesados.
     - title: ¿Qué tipos de servicios ofrecen?
       text: Ofrecemos una amplia gama de renderizados, incluidos renderizados
         arquitectónicos en 3D, renderizados de interiores, renderizados de
