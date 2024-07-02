@@ -124,23 +124,22 @@ es:
         Trabajamos con eficiencia para entregar renderizados de alta calidad
         dentro de los plazos acordados, y disponemos de opciones rápidas para
         proyectos urgentes.
-    - title: What information do you need from me to get started on a rendering
-        project?
-      text: We'll need your architectural plans, design concepts, material
-        specifications, and any other relevant information to ensure accurate
-        and detailed renderings.
-    - title: Can you work with my architectural plans or design concepts to create the
-        renderings?
-      text: Yes, we can work with your existing plans and design concepts to create
-        the renderings. Our team can help you bring your ideas to life and make
-        them visually compelling.
-    - title: Do you provide both interior and exterior renderings?
-      text: Yes, we offer both interior and exterior renderings to give you a
-        comprehensive view of your project from various angles.
-    - title: What level of detail can I expect in the renderings?
-      text: Our renderings are known for their high level of detail, including
-        realistic lighting, materials, textures, and accurate spatial
-        proportions.
+    - title: ¿Qué información necesitan para empezar un proyecto de renderizado?
+      text: Necesitaremos sus planos arquitectónicos, conceptos de diseño,
+        especificaciones de materiales y cualquier otra información relevante
+        para garantizar renders precisos y detallados.
+    - title: ¿Pueden trabajar con mis planos arquitectónicos o conceptos de diseño
+        para crear los renders?
+      text: Sí, podemos trabajar con los planos y conceptos de diseño existentes para
+        crear los renders. Nuestro equipo puede ayudar a dar vida a tus ideas y
+        hacerlas visualmente atractivas.
+    - title: ¿Proporcionan renderizados interiores y exteriores?
+      text: Sí, ofrecemos renderizados tanto interiores como exteriores para ofrecer
+        una visión completa del proyecto desde distintos ángulos.
+    - title: ¿Qué nivel de detalle puedo esperar en los renders?
+      text: Nuestros renderizados son conocidos por su alto nivel de detalle, que
+        incluye iluminación realista, materiales, texturas y proporciones
+        espaciales exactas.
     - title: Can you incorporate specific materials and finishes into the renderings?
       text: Absolutely! We can accurately depict various materials, finishes, and
         textures to provide a lifelike representation of the final product.
