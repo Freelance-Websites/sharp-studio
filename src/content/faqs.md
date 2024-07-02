@@ -140,17 +140,19 @@ es:
       text: Nuestros renderizados son conocidos por su alto nivel de detalle, que
         incluye iluminación realista, materiales, texturas y proporciones
         espaciales exactas.
-    - title: Can you incorporate specific materials and finishes into the renderings?
-      text: Absolutely! We can accurately depict various materials, finishes, and
-        textures to provide a lifelike representation of the final product.
-    - title: Do you offer revisions if I'm not satisfied with the initial rendering?
-      text: Yes, we provide a revision process to ensure your satisfaction. We'll work
-        closely with you to make necessary adjustments until you're happy with
-        the final result. See our workflow
-        [Here](/architects-and-developers/workflow).
-    - title: What file formats will the final renderings be delivered in?
-      text: We can deliver renderings in commonly used file formats, such as JPEG,
-        PNG, TIFF, or PDF. We can also provide 3D model files if required.
+    - title: ¿Puede incorporar materiales y acabados específicos en los renders?
+      text: Por supuesto. Podemos representar con precisión diversos materiales,
+        acabados y texturas para ofrecer una representación realista del
+        producto final.
+    - title: ¿Ofrecen revisiones si no estoy satisfecho con el renderizado inicial?
+      text: Sí, ofrecemos un proceso de revisión para garantizar tu satisfacción.
+        Trabajaremos estrechamente para realizar los ajustes necesarios hasta
+        que quedes satisfecho con el resultado final. Conozca nuestro flujo de
+        trabajo [aquí.](/architects-and-developers/workflow)
+    - title: ¿En qué formatos se entregarán los renderizados finales?
+      text: Podemos entregar renderizados en formatos de archivo de uso común, como
+        JPEG, PNG, TIFF o PDF. También podemos proporcionar archivos de modelos
+        3D si es necesario.
     - title: Can you work with tight deadlines or rush projects?
       text: Yes, we understand the importance of meeting deadlines. We offer rush
         services for projects that require quick turnaround times.
