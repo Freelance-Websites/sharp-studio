@@ -57,11 +57,6 @@ export default function Header({
                   </a>
                 </li>
                 <li>
-                  <a href={`/${type}/portfolio`} className="hover:opacity-80 duration-100 transition ease-in-out">
-                    <UpperCaseText color="text-black">Portfolio</UpperCaseText>
-                  </a>
-                </li>
-                <li>
                   <a href={`/${type}/services`} className="hover:opacity-80 duration-100 transition ease-in-out">
                     <UpperCaseText color="text-black">
                       {activeLanguage === 'en' ? 'Services' : 'Servicios'}
@@ -78,10 +73,8 @@ export default function Header({
               </a>
             </li>
             <li>
-              <a href="/faqs" className="hover:opacity-80 duration-100 transition ease-in-out">
-                <UpperCaseText color="text-black">
-                  FAQs
-                </UpperCaseText>
+              <a href={`/${type ? type : 'architects-and-developers'}/portfolio`} className="hover:opacity-80 duration-100 transition ease-in-out">
+                <UpperCaseText color="text-black">Portfolio</UpperCaseText>
               </a>
             </li>
             <li>
