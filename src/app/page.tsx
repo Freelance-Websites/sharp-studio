@@ -10,6 +10,7 @@ import LandingPageSelector from "@/components/LandingPageSelector";
 import { MainHeading } from "@/components/Typography";
 
 import { attributes } from '@/content/index.md';
+import Link from 'next/link';
 
 export default function Home() {
   const { en, es } = attributes;
@@ -66,7 +67,11 @@ export default function Home() {
                     drop-shadow-[0_1px_1px_rgba(0,0,0,0.9)]
                   "
                 >
+                  <Link
+                    href="/architects-and-developers/portfolio"
+                  >
                   {language === 'en' ? en.slogan : es.slogan}
+                  </Link>
                 </MainHeading>
               </h1>
               <FullPageSlider
