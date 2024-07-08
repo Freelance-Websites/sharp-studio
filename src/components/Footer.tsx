@@ -43,7 +43,7 @@ export default function Footer({
           </li>
           <li className="relative -top-[2px]">
             <a
-              href="https://linkedin.com/sharpstudiovisuals"
+              href="https://linkedin.com/company/sharp-studio-visuals"
               target="_blank"
               rel="noopener noreferrer"
             >
