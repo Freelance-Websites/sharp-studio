@@ -2488,6 +2488,7 @@ collections:
       - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", required: false}
       - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", required: false}
       - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, hint: "Tamaño recomendado 800x600px o superior"}
+      - {label: "Orden del proyecto", name: "order", widget: "number", min: 1, hint: "El orden del proyecto en la grilla"}
       - label: "Slider"
         name: "slides"
         widget: "list"
@@ -2519,6 +2520,7 @@ collections:
       - {label: "Título", name: "title", widget: "string", hint: "El título del proyecto", required: false}
       - {label: "Crédito", name: "credit", widget: "string", hint: "El crédito del proyecto", required: false}
       - {label: "Thumbnail proyecto", name: "thumbnail", widget: "image", required: false, hint: "Tamaño recomendado 800x600px o superior"}
+      - {label: "Orden del proyecto", name: "order", widget: "number", min: 1, hint: "El orden del proyecto en la grilla"}
       - label: "Slider"
         name: "slides"
         widget: "list"
