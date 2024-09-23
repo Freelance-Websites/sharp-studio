@@ -10,10 +10,14 @@ slides:
     proportion: square
   - type: image
     image: /images/ven-still_p2-family-room-2k-00.jpg
+    proportion: square
   - type: image
     image: /images/ven-still_p2-kitchen-2k-00.jpg
+    proportion: square
   - type: image
     image: /images/ven-still_p2-dining-room-2k-00.jpg
+    proportion: square
   - type: image
     image: /images/ven-still_p3-master-bedroom-2k-00.jpg
+    proportion: square
 ---
