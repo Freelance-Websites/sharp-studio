@@ -7,6 +7,7 @@ slides:
     videoURL: https://vimeo.com/1012060751
   - type: image
     image: /images/ven-still_p2-terrace-2k-00.jpg
+    proportion: square
   - type: image
     image: /images/ven-still_p2-family-room-2k-00.jpg
   - type: image
