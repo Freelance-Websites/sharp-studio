@@ -1,7 +1,7 @@
 ---
 title: "Via Veneto  "
 credit: The Calta Group
-thumbnail: /images/ven-still_p2-terrace-2k-00.jpg
+thumbnail: /images/ven-still_p2-family-room-2k-00.jpg
 slides:
   - type: video
     videoURL: https://vimeo.com/1012060751
