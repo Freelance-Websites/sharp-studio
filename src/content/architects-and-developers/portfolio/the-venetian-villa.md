@@ -1,6 +1,6 @@
 ---
 title: "The Venetian Villa "
-credit: "Calta Group - "
+credit: Calta Group
 thumbnail: /images/ven-still_p2-terrace-2k-00.jpg
 slides:
   - type: video
