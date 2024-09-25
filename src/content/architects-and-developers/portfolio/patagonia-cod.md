@@ -2,6 +2,7 @@
 title: Patagonia CoD
 credit: VABA - Patagonia, Argentina
 thumbnail: /images/portada-2.jpg
+order: 1
 slides:
   - proportion: vertical
     image: /images/cod_cam02-peatonal-final_05.jpg
