@@ -2,6 +2,7 @@
 title: Dimora Lake
 credit: Delta Bridge - Kissimmee, Florida
 thumbnail: /images/dimora-lake-portada.jpg
+order: 8
 slides:
   - type: video
     videoURL: https://vimeo.com/911674901
