@@ -9,7 +9,19 @@ export default function Footer({
     <footer
       className={`w-full px-4 flex flex-col md:flex-row gap-1 justify-between ${classes? classes : ''}`}
     >
-      <SmallText color="text-black">&copy; {new Date().getFullYear()} Sharp Studio Visuals.</SmallText>
+      <div className="flex gap-2 items-baseline"> 
+        <SmallText color="text-black">&copy; {new Date().getFullYear()} Sharp Studio Visuals.</SmallText>
+        <SmallText color="text-black">
+          <a
+            href="https://docs.google.com/document/d/1-BnrsesSDyTAh__SXnNUtUjQGUK9BxahaRZC29DzSz8/edit?tab=t.0#heading=h.jfu1c635m61o"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:no-underline underline-offset-2"
+          >
+            Legal notice
+          </a>
+        </SmallText>
+      </div>
       <div className="flex gap-4 items-center">
         <SmallText color="text-black">
           Made by{" "}
