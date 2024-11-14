@@ -1,8 +1,8 @@
 ---
 title: "Via Veneto  "
-credit: The Calta Group
+credit: The Calta Group - Coral Gables, Florida
 thumbnail: /images/ven-still_p2-family-room-2k-00.jpg
-order: 2
+order: 1
 slides:
   - type: video
     videoURL: https://vimeo.com/1012060751
